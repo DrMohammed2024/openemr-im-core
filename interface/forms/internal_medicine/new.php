@@ -15,7 +15,7 @@ $session = SessionWrapperFactory::getInstance()->getActiveSession();
 
 $pid = (int) ($pid ?? $session->get('pid'));
 $encounter = (int) ($encounter ?? $session->get('encounter'));
-$userauthorized = $userauthorized ?? 0;
+$userauthorized = (int) ($userauthorized ?? ($session->get('authUserID') ?? 0));
 
 if (empty($pid) || empty($encounter)) {
     die(xlt('Missing patient or encounter context'));

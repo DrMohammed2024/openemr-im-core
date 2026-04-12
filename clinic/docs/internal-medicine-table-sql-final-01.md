@@ -1,0 +1,57 @@
+# Internal Medicine table.sql Final - 01
+
+## Target Final Path
+`interface/forms/internal_medicine/table.sql`
+
+---
+
+## Objective
+Define the final V1 SQL schema for the custom OpenEMR Internal Medicine encounter form.
+
+---
+
+## Final Table Name
+`form_internal_medicine`
+
+---
+
+## Final SQL
+```sql
+CREATE TABLE IF NOT EXISTS `form_internal_medicine` (
+  `id` bigint(20) NOT NULL AUTO_INCREMENT,
+  `pid` bigint(20) NOT NULL,
+  `encounter` bigint(20) NOT NULL,
+  `date` datetime DEFAULT NULL,
+  `user` varchar(255) DEFAULT NULL,
+  `groupname` varchar(255) DEFAULT NULL,
+  `authorized` tinyint(4) DEFAULT 0,
+  `activity` tinyint(4) DEFAULT 1,
+  `deleted` tinyint(1) DEFAULT 0,
+
+  `visit_type` varchar(100) DEFAULT NULL,
+  `clinician_name` varchar(255) DEFAULT NULL,
+  `chief_complaint` text DEFAULT NULL,
+  `hpi` longtext DEFAULT NULL,
+  `pmh` longtext DEFAULT NULL,
+  `psh` longtext DEFAULT NULL,
+  `medications` longtext DEFAULT NULL,
+  `allergies` longtext DEFAULT NULL,
+  `family_history` longtext DEFAULT NULL,
+  `social_history` longtext DEFAULT NULL,
+  `review_of_systems` longtext DEFAULT NULL,
+  `physical_exam` longtext DEFAULT NULL,
+  `assessment` longtext DEFAULT NULL,
+  `differential_diagnosis` longtext DEFAULT NULL,
+  `plan` longtext DEFAULT NULL,
+  `follow_up` longtext DEFAULT NULL,
+  `red_flags` longtext DEFAULT NULL,
+  `disposition` varchar(255) DEFAULT NULL,
+
+  `created_at` datetime DEFAULT CURRENT_TIMESTAMP,
+  `updated_at` datetime DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
+
+  PRIMARY KEY (`id`),
+  KEY `idx_internal_medicine_pid` (`pid`),
+  KEY `idx_internal_medicine_encounter` (`encounter`),
+  KEY `idx_internal_medicine_date` (`date`)
+) ENGINE=InnoDB;

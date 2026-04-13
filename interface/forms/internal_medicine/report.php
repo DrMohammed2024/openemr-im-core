@@ -3,7 +3,11 @@
 require_once("../../globals.php");
 require_once("$srcdir/api.inc.php");
 require_once("$srcdir/forms.inc.php");
+require_once("$srcdir/registry.inc.php");
 
+use OpenEMR\Common\Acl\AccessDeniedHelper;
+use OpenEMR\Common\Acl\AclMain;
+use OpenEMR\Common\Session\SessionWrapperFactory;
 use OpenEMR\Core\Header;
 
 $formid = isset($_GET['id']) ? (int) $_GET['id'] : 0;
@@ -12,13 +16,30 @@ if (empty($formid)) {
     die(xlt('Missing form id'));
 }
 
-$row = sqlQuery(
-    "SELECT * FROM form_internal_medicine WHERE id = ? AND deleted = 0",
-    [$formid]
-);
+$session = SessionWrapperFactory::getInstance()->getActiveSession();
+
+if (!AclMain::aclCheckForm('internal_medicine')) {
+    $formLabel = xl_form_title(getRegistryEntryByDirectory('internal_medicine', 'name')['name'] ?? 'Internal Medicine');
+    AccessDeniedHelper::denyWithTemplate("ACL check failed for form: " . $formLabel, $formLabel);
+}
+
+$pid = (int) ($pid ?? $session->get('pid'));
+$encounter = (int) ($encounter ?? $session->get('encounter'));
+
+if (!empty($pid) && !empty($encounter)) {
+    $row = sqlQuery(
+        "SELECT * FROM form_internal_medicine WHERE id = ? AND pid = ? AND encounter = ? AND deleted = 0",
+        [$formid, $pid, $encounter]
+    );
+} else {
+    $row = sqlQuery(
+        "SELECT * FROM form_internal_medicine WHERE id = ? AND deleted = 0",
+        [$formid]
+    );
+}
 
 if (empty($row)) {
-    die(xlt('Form not found'));
+    die(xlt('Form not found or access denied'));
 }
 
 $sections = [

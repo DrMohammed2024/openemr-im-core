@@ -3,34 +3,44 @@
 ## Folder
 `interface/forms/internal_medicine/`
 
-## Files
+## Files present in this package
+- `README.md`
 - `info.txt`
-- `table.sql`
 - `new.php`
 - `report.php`
-- `view.php`
 - `save.php`
+- `table.sql`
+- `view.php`
 
 ## Purpose
-Custom OpenEMR Internal Medicine encounter form package.
+Traditional OpenEMR custom Internal Medicine encounter form package.
 
-## Current behavior
+## Current structure
 - `new.php` = create / edit / save flow
 - `report.php` = report rendering
-- `view.php` = compatibility wrapper
+- `view.php` = view wrapper
 - `save.php` = compatibility wrapper
 - `table.sql` = schema
-- `info.txt` = form label metadata
+- `info.txt` = form metadata
 
-## Related docs
-- `docs/internal-medicine-form-install-and-test.md`
-- `docs/internal-medicine-form-status.md`
-- `docs/internal-medicine-form-direct-links.md`
+## Status
+- Structural package review: completed
+- GitHub package repair: in progress
+- Runtime validation: deferred
+- Production readiness: not established
 
-## Next runtime phase
-Deploy this folder into a real OpenEMR instance and test:
+## Important boundary
+This package has NOT yet been validated inside a clean working OpenEMR runtime.
+Do not treat prior ad-hoc Apache/PHP-CGI experiments in unstable local environments as proof of application correctness.
+
+## Next phase
+After GitHub-side package repair is complete, validate in a clean OpenEMR instance:
+
 1. registration
 2. encounter open
-3. save
-4. edit
-5. report
+3. create
+4. save
+5. edit
+6. report/view
+7. DB verification
+8. error-path verification

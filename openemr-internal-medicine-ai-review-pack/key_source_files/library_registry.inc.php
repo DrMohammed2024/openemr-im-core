@@ -1,0 +1,1 @@
+library/registry.inc.php

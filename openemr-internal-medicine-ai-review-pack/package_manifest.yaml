@@ -1,0 +1,8 @@
+package_name: openemr-internal-medicine-ai-review-pack
+main_contents:
+  - key_source_files
+  - 00_project_identity_and_goal.md
+  - 01_conversation_derived_context.md
+  - 02_repository_manifest.md
+  - 10_open_issues_unknowns_and_contradictions.md
+  - 11_completion_roadmap.md

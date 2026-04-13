@@ -11,7 +11,6 @@ use OpenEMR\Common\Session\SessionWrapperFactory;
 use OpenEMR\Core\Header;
 
 $formid = isset($_GET['id']) ? (int) $_GET['id'] : 0;
-
 if (empty($formid)) {
     die(xlt('Missing form id'));
 }
@@ -23,20 +22,32 @@ if (!AclMain::aclCheckForm('internal_medicine')) {
     AccessDeniedHelper::denyWithTemplate("ACL check failed for form: " . $formLabel, $formLabel);
 }
 
-$pid = (int) ($pid ?? $session->get('pid'));
-$encounter = (int) ($encounter ?? $session->get('encounter'));
+$pid = (int) ($pid ?? $session->get('pid') ?? 0);
+$encounter = (int) ($encounter ?? $session->get('encounter') ?? 0);
 
-if (!empty($pid) && !empty($encounter)) {
-    $row = sqlQuery(
-        "SELECT * FROM form_internal_medicine WHERE id = ? AND pid = ? AND encounter = ? AND deleted = 0",
-        [$formid, $pid, $encounter]
-    );
-} else {
-    $row = sqlQuery(
-        "SELECT * FROM form_internal_medicine WHERE id = ? AND deleted = 0",
-        [$formid]
-    );
+$sql = "SELECT fim.*
+          FROM form_internal_medicine AS fim
+          INNER JOIN forms AS f
+                  ON f.form_id = fim.id
+                 AND f.formdir = 'internal_medicine'
+                 AND f.pid = fim.pid
+                 AND f.encounter = fim.encounter
+                 AND f.deleted = 0
+         WHERE fim.id = ?
+           AND fim.deleted = 0";
+$params = [$formid];
+
+if ($pid > 0) {
+    $sql .= " AND fim.pid = ?";
+    $params[] = $pid;
 }
+
+if ($encounter > 0) {
+    $sql .= " AND fim.encounter = ?";
+    $params[] = $encounter;
+}
+
+$row = sqlQuery($sql, $params);
 
 if (empty($row)) {
     die(xlt('Form not found or access denied'));

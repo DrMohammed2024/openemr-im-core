@@ -21,10 +21,15 @@ if (empty($row)) {
     die(xlt('Form not found'));
 }
 
-$fields = [
+$sections = [
     'visit_type' => xl('Visit Type'),
     'clinician_name' => xl('Clinician Name'),
     'chief_complaint' => xl('Chief Complaint'),
+    'assessment' => xl('Assessment'),
+    'plan' => xl('Plan'),
+    'follow_up' => xl('Follow Up'),
+    'red_flags' => xl('Red Flags'),
+    'disposition' => xl('Disposition'),
     'hpi' => xl('HPI'),
     'pmh' => xl('PMH'),
     'psh' => xl('PSH'),
@@ -34,12 +39,7 @@ $fields = [
     'social_history' => xl('Social History'),
     'review_of_systems' => xl('Review of Systems'),
     'physical_exam' => xl('Physical Exam'),
-    'assessment' => xl('Assessment'),
-    'differential_diagnosis' => xl('Differential Diagnosis'),
-    'plan' => xl('Plan'),
-    'follow_up' => xl('Follow Up'),
-    'red_flags' => xl('Red Flags'),
-    'disposition' => xl('Disposition')
+    'differential_diagnosis' => xl('Differential Diagnosis')
 ];
 ?>
 <!DOCTYPE html>
@@ -57,11 +57,11 @@ $fields = [
 <div class="container im-report-wrap">
     <h2><?php echo xlt('Internal Medicine Report'); ?></h2>
 
-    <?php foreach ($fields as $key => $label): ?>
+    <?php foreach ($sections as $key => $label): ?>
         <?php if (!empty($row[$key])): ?>
             <div class="im-report-section">
                 <h4><?php echo text($label); ?></h4>
-                <div><?php echo nl2br(text($row[$key])); ?></div>
+                <div><?php echo nl2br(text((string) $row[$key])); ?></div>
             </div>
         <?php endif; ?>
     <?php endforeach; ?>

@@ -1,0 +1,5 @@
+blank_issues_enabled: false
+contact_links:
+  - name: Governance note
+    url: https://github.com/DrMohammed2024/openemr-im-core
+    about: Use repository governance documents before opening broad implementation requests.

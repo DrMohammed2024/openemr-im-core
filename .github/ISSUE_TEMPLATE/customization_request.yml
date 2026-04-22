@@ -1,0 +1,69 @@
+name: Customization request
+description: Propose a clinic-specific customization
+title: "[Customization]: "
+labels: ["customization"]
+body:
+  - type: textarea
+    id: objective
+    attributes:
+      label: Objective
+      description: What should this customization accomplish?
+    validations:
+      required: true
+
+  - type: dropdown
+    id: category
+    attributes:
+      label: Category
+      options:
+        - Documentation
+        - Governance
+        - Configuration
+        - Extension / Module
+        - UI / Template customization
+        - Core patch
+        - Verification / CI
+        - Upstream sync
+    validations:
+      required: true
+
+  - type: textarea
+    id: why
+    attributes:
+      label: Why is upstream insufficient?
+      description: Explain why standard OpenEMR behavior is not enough here.
+    validations:
+      required: true
+
+  - type: textarea
+    id: paths
+    attributes:
+      label: Expected affected paths
+      description: List likely files or directories
+      placeholder: |
+        clinic/
+        custom/
+        modules/
+    validations:
+      required: false
+
+  - type: dropdown
+    id: risk
+    attributes:
+      label: Initial risk level
+      options:
+        - Low
+        - Medium
+        - High
+        - Unknown
+    validations:
+      required: true
+
+  - type: checkboxes
+    id: checks
+    attributes:
+      label: Governance checks
+      options:
+        - label: This should be recorded in the customization ledger
+        - label: This should be implemented on a branch, not directly on main
+        - label: This may affect upstream compatibility

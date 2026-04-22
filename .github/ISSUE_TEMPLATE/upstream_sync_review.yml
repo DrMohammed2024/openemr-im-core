@@ -1,0 +1,36 @@
+name: Upstream sync review
+description: Review sync status and divergence from upstream OpenEMR
+title: "[Upstream Sync]: "
+labels: ["upstream-sync"]
+body:
+  - type: textarea
+    id: baseline
+    attributes:
+      label: Upstream reference point
+      description: What upstream branch, tag, or commit is being reviewed?
+    validations:
+      required: true
+
+  - type: textarea
+    id: divergence
+    attributes:
+      label: Known divergence
+      description: What custom divergence exists or is suspected?
+    validations:
+      required: true
+
+  - type: textarea
+    id: risk
+    attributes:
+      label: Sync risks
+      description: What may break or conflict during sync?
+    validations:
+      required: true
+
+  - type: textarea
+    id: next
+    attributes:
+      label: Required next action
+      description: What should be done next?
+    validations:
+      required: true

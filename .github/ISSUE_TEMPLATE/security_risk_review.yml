@@ -1,0 +1,39 @@
+name: Security / risk review
+description: Record a security-sensitive or trust-sensitive concern
+title: "[Security Review]: "
+labels: ["security-review"]
+body:
+  - type: textarea
+    id: concern
+    attributes:
+      label: Concern
+      description: Describe the security, privacy, or trust concern
+    validations:
+      required: true
+
+  - type: textarea
+    id: affected
+    attributes:
+      label: Affected area
+      description: What files, modules, or flows may be affected?
+    validations:
+      required: true
+
+  - type: dropdown
+    id: severity
+    attributes:
+      label: Severity estimate
+      options:
+        - Low
+        - Medium
+        - High
+        - Critical
+    validations:
+      required: true
+
+  - type: textarea
+    id: mitigation
+    attributes:
+      label: Immediate mitigation or verification needed
+    validations:
+      required: true

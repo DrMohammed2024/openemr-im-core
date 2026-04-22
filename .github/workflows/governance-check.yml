@@ -1,0 +1,21 @@
+name: Governance Check
+
+on:
+  pull_request:
+  workflow_dispatch:
+
+jobs:
+  governance-files:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Verify governance files exist
+        run: |
+          test -f README.md
+          test -f CUSTOMIZATION_POLICY.md
+          test -f UPSTREAM_SYNC_POLICY.md
+          test -f ARCHITECTURE.md
+          test -f clinic/docs/customization-ledger.md
+          test -f .github/pull_request_template.md

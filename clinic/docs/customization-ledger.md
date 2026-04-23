@@ -154,3 +154,15 @@ Keep initial work documentation-first until architecture is confirmed.
 
 ### Notes
 Do not escalate to deep implementation before upstream sync and validation discipline are established.
+
+## IM-0002 — Upstream security and sync baseline
+- Status: Planned
+- Type: Governance / Baseline
+- Summary: Establish documented upstream sync and security patch baseline before new deep customization.
+- Related issue: TBD
+- Affected files:
+  - `clinic/docs/upstream-baseline-review.md`
+  - `clinic/docs/customization-ledger.md`
+  - `README.md`
+- Risk level: High
+- Rollback note: Documentation-only change.

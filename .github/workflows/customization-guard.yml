@@ -1,0 +1,25 @@
+name: Customization Guard
+
+on:
+  pull_request:
+    paths:
+      - 'interface/**'
+      - 'library/**'
+      - 'src/**'
+      - 'controllers/**'
+      - 'apis/**'
+      - 'custom/**'
+      - 'modules/**'
+      - 'templates/**'
+      - 'clinic/docs/customization-ledger.md'
+      - '.github/PULL_REQUEST_TEMPLATE.md'
+
+jobs:
+  guard:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Ensure customization ledger exists
+        run: test -f clinic/docs/customization-ledger.md
+      - name: Ensure PR template exists
+        run: test -f .github/PULL_REQUEST_TEMPLATE.md

@@ -56,6 +56,10 @@ Expected workflow:
 - This repository should be maintained as a controlled derivative, not an uncontrolled long-lived fork
 - Any divergence from upstream must be justified, documented, and reviewable
 
+## Disabled / High-Review Components
+
+- `modules/sms_email_reminder` is not approved for production use pending formal security and operational review.
+
 ## Immediate Priority
 
 The immediate priority is to establish repository governance, upstream sync discipline, customization traceability, and basic validation workflow before deep feature customization.

@@ -154,3 +154,49 @@ Keep initial work documentation-first until architecture is confirmed.
 
 ### Notes
 Do not escalate to deep implementation before upstream sync and validation discipline are established.
+---
+
+### Customization ID
+`IM-0004`
+
+### Title
+Project-specific CI guardrails
+
+### Status
+Proposed
+
+### Category
+Governance / Verification
+
+### Objective
+Add project-specific CI guardrails for customization traceability and risky-pattern scanning.
+
+### Why Upstream Is Insufficient
+The inherited upstream CI does not by itself enforce this repository's local customization governance requirements.
+
+### Affected Paths
+- `.github/workflows/customization-guard.yml`
+- `.github/workflows/secret-and-logging-guard.yml`
+- `.github/PULL_REQUEST_TEMPLATE.md`
+- `clinic/docs/customization-ledger.md`
+
+### Risk Level
+Medium
+
+### Upstream Compatibility Impact
+Low
+
+### Validation Requirement
+Confirm that pull requests touching local/customized paths are subject to guard workflows and repository-specific review metadata.
+
+### Rollback Note
+Remove the added workflows and PR-template metadata if this guardrail model is replaced.
+
+### Related Issue
+[add issue link]
+
+### Related Pull Request
+[add PR link]
+
+### Notes
+This entry tracks the introduction of repository-specific CI governance beyond inherited upstream workflows.

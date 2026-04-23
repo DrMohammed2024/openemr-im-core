@@ -21,6 +21,10 @@ It is a clinic-driven derivative intended to support structured Internal Medicin
 - Do not commit secrets or patient data
 - Do not introduce AI workflow activation until supervised review controls are defined
 
+## Current Governance Priority
+
+Before any deep customization work proceeds, this repository must maintain a documented upstream sync and security baseline review.
+
 ## Intended Near-Term Scope
 
 - Structured Internal Medicine encounter framework

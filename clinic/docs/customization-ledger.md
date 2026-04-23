@@ -154,3 +154,16 @@ Keep initial work documentation-first until architecture is confirmed.
 
 ### Notes
 Do not escalate to deep implementation before upstream sync and validation discipline are established.
+
+## IM-0003 — sms_email_reminder quarantine and review
+- Status: Planned
+- Type: Risk review / Governance
+- Summary: Quarantine `sms_email_reminder` pending security and operational review.
+- Related issue: TBD
+- Affected files:
+  - `clinic/docs/module-risk-sms-email-reminder.md`
+  - `modules/sms_email_reminder/readme.txt`
+  - `clinic/docs/customization-ledger.md`
+  - `README.md`
+- Risk level: High
+- Rollback note: Documentation-only change.

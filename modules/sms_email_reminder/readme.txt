@@ -1,3 +1,4 @@
+WARNING: Do not enable this module in production pending formal security and operational review.
 
  To install backend notification processes you need to add
 cron_email_notification.php and cron_sms_notification.php in system crontab to run

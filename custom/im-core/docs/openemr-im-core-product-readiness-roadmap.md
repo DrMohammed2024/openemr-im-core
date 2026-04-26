@@ -555,13 +555,13 @@ OpenEMR IM Core should continue as a controlled, incremental, evidence-based Ope
 
 The correct path is:
 
-Local verified LBF MVP  
-→ clinical review  
-→ seed/script conversion  
-→ clean install validation  
-→ security/privacy package  
-→ demo safety package  
-→ compliance/legal boundary review  
-→ controlled pilot readiness
+1. Local verified LBF MVP
+2. Clinical review
+3. Seed/script conversion
+4. Clean install validation
+5. Security/privacy package
+6. Demo safety package
+7. Compliance/legal boundary review
+8. Controlled pilot readiness
 
 This roadmap is the governing product-readiness path for the current project unless replaced by a later approved roadmap.

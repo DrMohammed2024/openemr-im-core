@@ -11,6 +11,7 @@ The first clinic-visible LBF customization is in progress and partially verified
 - Vital Signs Review batch 1 has runtime and database metadata verification documentation.
 - Chronic Conditions Review batch 1 has runtime and database metadata verification documentation.
 - Chronic Conditions Review batch 2 has runtime and database metadata verification documentation.
+- Medication Review batch 1 has runtime and database metadata verification documentation.
 
 The LBF customization is still not production-ready.
 
@@ -60,6 +61,16 @@ Batch 2:
 - Respiratory disease status
 - Other chronic condition notes
 
+### Medication Review
+
+Batch 1:
+
+- Current medication list reviewed
+- Medication changes since last visit
+- Medication adherence concerns
+- Medication side effects
+- Refill needs
+
 ## Verified documentation currently present
 
 - `internal-medicine-follow-up-v1-fields.md`
@@ -74,6 +85,8 @@ Batch 2:
 - `chronic-conditions-review-batch-1-database-snapshot.md`
 - `chronic-conditions-review-batch-2-runtime-confirmation.md`
 - `chronic-conditions-review-batch-2-database-snapshot.md`
+- `medication-review-batch-1-runtime-confirmation.md`
+- `medication-review-batch-1-database-snapshot.md`
 
 ## Safety and privacy status
 
@@ -100,14 +113,16 @@ Continue Internal Medicine Follow-Up V1 in controlled batches.
 
 Recommended next candidate area:
 
-Medication Review
+Symptoms Review
 
 Potential future fields may include:
 
-- Current medication list reviewed
-- Medication changes
-- Adherence concerns
-- Side effects
-- Refill needs
+- New symptoms since last visit
+- Chest pain
+- Shortness of breath
+- Dizziness or syncope
+- Edema
+- Constitutional symptoms
+- Other symptom notes
 
 Do not create the next batch until the current documentation status is merged and confirmed.

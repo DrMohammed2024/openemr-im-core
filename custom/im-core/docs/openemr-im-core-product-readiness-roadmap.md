@@ -4,7 +4,7 @@
 
 This document defines the practical execution roadmap for building OpenEMR IM Core from the current local OpenEMR LBF customization into a controlled, documented, medically reviewable, security-aware, and eventually deployable healthcare product path.
 
-This roadmap is intended to preserve the working method used in the project and prevent uncontrolled expansion, unsafe shortcuts, undocumented changes, or premature production claims.
+This roadmap preserves the current working method and prevents uncontrolled expansion, unsafe shortcuts, undocumented changes, or premature production claims.
 
 ## 2. Project Identity
 
@@ -83,22 +83,15 @@ Verified or in-progress groups include:
 
 ### Chronic Conditions Review
 
-Batch 1:
-
 - Hypertension status
 - Diabetes status
 - Dyslipidemia status
-
-Batch 2:
-
 - CKD status
 - Cardiovascular disease status
 - Respiratory disease status
 - Other chronic condition notes
 
 ### Medication Review
-
-Batch 1:
 
 - Current medication list reviewed
 - Medication changes since last visit
@@ -107,8 +100,6 @@ Batch 1:
 - Refill needs
 
 ### Symptoms Review
-
-Batch 1:
 
 - New symptoms since last visit
 - Chest pain
@@ -119,8 +110,6 @@ Batch 1:
 
 ### Physical Exam Summary
 
-Batch 1:
-
 - General appearance
 - Cardiovascular exam
 - Respiratory exam
@@ -130,24 +119,22 @@ Batch 1:
 
 ### Assessment
 
-Batch 1:
-
 - Assessment summary
 - Problem list update
 - Clinical risk level
 - Differential notes
 
-## 6. Evidence Types Used So Far
+## 6. Evidence Types
 
-The project relies on the following evidence layers:
+The project uses these evidence layers:
 
-### 6.1 Runtime evidence
+### Runtime evidence
 
-Evidence that the LBF group and fields render in OpenEMR Encounter Preview.
+Evidence that groups and fields render in OpenEMR Encounter Preview.
 
-### 6.2 Database metadata evidence
+### Database metadata evidence
 
-Evidence from the OpenEMR `layout_options` table confirming:
+Evidence from `layout_options` confirming:
 
 - `form_id`
 - `group_id`
@@ -162,18 +149,18 @@ Evidence from the OpenEMR `layout_options` table confirming:
 - `titlecols`
 - `datacols`
 
-### 6.3 GitHub traceability evidence
+### GitHub traceability evidence
 
 Evidence committed through Pull Requests, including:
 
 - runtime confirmation
 - database metadata snapshot
-- README/status updates
 - milestone verification files
+- README/status updates
 
-### 6.4 Safety evidence
+### Safety evidence
 
-Evidence that the documentation contains:
+Evidence that documentation contains:
 
 - no PHI
 - no patient data
@@ -182,11 +169,7 @@ Evidence that the documentation contains:
 - no database dumps
 - no OpenEMR core modifications
 
-## 7. Improved Batch Workflow
-
-The project initially used separate PRs for runtime confirmation and database snapshots.
-
-After the workflow was proven, the process was improved to reduce execution time.
+## 7. Improved Workflow
 
 The improved workflow is:
 
@@ -194,19 +177,17 @@ The improved workflow is:
 2. Encounter Preview verification.
 3. Termux metadata verification.
 4. One combined verification PR.
-5. README update only at milestones, not after every small batch.
+5. README update only at milestones.
 
 This workflow is called:
 
 **Single-PR verified batch workflow**
 
-For multi-group milestones, the workflow is:
+For multi-group milestones, the workflow is called:
 
 **Multi-group verified milestone workflow**
 
 ## 8. Rules for Future LBF Work
-
-### 8.1 Field creation rules
 
 Use OpenEMR UI for creating LBF groups and fields.
 
@@ -218,14 +199,10 @@ For each new field:
 2. Enter field values.
 3. Click Save New Field.
 4. Repeat for the next field.
-5. After all fields are added, click Save Changes.
+5. Click Save Changes.
 6. Verify in Encounter Preview.
 
-### 8.2 Metadata verification rules
-
-Use Termux/PHP only for verification.
-
-The verification command must:
+Metadata verification must:
 
 - read DB settings from `sites/default/sqlconf.php`
 - query only `layout_options`
@@ -234,20 +211,7 @@ The verification command must:
 - avoid database dumps
 - report expected `ROW_COUNT`
 
-### 8.3 GitHub documentation rules
-
-Each verification file must include:
-
-- purpose
-- project context
-- runtime execution method
-- fields verified
-- Encounter Preview confirmation
-- database metadata output
-- safety status
-- status/next step
-
-### 8.4 Prohibited actions
+## 9. Prohibited Actions
 
 Do not:
 
@@ -262,11 +226,9 @@ Do not:
 - start AI integration before safety boundaries
 - start multi-tenant architecture prematurely
 
-## 9. Remaining MVP Build Plan
+## 10. Remaining MVP Build Plan
 
-The remaining clinical MVP should be completed in controlled milestones.
-
-### 9.1 Plan Batch 1
+### Plan Batch 1
 
 Recommended fields:
 
@@ -278,7 +240,7 @@ Recommended fields:
 - Follow-up interval
 - Patient instructions
 
-### 9.2 Patient Safety / Follow-up Batch
+### Patient Safety and Follow-up Batch
 
 Recommended fields:
 
@@ -288,7 +250,7 @@ Recommended fields:
 - Pending results follow-up
 - Safety-net notes
 
-### 9.3 Final Internal Medicine Follow-Up V1 Verification
+### Final Internal Medicine Follow-Up V1 Verification
 
 Create final verification file:
 
@@ -303,13 +265,11 @@ This file should summarize:
 - production readiness status
 - next required evidence packages
 
-## 10. Product Readiness Evidence Package
+## 11. Product Readiness Evidence Package
 
 After the LBF clinical MVP is complete, the project must build a stronger evidence package before production or sale.
 
-This package must include:
-
-### 10.1 Clinical Review Package
+### Clinical Review Package
 
 Path:
 
@@ -326,11 +286,11 @@ Purpose:
 
 - confirm clinical relevance
 - confirm field order and completeness
-- identify missing clinical safety elements
+- identify missing safety elements
 - confirm usability for internal medicine follow-up
 - document physician review
 
-### 10.2 Seed/Script Package
+### Seed and Script Package
 
 Path:
 
@@ -339,10 +299,6 @@ Path:
 Recommended file:
 
 - `apply_lbfim_followup_v1.php`
-
-Alternative SQL file:
-
-- `custom/im-core/lbf/sql/lbfim_followup_v1_seed.sql`
 
 Purpose:
 
@@ -356,13 +312,13 @@ The script must be:
 - idempotent
 - non-destructive
 - safe to run more than once
-- able to create/update layout groups
-- able to create/update fields
+- able to create or update layout groups
+- able to create or update fields
 - not delete patient data
 - not touch OpenEMR core-sensitive paths
 - not print credentials or PHI
 
-### 10.3 Clean Install Verification Package
+### Clean Install Verification Package
 
 Path:
 
@@ -374,11 +330,11 @@ Recommended file:
 
 Purpose:
 
-- verify that the project can be rebuilt on a clean OpenEMR instance
-- prove that the LBF seed/script works outside the original Termux runtime
-- confirm portability
+- verify rebuild on a clean OpenEMR instance
+- prove portability outside the original Termux runtime
+- confirm that seed/script output matches expected groups and fields
 
-### 10.4 Security and Privacy Package
+### Security and Privacy Package
 
 Path:
 
@@ -397,12 +353,12 @@ Purpose:
 
 - define safe access controls
 - prevent PHI leakage
-- define backup/restore procedures
+- define backup and restore procedures
 - define role-based access
 - define audit log expectations
 - prepare for real deployment review
 
-### 10.5 Demo Safety Package
+### Demo Safety Package
 
 Path:
 
@@ -419,11 +375,11 @@ Purpose:
 
 - support safe demo deployment
 - prohibit real patient data
-- define synthetic/demo data usage
+- define synthetic demo data usage
 - define demo reset process
 - define limited demo user access
 
-### 10.6 Compliance and Legal Boundary Package
+### Compliance and Legal Boundary Package
 
 Path:
 
@@ -445,9 +401,9 @@ Purpose:
 - document OpenEMR licensing considerations
 - avoid unsupported compliance claims
 
-## 11. Production Readiness Gates
+## 12. Production Readiness Gates
 
-The project is not production-ready until all of the following are completed.
+The project is not production-ready until these gates are complete:
 
 ### Gate 1 — Clinical MVP Complete
 
@@ -463,7 +419,7 @@ The project is not production-ready until all of the following are completed.
 - safety-net elements reviewed
 - usability concerns documented
 
-### Gate 3 — Seed/Script Complete
+### Gate 3 — Seed and Script Complete
 
 - LBF seed/script created
 - script tested locally
@@ -499,11 +455,9 @@ The project is not production-ready until all of the following are completed.
 - OpenEMR license notes drafted
 - legal/regulatory review marked as required before commercial sale
 
-## 12. Product Readiness Classification
+## 13. Product Readiness Classification
 
-### Current state
-
-The project is currently:
+Current state:
 
 **Local-runtime verified LBF MVP in progress**
 
@@ -513,11 +467,9 @@ It is not:
 - clinically validated
 - security-validated
 - clean-install validated
-- legally/commercially cleared
+- legally or commercially cleared
 
-### Target state
-
-The target state is:
+Target state:
 
 **OpenEMR IM Core MVP**
 
@@ -529,11 +481,9 @@ The MVP should be:
 - demo-safe
 - security-baseline documented
 - deployment-ready for controlled non-production testing
-- prepared for legal/regulatory review before commercial use
+- prepared for legal and regulatory review before commercial use
 
-## 13. Recommended Execution Sequence
-
-The recommended sequence is:
+## 14. Recommended Execution Sequence
 
 1. Complete Internal Medicine Follow-Up V1 LBF model.
 2. Create final LBF verification summary.
@@ -541,28 +491,15 @@ The recommended sequence is:
 4. Perform clinical review.
 5. Create seed/script for LBF rebuild.
 6. Test seed/script locally.
-7. Test seed/script on clean OpenEMR instance.
-8. Create security/privacy baseline.
-9. Create backup/restore SOP.
+7. Test seed/script on a clean OpenEMR instance.
+8. Create security and privacy baseline.
+9. Create backup and restore SOP.
 10. Create demo safety package.
 11. Create deployment guide.
-12. Create compliance/legal boundary notes.
+12. Create compliance and legal boundary notes.
 13. Run controlled demo with no PHI.
 14. Perform production-readiness review.
 15. Consider commercial pilot only after professional review.
-
-## 14. What This Roadmap Does Not Claim
-
-This roadmap does not claim:
-
-- the system is ready for production
-- the system is legally compliant
-- the system is a certified medical device
-- the system is safe for real patient data
-- the system is commercially cleared
-- the system is deployable without further review
-
-It only defines a controlled execution path toward those goals.
 
 ## 15. Immediate Next Step
 

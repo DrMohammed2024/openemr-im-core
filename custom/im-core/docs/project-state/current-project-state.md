@@ -47,6 +47,7 @@ The current completed clinical MVP is:
 - Clean-install reproducibility: Not yet verified
 - Seed/script implementation: Not yet implemented
 - Seed script draft: Documented
+- Clean install validation evidence template: Documented
 
 ## 5. Verified Metadata Baseline
 

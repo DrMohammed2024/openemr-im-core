@@ -46,36 +46,16 @@ The current completed clinical MVP is:
 - Clinical validation: Not claimed
 - Clean-install reproducibility: Not yet verified
 - Seed/script implementation: Not yet implemented
+- Seed script draft: Documented
 
-## 5. Completed Internal Medicine Follow-Up V1 Groups
+## 5. Verified Metadata Baseline
 
-The following groups have been built, locally verified, metadata-checked in batches, and documented:
-
-1. Visit Context
-2. Vital Signs Review
-3. Chronic Conditions Review
-4. Medication Review
-5. Symptoms Review
-6. Physical Exam Summary
-7. Assessment
-8. Plan
-9. Patient Safety and Follow-up
-
-## 6. Completed Documentation Milestones
-
-The following documentation milestones have been completed:
-
-- Product Readiness Roadmap
-- Internal Medicine Follow-Up V1 final verification summary
-- Internal Medicine Follow-Up V1 clinical review checklist
-- Internal Medicine Follow-Up V1 seed/script conversion plan
-- Internal Medicine Follow-Up V1 metadata export plan
-- Internal Medicine Follow-Up V1 sanitized metadata export evidence
-- Current project state tracker
-
-## 7. Latest Completed Stage
-
-Latest completed stage:
+The current documented metadata baseline is:
 
 ```text
-Sanitized metadata export evidence
+form_id: LBFim_followup_v1
+ROW_COUNT: 51
+GROUP_COUNT: 9
+GROUP_IDS: 1,2,3,4,5,6,7,8,9
+FIELD_DISTRIBUTION: 4,7,7,5,6,6,4,7,5
+METADATA_VERIFICATION_STATUS: PASS

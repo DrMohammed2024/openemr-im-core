@@ -69,10 +69,11 @@ The following documentation milestones have been completed:
 - Internal Medicine Follow-Up V1 final verification summary
 - Internal Medicine Follow-Up V1 clinical review checklist
 - Internal Medicine Follow-Up V1 seed/script conversion plan
+- Internal Medicine Follow-Up V1 metadata export plan
 
 ## 7. Latest Completed Stage
 
 Latest completed stage:
 
 ```text
-Seed/script conversion planning
+Metadata export planning

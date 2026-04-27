@@ -70,10 +70,12 @@ The following documentation milestones have been completed:
 - Internal Medicine Follow-Up V1 clinical review checklist
 - Internal Medicine Follow-Up V1 seed/script conversion plan
 - Internal Medicine Follow-Up V1 metadata export plan
+- Internal Medicine Follow-Up V1 sanitized metadata export evidence
+- Current project state tracker
 
 ## 7. Latest Completed Stage
 
 Latest completed stage:
 
 ```text
-Metadata export planning
+Sanitized metadata export evidence

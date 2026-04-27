@@ -48,6 +48,7 @@ The current completed clinical MVP is:
 - Seed/script implementation: Not yet implemented
 - Seed script draft: Documented
 - Clean install validation evidence template: Documented
+- Executable seed script proposal: Documented
 
 ## 5. Verified Metadata Baseline
 

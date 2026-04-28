@@ -8,14 +8,19 @@ It is intended to help future AI-assisted sessions, maintainers, and reviewers c
 
 This document should be updated after meaningful merged milestones.
 
+---
+
 ## 2. Project Identity
 
 - Project name: OpenEMR IM Core
-- Repository: DrMohammed2024/openemr-im-core
+- Repository: `DrMohammed2024/openemr-im-core`
 - Base system: Controlled OpenEMR fork
 - Current clinical focus: Internal Medicine Follow-Up V1
+- Current layout ID: `LBFim_followup_v1`
 - Current build method: OpenEMR LBF-first customization
 - Current execution style: small controlled documentation PRs
+
+---
 
 ## 3. Standing Project Principles
 
@@ -31,9 +36,13 @@ The project follows these principles:
 - No sensitive logs in GitHub
 - No database dumps in GitHub
 - No production-readiness claim without completed evidence gates
+- No clinical validation claim without formal review evidence
+- No clean-install reproducibility claim until clean-install evidence exists
 - No commercial deployment claim without legal, privacy, security, and clinical review
 - Runtime LBF configuration must later be converted to seed/script before scalable deployment
 - Preferred future deployment model: independent instance per clinic, center, or hospital
+
+---
 
 ## 4. Current Verified Clinical MVP
 
@@ -46,12 +55,12 @@ The current completed clinical MVP is:
 - Clinical validation: Not claimed
 - Clean-install reproducibility: Not yet verified
 - Seed/script implementation: Not yet implemented
-- Seed script draft: Documented
-- Clean install validation evidence template: Documented
 
-## 5. Verified Metadata Baseline
+---
 
-The current documented metadata baseline is:
+## 5. Current Verified Metadata Baseline
+
+The current verified metadata baseline is:
 
 ```text
 form_id: LBFim_followup_v1

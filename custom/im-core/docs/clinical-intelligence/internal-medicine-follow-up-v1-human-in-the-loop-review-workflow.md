@@ -4,11 +4,16 @@
 
 Documentation-only.
 
-No runtime implementation.  
-No SQL.  
-No OpenEMR core changes.  
-No autonomous clinical decision support.  
-No clinical validation claim.  
+No runtime implementation.
+
+No SQL.
+
+No OpenEMR core changes.
+
+No autonomous clinical decision support.
+
+No clinical validation claim.
+
 No production-readiness claim.
 
 ---

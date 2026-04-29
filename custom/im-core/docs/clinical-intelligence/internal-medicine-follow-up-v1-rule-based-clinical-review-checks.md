@@ -104,7 +104,7 @@ All future rule-based checks must be:
 - traceable to source field categories
 - clinician-reviewed
 - auditable
-- overrideable with reason
+- overridable with reason
 - markable as false positive
 - non-autonomous
 - non-prescriptive

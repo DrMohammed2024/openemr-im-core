@@ -8,9 +8,7 @@ It is intended to help future AI-assisted sessions, maintainers, and reviewers c
 
 This document should be updated after meaningful merged milestones.
 
-This document is a project-state source of truth for planning and documentation continuity only.
-
-It does not claim production readiness, clinical validation, regulatory compliance, cybersecurity certification, commercial deployment readiness, or clean-install reproducibility.
+This document is a project-state source of truth for planning and documentation continuity only. It does not claim production readiness, clinical validation, regulatory compliance, cybersecurity certification, commercial deployment readiness, medical-device readiness, or clean-install reproducibility.
 
 ---
 
@@ -52,7 +50,6 @@ The project follows these principles:
 - No clean-install reproducibility claim until clean-install evidence exists
 - No regulatory compliance claim without formal compliance review
 - No cybersecurity certification claim without formal security evidence
-- No autonomous clinical decision support
 - No predictive AI implementation before governance, validation, bias review, monitoring, and human-in-the-loop controls
 - Runtime LBF configuration must later be converted to seed/script before scalable deployment
 - Preferred future deployment model: independent instance per clinic, center, or hospital

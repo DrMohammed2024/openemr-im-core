@@ -210,7 +210,119 @@ These prohibitions apply unless and until future governance, clinical safety rev
 
 ---
 
-## 8. Initial Safety Hazards
+## 8. Current Clinical Scope Boundary
+
+Current clinical scope is limited to documentation-stage planning for adult, stable, outpatient Internal Medicine follow-up workflows in a non-emergency clinic setting.
+
+This does not authorize clinical use.
+
+This does not authorize runtime deployment.
+
+This does not authorize emergency, inpatient, pediatric, obstetric, surgical, ICU, or acute triage use.
+
+This scope boundary is intended to prevent misunderstanding of the current documentation-stage safety case as a clinical deployment, runtime workflow, or validated clinical system.
+
+---
+
+## 9. Safety Red Lines
+
+The following safety red lines apply at the current stage:
+
+- No autonomous diagnosis.
+- No medication prescribing.
+- No medication dose change.
+- No emergency triage.
+- No recommendation to stop therapy without clinician review.
+- No image interpretation.
+- No ECG or waveform interpretation.
+- No autonomous abnormal result classification.
+- No autonomous critical result triage.
+- No patient-facing AI.
+- No automated patient messaging.
+- No runtime AI.
+- No predictive model.
+- No FHIR/API implementation.
+- No frontend implementation.
+- No OpenEMR core-sensitive change.
+
+These red lines remain active unless future governance, evidence, traceability, risk review, clinical safety review, privacy/security review, validation planning, training, and release gates explicitly approve a new scope.
+
+---
+
+## 10. Human-in-the-Loop High-Level Boundary
+
+Any future clinical indicator, rule, prompt, or alert may only be presented to a responsible clinician for review.
+
+The system must not execute clinical action automatically.
+
+Critical safety-related prompts must not be dismissed in future runtime design without documented clinician rationale.
+
+Final responsibility remains with the responsible clinician.
+
+This section defines high-level human-in-the-loop principles only.
+
+It does not define user interface behavior, prompt workflow, acceptance workflow, rejection workflow, audit trail implementation, or runtime interaction design.
+
+Those details are intentionally deferred to later human factors and usability planning.
+
+---
+
+## 11. High-Risk Clinical Scenarios
+
+The following high-risk clinical scenarios require future analysis before any runtime use:
+
+- Alert fatigue.
+- Overreliance on unvalidated rules.
+- Conflict between system prompt and clinician judgment.
+- Critical result escalation ambiguity.
+- Missed follow-up or open loop.
+- False reassurance when no prompt appears.
+- Documentation burden causing lower-quality notes.
+- Ambiguous responsibility for reviewing prompts.
+- Delayed escalation due to workflow ambiguity.
+- Misinterpretation of documentation support as clinical decision support.
+
+These scenarios are documentation-stage safety planning items only.
+
+They do not establish validated mitigations.
+
+---
+
+## 12. False-Positive and Not-Useful Prompt Policy
+
+Future design should allow clinicians to mark a prompt as not useful or false positive, with documented rationale.
+
+No real PHI or real patient data may be collected for this purpose at the current stage.
+
+False-positive handling must preserve clinician authority and must not create pressure to follow system output.
+
+False-positive handling must not be used as evidence of clinical validation unless a future approved validation process exists.
+
+---
+
+## 13. Data Boundary for Future Rules
+
+Future rules, if approved, should be limited first to structured OpenEMR-native or Layout-Based Forms data elements.
+
+Free-text NLP remains out of scope.
+
+External data remains out of scope.
+
+FHIR/API integration remains out of scope.
+
+Image interpretation remains out of scope.
+
+ECG or waveform interpretation remains out of scope.
+
+Predictive analytics remains out of scope.
+
+Autonomous AI remains out of scope.
+
+Any future expansion beyond structured OpenEMR-native or LBF data elements requires separate governance, evidence, traceability, risk review, privacy/security review, clinical safety review, and release gate approval.
+
+---
+
+## 14. Initial Safety Hazards
 
 | Hazard ID | Hazard | Related Risk ID | Potential Impact | Current Control | Evidence Reference | Status |
 |---|---|---|---|---|---|---|
@@ -230,7 +342,7 @@ These prohibitions apply unless and until future governance, clinical safety rev
 
 ---
 
-## 9. Initial Safety Controls
+## 15. Initial Safety Controls
 
 | Control ID | Control | Related Hazard | Evidence Reference | Current Status | Limitation |
 |---|---|---|---|---|---|
@@ -249,7 +361,7 @@ These prohibitions apply unless and until future governance, clinical safety rev
 
 ---
 
-## 10. Safety Argument
+## 16. Safety Argument
 
 The current safety argument is:
 
@@ -276,7 +388,7 @@ It does not authorize clinical use.
 
 ---
 
-## 11. Evidence References
+## 17. Evidence References
 
 | Evidence ID | Evidence Artifact | Current Use in Safety Case | Limitation |
 |---|---|---|---|
@@ -295,7 +407,7 @@ It does not authorize clinical use.
 
 ---
 
-## 12. Relationship to PR #92
+## 18. Relationship to PR #92
 
 PR #92 created the Evidence Registry and Evidence Templates V0.1.
 
@@ -309,7 +421,7 @@ This clinical safety case does not replace the evidence registry.
 
 ---
 
-## 13. Relationship to PR #93
+## 19. Relationship to PR #93
 
 PR #93 created the Traceability Matrix V0.1.
 
@@ -321,7 +433,7 @@ It does not convert documentation-stage traceability into runtime verification o
 
 ---
 
-## 14. Relationship to PR #94
+## 20. Relationship to PR #94
 
 PR #94 created the Risk Register V0.1.
 
@@ -333,7 +445,7 @@ It does not prove that listed risk controls are implemented, clinically validate
 
 ---
 
-## 15. Relationship to PR #95
+## 21. Relationship to PR #95
 
 PR #95 created the Pull Request Template and Stop Rules V0.1.
 
@@ -347,7 +459,7 @@ It does not convert governance stop rules into runtime safety validation.
 
 ---
 
-## 16. Required Future Evidence
+## 22. Required Future Evidence
 
 Before any future runtime, demo, pilot, production, clinical, or commercial claim, the project would require future evidence such as:
 
@@ -370,7 +482,7 @@ These future evidence items do not authorize runtime implementation by themselve
 
 ---
 
-## 17. Safety Review Rules
+## 23. Safety Review Rules
 
 Clinical safety case entries must be reviewed for:
 
@@ -397,7 +509,7 @@ Any future clinical safety claim stronger than documentation-stage planning requ
 
 ---
 
-## 18. Risks of the Clinical Safety Case
+## 24. Risks of the Clinical Safety Case
 
 | Risk | Impact | Control |
 |---|---|---|
@@ -410,7 +522,7 @@ Any future clinical safety claim stronger than documentation-stage planning requ
 
 ---
 
-## 19. Definition of Done
+## 25. Definition of Done
 
 This document is complete when:
 
@@ -448,7 +560,7 @@ This document is complete when:
 
 ---
 
-## 20. After-Merge Action
+## 26. After-Merge Action
 
 After this PR is merged, the next planned documentation step is:
 
@@ -464,7 +576,7 @@ Do not start PR #97 until:
 
 ---
 
-## 21. Status
+## 27. Status
 
 Documentation-stage clinical safety case.
 

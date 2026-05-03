@@ -628,6 +628,4 @@ It does not claim:
 - Legal readiness.
 - Pilot authorization.
 - Production authorization.
-
 Any transition between phases requires documented review, explicit ownership, evidence, and a recorded gate decision.
-

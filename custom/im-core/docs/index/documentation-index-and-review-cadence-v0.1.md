@@ -221,6 +221,7 @@ Safety, privacy, security, and claims-sensitive documents require appropriate cr
 | #106 | Training and Support Package V0.1 | custom/im-core/docs/training/ | Training Owner / Support Owner | Approved for current stage |
 | #107 | Commercial Claims Policy and Claims Register V0.1 | custom/im-core/docs/claims/ | Claims Owner / Governance Owner | Approved for current stage |
 | #112 | CI Failure Handling and PR Merge Safety SOP V0.1 | custom/im-core/docs/governance/ci-failure-handling-and-pr-merge-safety-sop-v0.1.md | Governance Owner / Documentation Owner / Technical Owner | Approved for current stage |
+| #116 | Merge Readiness Checklist V0.1 | custom/im-core/docs/governance/merge-readiness-checklist-v0.1.md | Governance Owner / Documentation Owner / Release Owner | Approved for current stage |
 
 ---
 
@@ -245,6 +246,7 @@ Current dependency flow:
 15. Documentation index and review cadence organizes the documentation set.
 16. Gate review package should evaluate readiness to move to the next controlled phase.
 17. CI failure handling and PR merge safety SOP defines safe CI troubleshooting and merge discipline.
+18. Merge readiness checklist defines final pre-merge review criteria for scope, CI state, safety, privacy, and governance.
 
 ---
 

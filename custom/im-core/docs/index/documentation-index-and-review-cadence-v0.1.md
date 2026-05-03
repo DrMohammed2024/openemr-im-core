@@ -220,6 +220,7 @@ Safety, privacy, security, and claims-sensitive documents require appropriate cr
 | #105 | Synthetic Demo Data and Demo Boundary V0.1 | custom/im-core/docs/data-governance/ | Data Governance Owner / Privacy-Security Owner | Approved for current stage |
 | #106 | Training and Support Package V0.1 | custom/im-core/docs/training/ | Training Owner / Support Owner | Approved for current stage |
 | #107 | Commercial Claims Policy and Claims Register V0.1 | custom/im-core/docs/claims/ | Claims Owner / Governance Owner | Approved for current stage |
+| #112 | CI Failure Handling and PR Merge Safety SOP V0.1 | custom/im-core/docs/governance/ci-failure-handling-and-pr-merge-safety-sop-v0.1.md | Governance Owner / Documentation Owner / Technical Owner | Approved for current stage |
 
 ---
 
@@ -243,6 +244,7 @@ Current dependency flow:
 14. Commercial claims policy controls internal and external claims.
 15. Documentation index and review cadence organizes the documentation set.
 16. Gate review package should evaluate readiness to move to the next controlled phase.
+17. CI failure handling and PR merge safety SOP defines safe CI troubleshooting and merge discipline.
 
 ---
 

@@ -226,6 +226,7 @@ Safety, privacy, security, and claims-sensitive documents require appropriate cr
 | #120 | Data Flow Diagram Level 0 Plan V0.1 | custom/im-core/docs/architecture/data-flow-diagram-level-0-plan-v0.1.md | Technical Owner / Architecture Reviewer / Governance Owner | Approved for current stage |
 | #122 | Trust Boundary Register V0.1 | custom/im-core/docs/architecture/trust-boundary-register-v0.1.md | Technical Owner / Architecture Reviewer / Governance Owner | Approved for current stage |
 | #124 | Component Inventory V0.1 | custom/im-core/docs/architecture/component-inventory-v0.1.md | Technical Owner / Architecture Reviewer / Governance Owner | Approved for current stage |
+| #126 | Runtime Boundary Specification V0.1 | custom/im-core/docs/architecture/runtime-boundary-specification-v0.1.md | Technical Owner / Architecture Reviewer / Governance Owner | Approved for current stage |
 
 ---
 
@@ -255,6 +256,7 @@ Current dependency flow:
 20. Data flow diagram level 0 plan defines high-level data flows, candidate data stores, PHI boundaries, trust boundaries, AI data boundaries, FHIR/API boundaries, and security/audit boundaries.
 21. Trust boundary register identifies planned trust boundaries across documentation, local development, CI, OpenEMR customization, synthetic data, future database, audit/security, API/FHIR, AI, clinical use, claims, secrets, and evidence boundaries.
 22. Component inventory identifies documented-only and future-phase components, owner roles, related boundaries, implementation status, and required controls before implementation.
+23. Runtime boundary specification defines runtime constraints, OpenEMR core-sensitive boundaries, customization boundaries, non-production runtime boundaries, dependency boundaries, database/API/FHIR/AI/frontend runtime boundaries, audit/security boundaries, rollback expectations, and runtime implementation entry criteria.
 
 ---
 

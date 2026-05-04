@@ -227,6 +227,7 @@ Safety, privacy, security, and claims-sensitive documents require appropriate cr
 | #122 | Trust Boundary Register V0.1 | custom/im-core/docs/architecture/trust-boundary-register-v0.1.md | Technical Owner / Architecture Reviewer / Governance Owner | Approved for current stage |
 | #124 | Component Inventory V0.1 | custom/im-core/docs/architecture/component-inventory-v0.1.md | Technical Owner / Architecture Reviewer / Governance Owner | Approved for current stage |
 | #126 | Runtime Boundary Specification V0.1 | custom/im-core/docs/architecture/runtime-boundary-specification-v0.1.md | Technical Owner / Architecture Reviewer / Governance Owner | Approved for current stage |
+| #128 | Database Boundary and Migration Policy V0.1 | custom/im-core/docs/architecture/database-boundary-and-migration-policy-v0.1.md | Technical Owner / Architecture Reviewer / Data Governance Owner | Approved for current stage |
 
 ---
 
@@ -257,6 +258,7 @@ Current dependency flow:
 21. Trust boundary register identifies planned trust boundaries across documentation, local development, CI, OpenEMR customization, synthetic data, future database, audit/security, API/FHIR, AI, clinical use, claims, secrets, and evidence boundaries.
 22. Component inventory identifies documented-only and future-phase components, owner roles, related boundaries, implementation status, and required controls before implementation.
 23. Runtime boundary specification defines runtime constraints, OpenEMR core-sensitive boundaries, customization boundaries, non-production runtime boundaries, dependency boundaries, database/API/FHIR/AI/frontend runtime boundaries, audit/security boundaries, rollback expectations, and runtime implementation entry criteria.
+24. Database boundary and migration policy defines database boundaries, data classification rules, migration expectations, rollback expectations, backup/restore expectations, synthetic data boundaries, PHI restrictions, and database implementation entry criteria.
 
 ---
 

@@ -230,6 +230,7 @@ Safety, privacy, security, and claims-sensitive documents require appropriate cr
 | #128 | Database Boundary and Migration Policy V0.1 | custom/im-core/docs/architecture/database-boundary-and-migration-policy-v0.1.md | Technical Owner / Architecture Reviewer / Data Governance Owner | Approved for current stage |
 | #130 | API/FHIR Boundary Specification V0.1 | custom/im-core/docs/architecture/api-fhir-boundary-specification-v0.1.md | Technical Owner / Architecture Reviewer / Privacy-Security Owner | Approved for current stage |
 | #132 | AI Clinical Support Boundary Specification V0.1 | custom/im-core/docs/architecture/ai-clinical-support-boundary-specification-v0.1.md | Technical Owner / Architecture Reviewer / Privacy-Security Owner / Clinical Safety Owner / AI Governance Owner | Approved for current stage |
+| #134 | Internal Medicine Workflow Specification Template V0.1 | custom/im-core/docs/clinical-workflows/internal-medicine-workflow-specification-template-v0.1.md | Technical Owner / Documentation Owner / Internal Medicine Clinical Reviewer / Clinical Safety Owner / Privacy-Security Owner | Approved for current stage |
 
 ---
 
@@ -263,6 +264,7 @@ Current dependency flow:
 24. Database boundary and migration policy defines database boundaries, data classification rules, migration expectations, rollback expectations, backup/restore expectations, synthetic data boundaries, PHI restrictions, and database implementation entry criteria.
 25. API/FHIR boundary specification defines API/FHIR boundaries, authentication and authorization expectations, audit expectations, data boundary rules, synthetic data rules, error handling expectations, external integration boundaries, and API/FHIR implementation entry criteria.
 26. AI clinical support boundary specification defines physician-supervised AI boundaries, draft-only output expectations, prompt governance expectations, AI audit and traceability expectations, data minimization, de-identification, logging, external LLM/API boundaries, failure handling, and AI implementation entry criteria.
+27. Internal medicine workflow specification template defines the required structure for future Internal Medicine workflows, including clinical context, intended users, patient data boundaries, workflow steps, decision points, red flags, safety-netting, physician review checkpoints, AI/API/FHIR/database/OpenEMR boundaries, audit expectations, privacy/security expectations, failure modes, fallback, validation prerequisites, and traceability expectations.
 
 ---
 

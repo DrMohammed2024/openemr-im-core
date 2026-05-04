@@ -228,6 +228,7 @@ Safety, privacy, security, and claims-sensitive documents require appropriate cr
 | #124 | Component Inventory V0.1 | custom/im-core/docs/architecture/component-inventory-v0.1.md | Technical Owner / Architecture Reviewer / Governance Owner | Approved for current stage |
 | #126 | Runtime Boundary Specification V0.1 | custom/im-core/docs/architecture/runtime-boundary-specification-v0.1.md | Technical Owner / Architecture Reviewer / Governance Owner | Approved for current stage |
 | #128 | Database Boundary and Migration Policy V0.1 | custom/im-core/docs/architecture/database-boundary-and-migration-policy-v0.1.md | Technical Owner / Architecture Reviewer / Data Governance Owner | Approved for current stage |
+| #130 | API/FHIR Boundary Specification V0.1 | custom/im-core/docs/architecture/api-fhir-boundary-specification-v0.1.md | Technical Owner / Architecture Reviewer / Privacy-Security Owner | Approved for current stage |
 
 ---
 
@@ -259,6 +260,7 @@ Current dependency flow:
 22. Component inventory identifies documented-only and future-phase components, owner roles, related boundaries, implementation status, and required controls before implementation.
 23. Runtime boundary specification defines runtime constraints, OpenEMR core-sensitive boundaries, customization boundaries, non-production runtime boundaries, dependency boundaries, database/API/FHIR/AI/frontend runtime boundaries, audit/security boundaries, rollback expectations, and runtime implementation entry criteria.
 24. Database boundary and migration policy defines database boundaries, data classification rules, migration expectations, rollback expectations, backup/restore expectations, synthetic data boundaries, PHI restrictions, and database implementation entry criteria.
+25. API/FHIR boundary specification defines API/FHIR boundaries, authentication and authorization expectations, audit expectations, data boundary rules, synthetic data rules, error handling expectations, external integration boundaries, and API/FHIR implementation entry criteria.
 
 ---
 

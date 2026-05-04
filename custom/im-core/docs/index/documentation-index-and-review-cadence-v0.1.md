@@ -224,6 +224,7 @@ Safety, privacy, security, and claims-sensitive documents require appropriate cr
 | #116 | Merge Readiness Checklist V0.1 | custom/im-core/docs/governance/merge-readiness-checklist-v0.1.md | Governance Owner / Documentation Owner / Release Owner | Approved for current stage |
 | #118 | System Context Diagram Plan V0.1 | custom/im-core/docs/architecture/system-context-diagram-plan-v0.1.md | Technical Owner / Architecture Reviewer / Governance Owner | Approved for current stage |
 | #120 | Data Flow Diagram Level 0 Plan V0.1 | custom/im-core/docs/architecture/data-flow-diagram-level-0-plan-v0.1.md | Technical Owner / Architecture Reviewer / Governance Owner | Approved for current stage |
+| #122 | Trust Boundary Register V0.1 | custom/im-core/docs/architecture/trust-boundary-register-v0.1.md | Technical Owner / Architecture Reviewer / Governance Owner | Approved for current stage |
 
 ---
 
@@ -251,6 +252,7 @@ Current dependency flow:
 18. Merge readiness checklist defines final pre-merge review criteria for scope, CI state, safety, privacy, and governance.
 19. System context diagram plan defines high-level actors, external systems, OpenEMR boundaries, data boundaries, AI boundaries, FHIR/API boundaries, and non-production boundaries.
 20. Data flow diagram level 0 plan defines high-level data flows, candidate data stores, PHI boundaries, trust boundaries, AI data boundaries, FHIR/API boundaries, and security/audit boundaries.
+21. Trust boundary register identifies planned trust boundaries across documentation, local development, CI, OpenEMR customization, synthetic data, future database, audit/security, API/FHIR, AI, clinical use, claims, secrets, and evidence boundaries.
 
 ---
 

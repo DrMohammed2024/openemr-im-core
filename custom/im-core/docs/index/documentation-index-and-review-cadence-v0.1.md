@@ -233,6 +233,7 @@ Safety, privacy, security, and claims-sensitive documents require appropriate cr
 | #134 | Internal Medicine Workflow Specification Template V0.1 | custom/im-core/docs/clinical-workflows/internal-medicine-workflow-specification-template-v0.1.md | Technical Owner / Documentation Owner / Internal Medicine Clinical Reviewer / Clinical Safety Owner / Privacy-Security Owner | Approved for current stage |
 | #136 | Internal Medicine Visit Documentation Workflow V0.1 | custom/im-core/docs/clinical-workflows/internal-medicine-visit-documentation-workflow-v0.1.md | Technical Owner / Documentation Owner / Internal Medicine Clinical Reviewer / Clinical Safety Owner / Privacy-Security Owner | Approved for current stage |
 | #138 | Workflow Risk Mapping for Internal Medicine Visit Documentation V0.1 | custom/im-core/docs/risk/workflow-risk-mapping-internal-medicine-visit-documentation-v0.1.md | Technical Owner / Documentation Owner / Internal Medicine Clinical Reviewer / Clinical Safety Owner / Privacy-Security Owner / Risk Owner | Approved for current stage |
+| #140 | Clinical AI Governance and Scientific Evaluation Framework V0.1 | custom/im-core/docs/governance/clinical-ai-governance-and-scientific-evaluation-framework-v0.1.md | Governance Owner / Documentation Owner / Technical Owner / Architecture Reviewer / Privacy-Security Owner / Clinical Safety Owner / Internal Medicine Clinical Reviewer / AI Governance Owner / Risk Owner | Approved for current stage |
 
 ---
 
@@ -269,6 +270,7 @@ Current dependency flow:
 27. Internal medicine workflow specification template defines the required structure for future Internal Medicine workflows, including clinical context, intended users, patient data boundaries, workflow steps, decision points, red flags, safety-netting, physician review checkpoints, AI/API/FHIR/database/OpenEMR boundaries, audit expectations, privacy/security expectations, failure modes, fallback, validation prerequisites, and traceability expectations.
 28. Internal medicine visit documentation workflow defines planning-only visit documentation flow, including visit context, inputs, outputs, workflow steps, decision points, red flags, safety-netting, physician review checkpoints, AI/API/FHIR/database/OpenEMR boundaries, audit expectations, privacy/security expectations, failure modes, fallback, validation prerequisites, and traceability expectations.
 29. Workflow risk mapping for internal medicine visit documentation maps workflow-specific risks, including clinical safety, privacy/security, AI boundary, API/FHIR, database, OpenEMR customization, audit, local protocol, human factors, unsupported readiness claims, stop rules, current controls, future required controls, and traceability expectations.
+30. Clinical AI governance and scientific evaluation framework defines documentation-stage human-supervised review, scoring, GO / CONDITIONAL GO / NO-GO / DEFER decisions, scientific validity review, evidence-awareness review, clinical safety review, privacy/security review, AI boundary review, workflow integrity review, traceability review, implementation readiness scoring, reviewer roles, and stop-rule enforcement.
 
 ---
 

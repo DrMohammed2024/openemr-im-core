@@ -239,6 +239,7 @@ Safety, privacy, security, and claims-sensitive documents require appropriate cr
 | #146 | AI-Output Evaluation Checklist V0.1 | custom/im-core/docs/governance/ai-output-evaluation-checklist-v0.1.md | Governance Owner / Documentation Owner / Technical Owner / Privacy-Security Owner / Clinical Safety Owner / AI Governance Owner / Risk Owner | Approved for current stage |
 | #148 | Sandbox Readiness Criteria for AI-Assisted Workflows V0.1 | custom/im-core/docs/governance/sandbox-readiness-criteria-for-ai-assisted-workflows-v0.1.md | Governance Owner / Documentation Owner / Technical Owner / Architecture Reviewer / Privacy-Security Owner / Clinical Safety Owner / AI Governance Owner / Risk Owner / Operations Owner | Approved for current stage |
 | #150 | Synthetic Test Data Policy V0.1 | custom/im-core/docs/governance/synthetic-test-data-policy-v0.1.md | Governance Owner / Documentation Owner / Technical Owner / Privacy-Security Owner / Clinical Safety Owner / AI Governance Owner / Risk Owner / Operations Owner | Approved for current stage |
+| #152 | AI-Assisted Governance Review Procedure V0.1 | custom/im-core/docs/governance/ai-assisted-governance-review-procedure-v0.1.md | Governance Owner / Documentation Owner / Technical Owner / Privacy-Security Owner / Clinical Safety Owner / Internal Medicine Clinical Reviewer / AI Governance Owner / Risk Owner / Operations Owner | Approved for current stage |
 
 ---
 

@@ -237,6 +237,7 @@ Safety, privacy, security, and claims-sensitive documents require appropriate cr
 | #142 | Governance Review Checklist for Pull Requests V0.1 | custom/im-core/docs/governance/governance-review-checklist-for-pull-requests-v0.1.md | Governance Owner / Documentation Owner / Technical Owner / Privacy-Security Owner / Clinical Safety Owner / AI Governance Owner / Risk Owner / Operations Owner | Approved for current stage |
 | #144 | Prompt Governance and AI-Output Review Policy V0.1 | custom/im-core/docs/governance/prompt-governance-and-ai-output-review-policy-v0.1.md | Governance Owner / Documentation Owner / Technical Owner / Privacy-Security Owner / Clinical Safety Owner / AI Governance Owner / Risk Owner | Approved for current stage |
 | #146 | AI-Output Evaluation Checklist V0.1 | custom/im-core/docs/governance/ai-output-evaluation-checklist-v0.1.md | Governance Owner / Documentation Owner / Technical Owner / Privacy-Security Owner / Clinical Safety Owner / AI Governance Owner / Risk Owner | Approved for current stage |
+| #148 | Sandbox Readiness Criteria for AI-Assisted Workflows V0.1 | custom/im-core/docs/governance/sandbox-readiness-criteria-for-ai-assisted-workflows-v0.1.md | Governance Owner / Documentation Owner / Technical Owner / Architecture Reviewer / Privacy-Security Owner / Clinical Safety Owner / AI Governance Owner / Risk Owner / Operations Owner | Approved for current stage |
 
 ---
 
@@ -277,6 +278,7 @@ Current dependency flow:
 31. Governance review checklist for pull requests operationalizes the clinical AI governance and scientific evaluation framework for PR review, including scope checks, documentation-only checks, PHI/secrets checks, runtime/API/FHIR/SQL/database/OpenEMR core checks, AI/prompt/model checks, clinical safety checks, evidence/readiness claim checks, reviewer roles, decision model, merge criteria, and after-merge verification.
 32. Prompt governance and AI-output review policy defines documentation-stage controls for future prompt proposals, AI-assisted drafting concepts, AI-output review planning, prohibited prompt content, human supervision, clinical safety review, evidence and claim control, privacy/security requirements, NO-GO stop rules, and GO / CONDITIONAL GO / NO-GO / DEFER decisions.
 33. AI-output evaluation checklist operationalizes prompt governance and AI-output review policy for future AI-output concepts, including draft-only review, clinical safety review, privacy/security review, evidence and claim review, human supervision, traceability review, NO-GO stop rules, and GO / CONDITIONAL GO / NO-GO / DEFER decisions.
+34. Sandbox readiness criteria for AI-assisted workflows defines documentation-stage prerequisites for future sandbox planning, including synthetic-data-only requirements, isolation from production systems, AI boundary requirements, prompt and AI-output review requirements, clinical safety review, privacy/security review, technical readiness expectations, human supervision, NO-GO stop rules, and GO / CONDITIONAL GO / NO-GO / DEFER readiness decisions.
 
 ---
 

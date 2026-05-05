@@ -234,6 +234,7 @@ Safety, privacy, security, and claims-sensitive documents require appropriate cr
 | #136 | Internal Medicine Visit Documentation Workflow V0.1 | custom/im-core/docs/clinical-workflows/internal-medicine-visit-documentation-workflow-v0.1.md | Technical Owner / Documentation Owner / Internal Medicine Clinical Reviewer / Clinical Safety Owner / Privacy-Security Owner | Approved for current stage |
 | #138 | Workflow Risk Mapping for Internal Medicine Visit Documentation V0.1 | custom/im-core/docs/risk/workflow-risk-mapping-internal-medicine-visit-documentation-v0.1.md | Technical Owner / Documentation Owner / Internal Medicine Clinical Reviewer / Clinical Safety Owner / Privacy-Security Owner / Risk Owner | Approved for current stage |
 | #140 | Clinical AI Governance and Scientific Evaluation Framework V0.1 | custom/im-core/docs/governance/clinical-ai-governance-and-scientific-evaluation-framework-v0.1.md | Governance Owner / Documentation Owner / Technical Owner / Architecture Reviewer / Privacy-Security Owner / Clinical Safety Owner / Internal Medicine Clinical Reviewer / AI Governance Owner / Risk Owner | Approved for current stage |
+| #142 | Governance Review Checklist for Pull Requests V0.1 | custom/im-core/docs/governance/governance-review-checklist-for-pull-requests-v0.1.md | Governance Owner / Documentation Owner / Technical Owner / Privacy-Security Owner / Clinical Safety Owner / AI Governance Owner / Risk Owner / Operations Owner | Approved for current stage |
 
 ---
 
@@ -271,6 +272,7 @@ Current dependency flow:
 28. Internal medicine visit documentation workflow defines planning-only visit documentation flow, including visit context, inputs, outputs, workflow steps, decision points, red flags, safety-netting, physician review checkpoints, AI/API/FHIR/database/OpenEMR boundaries, audit expectations, privacy/security expectations, failure modes, fallback, validation prerequisites, and traceability expectations.
 29. Workflow risk mapping for internal medicine visit documentation maps workflow-specific risks, including clinical safety, privacy/security, AI boundary, API/FHIR, database, OpenEMR customization, audit, local protocol, human factors, unsupported readiness claims, stop rules, current controls, future required controls, and traceability expectations.
 30. Clinical AI governance and scientific evaluation framework defines documentation-stage human-supervised review, scoring, GO / CONDITIONAL GO / NO-GO / DEFER decisions, scientific validity review, evidence-awareness review, clinical safety review, privacy/security review, AI boundary review, workflow integrity review, traceability review, implementation readiness scoring, reviewer roles, and stop-rule enforcement.
+31. Governance review checklist for pull requests operationalizes the clinical AI governance and scientific evaluation framework for PR review, including scope checks, documentation-only checks, PHI/secrets checks, runtime/API/FHIR/SQL/database/OpenEMR core checks, AI/prompt/model checks, clinical safety checks, evidence/readiness claim checks, reviewer roles, decision model, merge criteria, and after-merge verification.
 
 ---
 

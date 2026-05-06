@@ -259,6 +259,10 @@ Safety, privacy, security, and claims-sensitive documents require appropriate cr
 | #INDEX-AUDIT | Follow-up, Open Loops, and Safety-Net Workflow Plans V0.1 | custom/im-core/docs/workflows/follow-up-open-loops-and-safety-net-workflow-plans-v0.1.md | Documentation Owner / Operations Owner / Internal Medicine Clinical Reviewer / Clinical Safety Owner / Risk Owner | Approved for current stage |
 | #INDEX-AUDIT | Lab Results and Critical Results Workflow Plans V0.1 | custom/im-core/docs/workflows/lab-results-and-critical-results-workflow-plans-v0.1.md | Documentation Owner / Operations Owner / Internal Medicine Clinical Reviewer / Clinical Safety Owner / Risk Owner | Approved for current stage |
 | #INDEX-AUDIT | Pharmacy, Billing, and Administrative Linkage Plans V0.1 | custom/im-core/docs/workflows/pharmacy-billing-and-administrative-linkage-plans-v0.1.md | Documentation Owner / Operations Owner / Internal Medicine Clinical Reviewer / Technical Owner / Risk Owner | Approved for current stage |
+| #INDEX-AUDIT | Data Model Starter and OpenEMR Mapping V0.1 | custom/im-core/docs/data-model/data-model-starter-and-openemr-mapping-v0.1.md | Documentation Owner / Technical Owner / Data Governance Owner / Architecture Reviewer / Risk Owner | Approved for current stage |
+| #INDEX-AUDIT | Daily Operating Model and Patient Status Model V0.1 | custom/im-core/docs/operations/daily-operating-model-and-patient-status-model-v0.1.md | Operations Owner / Documentation Owner / Internal Medicine Clinical Reviewer / Clinical Safety Owner / Risk Owner | Approved for current stage |
+| #INDEX-AUDIT | Current Project State | custom/im-core/docs/project-state/current-project-state.md | Governance Owner / Documentation Owner / Technical Owner / Operations Owner / Risk Owner | Approved for current stage |
+| #INDEX-AUDIT | SOP Framework V0.1 | custom/im-core/docs/sops/sop-framework-v0.1.md | Operations Owner / Documentation Owner / Governance Owner / Clinical Safety Owner / Privacy-Security Owner / Risk Owner | Approved for current stage |
 
 ---
 

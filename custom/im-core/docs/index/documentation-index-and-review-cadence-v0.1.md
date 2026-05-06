@@ -253,6 +253,8 @@ Safety, privacy, security, and claims-sensitive documents require appropriate cr
 | #INDEX-AUDIT | Failure Modes and Safe Response Library V0.1 | custom/im-core/docs/validation/failure-modes-and-safe-response-library-v0.1.md | Risk Owner / Clinical Safety Owner / Technical Owner / Documentation Owner | Approved for current stage |
 | #INDEX-AUDIT | Regulatory and CDS Boundary Statement V0.1 | custom/im-core/docs/regulatory/regulatory-and-cds-boundary-statement-v0.1.md | Governance Owner / Regulatory Owner / Clinical Safety Owner / Technical Owner / Documentation Owner | Approved for current stage |
 | #INDEX-AUDIT | No-PHI and Safe Repository Development Policy V0.1 | custom/im-core/docs/security-privacy/no-phi-safe-repository-development-policy-v0.1.md | Privacy-Security Owner / Governance Owner / Documentation Owner / Technical Owner | Approved for current stage |
+| #INDEX-AUDIT | Clinical Documentation Quality Rules V0.1 | custom/im-core/docs/clinical-quality/clinical-documentation-quality-rules-v0.1.md | Documentation Owner / Clinical Safety Owner / Internal Medicine Clinical Reviewer / Quality Owner / Risk Owner | Approved for current stage |
+| #INDEX-AUDIT | Internal Medicine Follow-Up V1 Clinical Review Checklist | custom/im-core/docs/clinical-review/internal-medicine-follow-up-v1-clinical-review-checklist.md | Internal Medicine Clinical Reviewer / Clinical Safety Owner / Documentation Owner / Quality Owner | Approved for current stage |
 
 ---
 

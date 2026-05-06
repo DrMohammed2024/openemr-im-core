@@ -255,6 +255,10 @@ Safety, privacy, security, and claims-sensitive documents require appropriate cr
 | #INDEX-AUDIT | No-PHI and Safe Repository Development Policy V0.1 | custom/im-core/docs/security-privacy/no-phi-safe-repository-development-policy-v0.1.md | Privacy-Security Owner / Governance Owner / Documentation Owner / Technical Owner | Approved for current stage |
 | #INDEX-AUDIT | Clinical Documentation Quality Rules V0.1 | custom/im-core/docs/clinical-quality/clinical-documentation-quality-rules-v0.1.md | Documentation Owner / Clinical Safety Owner / Internal Medicine Clinical Reviewer / Quality Owner / Risk Owner | Approved for current stage |
 | #INDEX-AUDIT | Internal Medicine Follow-Up V1 Clinical Review Checklist | custom/im-core/docs/clinical-review/internal-medicine-follow-up-v1-clinical-review-checklist.md | Internal Medicine Clinical Reviewer / Clinical Safety Owner / Documentation Owner / Quality Owner | Approved for current stage |
+| #INDEX-AUDIT | Core Clinic Workflow Plans V0.1 | custom/im-core/docs/workflows/core-clinic-workflow-plans-v0.1.md | Documentation Owner / Operations Owner / Internal Medicine Clinical Reviewer / Clinical Safety Owner / Risk Owner | Approved for current stage |
+| #INDEX-AUDIT | Follow-up, Open Loops, and Safety-Net Workflow Plans V0.1 | custom/im-core/docs/workflows/follow-up-open-loops-and-safety-net-workflow-plans-v0.1.md | Documentation Owner / Operations Owner / Internal Medicine Clinical Reviewer / Clinical Safety Owner / Risk Owner | Approved for current stage |
+| #INDEX-AUDIT | Lab Results and Critical Results Workflow Plans V0.1 | custom/im-core/docs/workflows/lab-results-and-critical-results-workflow-plans-v0.1.md | Documentation Owner / Operations Owner / Internal Medicine Clinical Reviewer / Clinical Safety Owner / Risk Owner | Approved for current stage |
+| #INDEX-AUDIT | Pharmacy, Billing, and Administrative Linkage Plans V0.1 | custom/im-core/docs/workflows/pharmacy-billing-and-administrative-linkage-plans-v0.1.md | Documentation Owner / Operations Owner / Internal Medicine Clinical Reviewer / Technical Owner / Risk Owner | Approved for current stage |
 
 ---
 

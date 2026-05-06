@@ -245,6 +245,7 @@ Safety, privacy, security, and claims-sensitive documents require appropriate cr
 | #158 | Traceability Matrix Policy V0.1 | custom/im-core/docs/governance/traceability-matrix-policy-v0.1.md | Governance Owner / Documentation Owner / Technical Owner / Architecture Reviewer / Privacy-Security Owner / Clinical Safety Owner / Internal Medicine Clinical Reviewer / AI Governance Owner / Risk Owner / Operations Owner | Approved for current stage |
 | #160 | Risk Register Structure V0.1 | custom/im-core/docs/governance/risk-register-structure-v0.1.md | Governance Owner / Documentation Owner / Technical Owner / Architecture Reviewer / Privacy-Security Owner / Clinical Safety Owner / Internal Medicine Clinical Reviewer / AI Governance Owner / Risk Owner / Operations Owner | Approved for current stage |
 | #162 | Clinical Safety Case Structure V0.1 | custom/im-core/docs/governance/clinical-safety-case-structure-v0.1.md | Governance Owner / Documentation Owner / Technical Owner / Architecture Reviewer / Privacy-Security Owner / Clinical Safety Owner / Internal Medicine Clinical Reviewer / AI Governance Owner / Risk Owner / Operations Owner | Approved for current stage |
+| #164 | Evidence and Claim-Control Register V0.1 | custom/im-core/docs/governance/evidence-and-claim-control-register-v0.1.md | Governance Owner / Documentation Owner / Technical Owner / Architecture Reviewer / Privacy-Security Owner / Clinical Safety Owner / Internal Medicine Clinical Reviewer / AI Governance Owner / Risk Owner / Operations Owner | Approved for current stage |
 
 ---
 

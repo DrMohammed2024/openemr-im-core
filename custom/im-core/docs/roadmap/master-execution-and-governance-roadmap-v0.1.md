@@ -595,6 +595,22 @@ The project must preserve:
 
 ---
 
+## 13A. Recent Governance Control Dependencies
+
+The roadmap should be interpreted together with the following recently added governance controls:
+
+| Governance control | File path | Roadmap relevance |
+|---|---|---|
+| Decision Automation Boundary Policy V0.1 | custom/im-core/docs/governance/decision-automation-boundary-policy-v0.1.md | Preserves human accountability and prevents automated approval, automated risk acceptance, automated clinical safety approval, and automated merge readiness decisions. |
+| Traceability Matrix Policy V0.1 | custom/im-core/docs/governance/traceability-matrix-policy-v0.1.md | Defines documentation-stage traceability expectations linking PRs, documents, risks, controls, reviewer roles, findings, decisions, merge status, and Documentation Index updates. |
+| Risk Register Structure V0.1 | custom/im-core/docs/governance/risk-register-structure-v0.1.md | Defines the structure for future risk records, risk ownership, residual-risk review, and human-owned risk acceptance without claiming ISO 14971 compliance. |
+| Clinical Safety Case Structure V0.1 | custom/im-core/docs/governance/clinical-safety-case-structure-v0.1.md | Defines the documentation-stage structure for clinical safety claims, assumptions, hazards, controls, evidence needs, reviewer roles, and safety conclusions without claiming clinical validation or clinical-use authorization. |
+| Evidence and Claim-Control Register V0.1 | custom/im-core/docs/governance/evidence-and-claim-control-register-v0.1.md | Controls project claims, evidence strength, prohibited wording, overclaiming risk, and human-owned claim acceptance. |
+
+These controls do not authorize runtime implementation, AI implementation, prompt execution, model integration, API/FHIR implementation, SQL, database migrations, OpenEMR core behavior changes, clinical validation, production readiness, regulatory compliance, cybersecurity certification, or clinical use.
+
+They strengthen roadmap governance by clarifying that future progression requires evidence, traceability, risk review, clinical safety review, privacy/security review, technical review, human approval, and GitHub checks showing 0 failing and 0 pending.
+
 ## 14. Roadmap Maintenance and Review Cadence
 
 This roadmap should be reviewed when:

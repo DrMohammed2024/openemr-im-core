@@ -176,7 +176,7 @@ OpenEMR IM Core must not claim runtime Clinical Decision Support readiness unles
 
 - intended use is defined
 - clinical safety boundary exists
-- human-in-the-loop workflow is implemented
+- human-in-the-loop workflow is documented for future planning
 - source data is traceable
 - audit trail is implemented
 - validation evidence exists

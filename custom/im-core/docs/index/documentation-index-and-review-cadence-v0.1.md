@@ -263,6 +263,8 @@ Safety, privacy, security, and claims-sensitive documents require appropriate cr
 | #INDEX-AUDIT | Daily Operating Model and Patient Status Model V0.1 | custom/im-core/docs/operations/daily-operating-model-and-patient-status-model-v0.1.md | Operations Owner / Documentation Owner / Internal Medicine Clinical Reviewer / Clinical Safety Owner / Risk Owner | Approved for current stage |
 | #INDEX-AUDIT | Current Project State | custom/im-core/docs/project-state/current-project-state.md | Governance Owner / Documentation Owner / Technical Owner / Operations Owner / Risk Owner | Approved for current stage |
 | #INDEX-AUDIT | SOP Framework V0.1 | custom/im-core/docs/sops/sop-framework-v0.1.md | Operations Owner / Documentation Owner / Governance Owner / Clinical Safety Owner / Privacy-Security Owner / Risk Owner | Approved for current stage |
+| #INDEX-AUDIT | Golden Catalog Gap Assessment V0.1 | custom/im-core/docs/golden-catalog-alignment/golden-catalog-gap-assessment-v0.1.md | Governance Owner / Documentation Owner / Technical Owner / Clinical Safety Owner / Risk Owner | Approved for current stage as baseline alignment reference |
+| #INDEX-AUDIT | Golden Catalog Master Execution Guide V0.1 | custom/im-core/docs/golden-catalog-alignment/master-execution-guide-v0.1.md | Governance Owner / Documentation Owner / Technical Owner / Clinical Safety Owner / Risk Owner | Approved for current stage as baseline alignment reference |
 
 ---
 

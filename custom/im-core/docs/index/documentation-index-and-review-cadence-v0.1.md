@@ -273,6 +273,7 @@ Safety, privacy, security, and claims-sensitive documents require appropriate cr
 | #INDEX-AUDIT | Internal Medicine Follow-Up V1 Open Loops and Safety-Net Tracking Plan | custom/im-core/docs/clinical-intelligence/internal-medicine-follow-up-v1-open-loops-and-safety-net-tracking-plan.md | Clinical Safety Owner / Documentation Owner / Internal Medicine Clinical Reviewer / Operations Owner / Risk Owner | Approved for current stage as documentation-only future Clinical Intelligence planning reference |
 | #INDEX-AUDIT | Internal Medicine Follow-Up V1 Clinical Summary Generator Boundary | custom/im-core/docs/clinical-intelligence/internal-medicine-follow-up-v1-clinical-summary-generator-boundary.md | Clinical Safety Owner / Documentation Owner / Internal Medicine Clinical Reviewer / AI Governance Owner / Risk Owner | Approved for current stage as documentation-only future Clinical Intelligence planning reference |
 | #INDEX-AUDIT | Internal Medicine Follow-Up V1 Trend Review Plan | custom/im-core/docs/clinical-intelligence/internal-medicine-follow-up-v1-trend-review-plan.md | Clinical Safety Owner / Documentation Owner / Internal Medicine Clinical Reviewer / AI Governance Owner / Risk Owner | Approved for current stage as documentation-only future Clinical Intelligence planning reference |
+| #181 | Intended Use, Scope, Users, and Claims V0.1 | custom/im-core/docs/product/intended-use-scope-users-claims-v0.1.md | Governance Owner / Documentation Owner / Product Owner / Clinical Safety Owner / Privacy-Security Owner | Approved for current stage |
 
 ---
 

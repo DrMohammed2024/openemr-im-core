@@ -563,7 +563,27 @@ If such content is discovered after merge, the change is an immediate revert can
 
 ---
 
-## 21. Final Statement
+## 21. Pre-Merge Claim-Control Tightening
+
+This document assigns planning-stage governance accountability only.
+
+It does not authorize implementation, runtime execution, clinical use, PHI handling, real patient data use, AI implementation, prompt execution, model integration, CDS functionality, API/FHIR integration, SQL/database migration, OpenEMR core behavior changes, production deployment, clinical validation, regulatory compliance, or cybersecurity certification.
+
+Where this RACI document conflicts with the Lifecycle Phase Gate Control, Intended Use / Scope / Users / Claims, VFinal++ Current-Stage Governance Addendum, or any stricter current-stage governance boundary document, the stricter and safer interpretation prevails.
+
+A role marked Accountable or Responsible in this document is accountable only for documentation-stage review, decision recording, governance control, escalation, and boundary preservation.
+
+Such assignment does not imply technical implementation authority, clinical authorization authority, regulatory approval authority, deployment authority, production release authority, validation acceptance, cybersecurity certification authority, PHI handling authority, AI/model integration authority, API/FHIR implementation authority, SQL/database migration authority, or OpenEMR core behavior-change authority.
+
+AI tools may assist documentation drafting, review support, checklist generation, gap identification, and governance suggestions only.
+
+AI tools may not own final decisions, approve PRs, declare final GO, accept risk, accept residual risk, approve clinical safety, approve privacy/security acceptance, approve regulatory interpretation, approve validation planning, approve release readiness, approve deployment readiness, authorize clinical use, authorize runtime, or activate any future-gated phase.
+
+The safest and most conservative interpretation must trigger hold, escalation, specialized review, NO-GO, split, defer, or revert assessment when boundary meaning is unclear.
+
+---
+
+## 22. Final Statement
 
 Human Accountability and RACI Model V0.1 defines current-stage and future-gated human accountability boundaries for OpenEMR IM Core governance.
 

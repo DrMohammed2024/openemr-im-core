@@ -277,6 +277,7 @@ Safety, privacy, security, and claims-sensitive documents require appropriate cr
 
 ---
 | #184 | Requirements Management Plan V0.1 | custom/im-core/docs/requirements/requirements-management-plan-v0.1.md | Governance Owner / Documentation Owner | Approved for current stage |
+| #186 | Requirements Register Starter V0.1 | custom/im-core/docs/requirements/requirements-register-starter-v0.1.md | Governance Owner / Documentation Owner | Approved for current stage |
 
 ## 11. Document Dependency Map
 

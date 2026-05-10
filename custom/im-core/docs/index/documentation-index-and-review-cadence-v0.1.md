@@ -276,6 +276,7 @@ Safety, privacy, security, and claims-sensitive documents require appropriate cr
 | #181 | Intended Use, Scope, Users, and Claims V0.1 | custom/im-core/docs/product/intended-use-scope-users-claims-v0.1.md | Governance Owner / Documentation Owner / Product Owner / Clinical Safety Owner / Privacy-Security Owner | Approved for current stage |
 
 ---
+| #184 | Requirements Management Plan V0.1 | custom/im-core/docs/requirements/requirements-management-plan-v0.1.md | Governance Owner / Documentation Owner | Approved for current stage |
 
 ## 11. Document Dependency Map
 

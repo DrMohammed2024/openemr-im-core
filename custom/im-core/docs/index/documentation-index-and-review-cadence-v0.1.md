@@ -207,7 +207,7 @@ Safety, privacy, security, and claims-sensitive documents require appropriate cr
 | PR | Document | Path | Primary Owner | Status |
 |---|---|---|---|---|
 | #92 | Evidence Registry and Evidence Templates V0.1 | custom/im-core/docs/evidence/ | Documentation Owner / Governance Owner | Approved for current stage |
-| #93 | Traceability Matrix V0.1 | custom/im-core/docs/traceability/ | Governance Owner / Technical Owner | Approved for current stage |
+| #93 | Traceability Matrix V0.1 | custom/im-core/docs/validation/traceability-matrix-v0.1.md | Governance Owner / Technical Owner | Approved for current stage |
 | #94 | Risk Register V0.1 | custom/im-core/docs/risk/ | Risk Owner / Clinical Safety Owner | Approved for current stage |
 | #95 | Pull Request Template and Stop Rules V0.1 | custom/im-core/docs/governance/ | Governance Owner | Approved for current stage |
 | #96 | Clinical Safety Case V0.1 | custom/im-core/docs/clinical-safety/ | Clinical Safety Owner | Approved for current stage |

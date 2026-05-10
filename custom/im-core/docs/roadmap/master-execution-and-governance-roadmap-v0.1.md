@@ -493,7 +493,7 @@ Each PR should include:
 The project documentation package may include:
 
 - custom/im-core/docs/evidence/
-- custom/im-core/docs/traceability/
+- custom/im-core/docs/validation/
 - custom/im-core/docs/risk/
 - custom/im-core/docs/governance/
 - custom/im-core/docs/clinical-safety/
@@ -530,6 +530,12 @@ Examples:
 - Documentation-only PR SOP.
 - Phase-specific roadmap refinements.
 - Gate review refinements.
+- Requirements register population.
+- Requirements-to-risk traceability execution.
+- Requirements-to-evidence traceability execution.
+- Risk register population.
+- Evidence record population.
+- Standards-aware planning updates without compliance claims.
 
 ### Not Now
 
@@ -610,6 +616,44 @@ The roadmap should be interpreted together with the following recently added gov
 These controls do not authorize runtime implementation, AI implementation, prompt execution, model integration, API/FHIR implementation, SQL, database migrations, OpenEMR core behavior changes, clinical validation, production readiness, regulatory compliance, cybersecurity certification, or clinical use.
 
 They strengthen roadmap governance by clarifying that future progression requires evidence, traceability, risk review, clinical safety review, privacy/security review, technical review, human approval, and GitHub checks showing 0 failing and 0 pending.
+
+---
+
+## 13B. Requirements and Traceability Readiness Dependencies
+
+The roadmap should also be interpreted together with the current requirements and traceability artifacts added or aligned after the initial roadmap baseline:
+
+| Artifact | File path | Roadmap relevance |
+|---|---|---|
+| Requirements Management Plan V0.1 | custom/im-core/docs/requirements/requirements-management-plan-v0.1.md | Defines documentation-stage requirements management rules, requirement ID expectations, change control, review responsibilities, safety and claims controls, and traceability expectations. |
+| Requirements Register Starter V0.1 | custom/im-core/docs/requirements/requirements-register-starter-v0.1.md | Provides the starter structure for planning-stage requirements using the `IMC-REQ-` pattern and identifies future risk, evidence, verification, and release-gate linkage needs. |
+| Traceability Matrix V0.1 | custom/im-core/docs/validation/traceability-matrix-v0.1.md | Provides documentation-stage traceability structure and now references requirements artifacts as sources for future-ready requirements traceability. |
+
+These artifacts do not authorize runtime implementation, clinical validation, production use, pilot execution, regulatory compliance claims, cybersecurity certification claims, or clinical-use authorization.
+
+Requirements register population, traceability execution, evidence record population, and risk register population remain future documentation-stage work until separately approved and completed through controlled PRs.
+
+---
+
+## 13C. AI/ML and Decision Automation Boundary — Future-Gated Only
+
+OpenEMR IM Core is not currently an AI/ML project and is not currently a SaMD-AI implementation.
+
+Current-stage boundaries remain:
+
+- No runtime AI.
+- No prompt execution.
+- No AI/model integration.
+- No autonomous clinical decision support.
+- No autonomous diagnosis.
+- No autonomous treatment recommendation.
+- No autonomous prescribing.
+- No autonomous emergency triage.
+- No patient-facing AI.
+
+AI/ML, prompt execution, model integration, decision automation, or GMLP-aware implementation planning may only be considered through a separate future phase gate with documented intended use, data governance, model governance, bias and performance evaluation planning, human oversight, cybersecurity review, clinical safety review, regulatory classification review, validation evidence planning, claims boundary review, and explicit governance approval.
+
+This section does not authorize AI/ML implementation.
 
 ## 14. Roadmap Maintenance and Review Cadence
 

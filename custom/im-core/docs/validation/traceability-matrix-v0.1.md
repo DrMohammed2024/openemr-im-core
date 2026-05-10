@@ -376,8 +376,41 @@ This PR satisfies `EVID-TRACE-FUTURE-001` at documentation-stage level only.
 
 ---
 
-## 14. Risks
+## 14. Relationship to Requirements Artifacts
 
+PR #184 provides the Requirements Management Plan V0.1.
+
+PR #186 provides the Requirements Register Starter V0.1.
+
+This traceability matrix treats those artifacts as documentation-stage sources for future-ready requirements traceability.
+
+The Requirements Register Starter introduces planning-stage requirement IDs using the `IMC-REQ-` pattern.
+
+Existing traceability rows that use earlier `REQ-` style identifiers remain unchanged in this PR.
+
+Mapping, migration, replacement, or normalization of earlier `REQ-` identifiers to `IMC-REQ-` identifiers is out of scope for this PR and must be handled separately through a future controlled traceability update.
+
+Future traceability updates should connect requirements to:
+
+- Requirement source artifact.
+- Requirement ID.
+- Related risk ID.
+- Related control ID.
+- Related test or review method.
+- Related evidence ID or future evidence need.
+- Owner.
+- Reviewer or review status.
+- Release gate or limitation.
+
+This section does not create runtime verification.
+
+This section does not create clinical validation.
+
+This section does not authorize implementation, demo, pilot, production, commercial deployment, clinical use, regulatory compliance, or cybersecurity certification claims.
+
+---
+
+## 15. Risks
 | Risk | Impact | Control |
 |---|---|---|
 | Traceability is mistaken for validation | Unsupported validation or readiness claims. | Limitations and review rules. |
@@ -387,11 +420,10 @@ This PR satisfies `EVID-TRACE-FUTURE-001` at documentation-stage level only.
 | Risk register is not yet available | Traceability remains partial. | Mark risk register as required future evidence. |
 | Security evidence is not yet available | Privacy/security readiness cannot be claimed. | Mark security evidence as required future evidence. |
 | Claims are overstated | Legal, safety, and trust risk. | Claims controls and release limitations. |
-
+| Requirements artifacts are not reflected in the traceability matrix | Weak requirements-to-evidence auditability. | Relationship to requirements artifacts section and future controlled traceability updates. |
 ---
 
-## 15. Definition of Done
-
+## 16. Definition of Done
 This document is complete when:
 
 - Purpose is defined.
@@ -422,11 +454,11 @@ This document is complete when:
 - No FHIR/API implementation is introduced.
 - No OpenEMR core-sensitive change is introduced.
 - No unsupported readiness, validation, compliance, certification, or commercial claim is introduced.
+- Relationship to requirements artifacts is documented.
 
 ---
 
-## 16. After-Merge Action
-
+## 17. After-Merge Action
 After this PR is merged, the next planned documentation step is:
 
 PR #94: docs(im-core): add risk register v0.1
@@ -441,8 +473,7 @@ Do not start PR #94 until:
 
 ---
 
-## 17. Status
-
+## 18. Status
 Documentation-only traceability matrix.
 
 No runtime implementation.

@@ -120,6 +120,68 @@ Decision:
 - changed master: previous GO expires
 
 ---
+## 4A. One-Gate-at-a-Time Execution Rule
+
+Every PR execution sequence must proceed one gate at a time.
+
+A GO decision applies only to the current gate and must not be reused for later gates.
+
+If the user says "continue as appropriate," this means continue only to the next safe gate. It does not authorize skipping verification, creating runtime work, merging without checks, or advancing to a later lifecycle phase.
+
+Each gate should identify:
+
+- [ ] PR type
+- [ ] risk class
+- [ ] duplicate/source-of-truth check
+- [ ] evidence required
+- [ ] GO / HOLD / NO-GO decision
+- [ ] next safest command
+
+The next safest command should be the smallest command block that obtains the missing evidence or performs the approved narrow action for the current gate only.
+
+---
+
+## 4B. Stage-Based Transition Guard
+
+The current project state is documentation-stage, governance-stage, planning-only, pre-runtime, pre-implementation, and pre-clinical-use.
+
+No sandbox, runtime, implementation, testing, pilot, production, clinical-use, PHI, real patient data, AI/CDS runtime, SQL/database, API/FHIR, or OpenEMR core behavior transition may be proposed as an execution step unless a separate approved stage-based governance gate exists with explicit evidence.
+
+Before any future transition toward sandbox, runtime, implementation, testing, pilot planning, or phase change, the PR must identify:
+
+- [ ] current stage
+- [ ] proposed next stage
+- [ ] stage-transition evidence required
+- [ ] accountable reviewers
+- [ ] safety and privacy boundaries
+- [ ] claim-control boundaries
+- [ ] rollback or revert expectations
+- [ ] explicit human approval requirement
+
+Absent this evidence, the decision is HOLD or NO-GO.
+
+---
+
+## 4C. Fixed PR Request Template Requirement
+
+Every non-mechanical PR request should use a fixed request structure.
+
+At minimum, the PR request should identify:
+
+- [ ] PR type
+- [ ] risk class
+- [ ] intended source of truth
+- [ ] duplicate/source-of-truth check
+- [ ] evidence required before execution
+- [ ] GO / HOLD / NO-GO gate
+- [ ] expected changed files
+- [ ] prohibited claims
+- [ ] merge criteria
+- [ ] post-merge verification plan
+
+A PR should not proceed if the request lacks enough information to determine scope, risk, evidence, source-of-truth relationship, or claim-control boundaries.
+
+---
 
 ## 5. Risk Classification Checklist
 

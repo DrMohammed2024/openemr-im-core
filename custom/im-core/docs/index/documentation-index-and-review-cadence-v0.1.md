@@ -1,4 +1,4 @@
-# Documentation Index and Review Cadence V0.1 - OpenEMR IM Core
+w# Documentation Index and Review Cadence V0.1 - OpenEMR IM Core
 
 ## 1. Purpose
 
@@ -766,3 +766,4 @@ Not commercially deployment-ready.
 | #200 | Phase 0 Closure Readiness Checklist V0.1 | custom/im-core/docs/roadmap/phase-0-closure-readiness-checklist-v0.1.md | Governance Owner / Documentation Owner / Technical Owner / Clinical Safety Owner / Risk Owner / Evidence Reviewer / Privacy-Security Owner / Regulatory Reviewer / Operations Owner | Approved for current stage |
 | #201 | Formal Reviewer Approval Matrix V0.1 | custom/im-core/docs/governance/formal-reviewer-approval-matrix-v0.1.md | Governance Owner / Documentation Owner / Technical Owner / Clinical Safety Owner / Risk Owner / Evidence Reviewer / Privacy-Security Owner / Regulatory Reviewer / AI Governance Owner / Operations Owner / Human Factors Reviewer / Release Owner | Approved for current stage |
 | #202 | Formal Reviewer Approval Record Template V0.1 | custom/im-core/docs/governance/formal-reviewer-approval-record-template-v0.1.md | Governance Owner / Documentation Owner / Technical Owner / Clinical Safety Owner / Risk Owner / Evidence Reviewer / Privacy-Security Owner / Regulatory Reviewer / AI Governance Owner / Operations Owner / Human Factors Reviewer / Release Owner | Approved for current stage |
+| #203 | Reviewer Approval Workflow SOP V0.1 | custom/im-core/docs/governance/reviewer-approval-workflow-sop-v0.1.md | Governance Owner / Documentation Owner / Technical Owner / Clinical Safety Owner / Risk Owner / Evidence Reviewer / Privacy-Security Owner / Regulatory Reviewer / AI Governance Owner / Operations Owner / Human Factors Reviewer / Release Owner | Approved for current stage |

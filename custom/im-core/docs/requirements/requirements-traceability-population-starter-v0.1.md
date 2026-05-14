@@ -136,6 +136,11 @@ Each traceability population row should include:
 | TRACE-REQ-008 | IMC-REQ-CLAIM-0001 | Control claims so no unsupported readiness, validation, compliance, certification, or commercial claim is made. | SRC-REQ-REG-001 / SRC-REQ-PLAN-001 | Active documentation-stage | RISK-CLAIM-001 planned | CTRL-CLAIM-001 planned | Claims review / governance review | EVID-CLAIM-FUTURE-001 | Claims Reviewer | Governance Owner | Draft | Does not approve external claims. |
 | TRACE-REQ-009 | IMC-REQ-AI-0001 | Prohibit runtime AI, prompt execution, AI/model integration, autonomous CDS, diagnosis, treatment recommendation, prescribing, emergency triage, and patient-facing AI at the current stage. | SRC-ROADMAP-001 / SRC-TRACE-001 | Future-gated | RISK-AI-001 planned | CTRL-AI-BND-001 planned | AI governance review / clinical safety review | EVID-AI-BND-FUTURE-001 | AI Governance Owner | Clinical Safety Owner / Privacy-Security Owner | Draft | Does not authorize AI/ML implementation. |
 | TRACE-REQ-010 | IMC-REQ-REL-0001 | Gate future demo, pilot, production, and clinical-use readiness on evidence, review, and explicit approval. | SRC-ROADMAP-001 / SRC-REQ-PLAN-001 | Future-gated | RISK-REL-001 planned | CTRL-GATE-001 planned | Gate review / release readiness review | EVID-GATE-FUTURE-001 | Release Owner | Governance Owner / Clinical Safety Owner | Draft | Does not authorize any release gate. |
+| TRACE-REQ-011 | IMC-REQ-DOC-0005 | Maintain evidence-gated PR execution before proposing or performing later-gate actions. | SRC-REQ-REG-001 / SRC-TRACE-001 | Active documentation-stage | RISK-GOV-001 planned | CTRL-PR-001 planned | PR review / evidence-gate review | EVID-PR-FUTURE-001 | Governance Owner | Documentation Owner / Evidence Reviewer | Draft | Does not authorize implementation, release, or clinical use. |
+| TRACE-REQ-012 | IMC-REQ-DOC-0006 | Maintain post-merge verification for documentation PRs. | SRC-REQ-REG-001 / SRC-TRACE-001 | Active documentation-stage | RISK-DOC-001 planned | CTRL-DOC-GOV-001 planned | Post-merge verification review | EVID-DOC-FUTURE-001 | Documentation Owner | Governance Owner / Evidence Reviewer | Draft | Does not prove validation, compliance, or production readiness. |
+| TRACE-REQ-013 | IMC-REQ-DOC-0007 | Preserve source-of-truth control and avoid duplicate governance, requirements, risk, evidence, safety, privacy, or traceability artifacts. | SRC-REQ-REG-001 / SRC-INV-001 | Active documentation-stage | RISK-DOC-001 planned | CTRL-DOC-GOV-001 planned | Documentation inventory review / source-of-truth review | EVID-DOC-FUTURE-001 | Documentation Owner | Governance Owner | Draft | Does not complete traceability or evidence linkage. |
+| TRACE-REQ-014 | IMC-REQ-VNV-0004 | Preserve evidence package limitations and prevent planning artifacts from being treated as closure, validation, compliance, certification, or release evidence. | SRC-REQ-REG-001 / SRC-TRACE-001 | Planning-only | RISK-EVID-001 planned | CTRL-EVID-001 planned | Evidence review / claims review | EVID-TRACE-FUTURE-001 | Evidence Reviewer | Governance Owner / Claims Reviewer | Draft | Does not create completed evidence, validation, compliance, certification, or release approval. |
+| TRACE-REQ-015 | IMC-REQ-CFG-0003 | Maintain one-gate-at-a-time GitHub execution and prevent later-gate commands before current evidence review. | SRC-REQ-REG-001 / SRC-TRACE-001 | Active documentation-stage | RISK-GOV-001 planned | CTRL-GATE-001 planned | Governance review / phase-gate review | EVID-GATE-FUTURE-001 | Governance Owner | Documentation Owner / Evidence Reviewer | Draft | Does not authorize runtime, deployment, production, or clinical use. |
 
 ---
 
@@ -165,6 +170,7 @@ Future updates to this starter or to the main traceability matrix should follow 
 | GAP-REQTRACE-003 | Controls are planned but not fully defined | Create or link controlled control definitions | High |
 | GAP-REQTRACE-004 | Test/review methods are documentation-stage only | Define future verification protocol links where applicable | Medium |
 | GAP-REQTRACE-005 | Main traceability matrix still needs population alignment | Update traceability matrix in a future controlled PR | High |
+| GAP-REQTRACE-007 | PR #208 requirements need controlled traceability alignment | Add PR #208 requirements to this starter before any future migration to the main traceability matrix | High |
 | GAP-REQTRACE-006 | Reviewer signoff evidence is not yet recorded | Define review evidence and signoff records | Medium |
 
 ---
@@ -261,6 +267,12 @@ Do not start the next PR until this PR is merged, reviewed, cleaned, and the rep
 ## 15. Status
 
 Documentation-only requirements traceability population starter.
+This update adds draft traceability rows for the PR #208 requirements register update.
+This update does not replace the Traceability Matrix V0.1.
+This update does not complete risk linkage.
+This update does not complete evidence linkage.
+This update does not complete verification or validation.
+This update does not authorize implementation, clinical use, production use, PHI, SQL, API/FHIR, runtime AI, deployment, regulatory compliance, cybersecurity certification, or medical-device readiness.
 
 Planning-stage only.
 

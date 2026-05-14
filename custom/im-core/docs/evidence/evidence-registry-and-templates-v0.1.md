@@ -197,6 +197,9 @@ Existing documentation evidence does not equal runtime proof, clinical validatio
 | EVID-RISK-FUTURE-001 | Risk register | Risk management | Clinical Safety Owner | Required future evidence | Safety review | Future PR. |
 | EVID-HF-FUTURE-001 | Human factors and usability risk plan | Human factors | Clinical Safety Owner | Required future evidence | Runtime planning | Future PR. |
 | EVID-SAFETY-FUTURE-001 | Clinical safety case | Clinical safety | Clinical Safety Owner | Required future evidence | Clinical safety review | Future PR. |
+| EVID-PR-FUTURE-001 | PR execution evidence-gate review record | Governance evidence | Governance Owner | Required future evidence | Documentation foundation gate | Planning-only; does not authorize implementation, release, or clinical use. |
+| EVID-DOC-FUTURE-001 | Documentation governance and post-merge verification evidence | Documentation evidence | Documentation Owner | Required future evidence | Documentation foundation gate | Planning-only; does not prove validation, compliance, or production readiness. |
+| EVID-GATE-FUTURE-001 | Phase-gate and one-gate-at-a-time execution evidence | Governance evidence | Governance Owner | Required future evidence | Phase gate | Planning-only; does not authorize runtime, deployment, production, or clinical use. |
 
 ---
 

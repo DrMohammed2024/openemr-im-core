@@ -193,6 +193,11 @@ A documentation-only requirement is not runtime approval.
 | IMC-REQ-DB-0001 | DB | Future database requirements are gated | Future database requirements, SQL, and migrations shall remain future-gated and shall not authorize implementation at the current stage. | Database Boundary and Migration Policy | Future-gated | OpenEMR Technical Reviewer / Evidence Reviewer | Future data integrity risk link required | Future evidence link required | Database gate |
 | IMC-REQ-AI-0001 | AI | Future AI requirements are gated | Future AI, model, prompt, or CDS requirements shall remain future-gated and shall not authorize runtime AI or clinical automation at the current stage. | Decision Automation Boundary Policy | Future-gated | Clinical Safety Reviewer / Governance Reviewer / Claims Reviewer | Future AI risk link required | Future evidence link required | AI governance gate |
 | IMC-REQ-OPS-0001 | OPS | Future operations requirements are gated | Future operations and maintenance requirements shall remain future-gated until support, training, incident response, and release evidence exist. | Training and Support Package / Release Readiness Gates | Future-gated | Operations Reviewer / Release Owner | Future operations risk link required | Future evidence link required | Operations gate |
+| IMC-REQ-DOC-0005 | DOC | Maintain evidence-gated PR execution | Project PR execution shall remain evidence-gated, with each gate supported by local or GitHub evidence before the next action is proposed. | Governance Execution Checklist / PR audit trail | Active documentation-only | Documentation Owner / Governance Reviewer | Future risk link required | Future evidence link required | Documentation foundation gate |
+| IMC-REQ-DOC-0006 | DOC | Maintain post-merge verification | Each merged documentation PR shall be followed by post-merge verification confirming merge state, expected files, index updates when applicable, and clean local master. | Post-merge verification workflow | Active documentation-only | Documentation Owner / Governance Reviewer | Future risk link required | Future evidence link required | Documentation foundation gate |
+| IMC-REQ-DOC-0007 | DOC | Preserve source-of-truth control | New governance, requirements, risk, evidence, safety, privacy, or traceability artifacts shall not duplicate an existing source-of-truth document unless a distinct supporting purpose is documented. | Documentation Inventory and Artifact Status Matrix V0.1 | Active documentation-only | Documentation Owner / Governance Reviewer | Future risk link required | Future evidence link required | Documentation foundation gate |
+| IMC-REQ-VNV-0004 | VNV | Preserve evidence package limitations | Phase evidence package planning or assembly artifacts shall identify evidence-needed status and shall not be treated as completed closure, validation, compliance, certification, or release evidence. | Phase 0 Closure Evidence Package Assembly Checklist V0.1 | Planning-only | Evidence Reviewer / Governance Reviewer | Future risk link required | Future evidence link required | Evidence gate |
+| IMC-REQ-CFG-0003 | CFG | Maintain one-gate-at-a-time execution | GitHub execution shall proceed one gate at a time, and later-gate commands shall not be proposed before the current gate evidence is reviewed. | Governance Execution Checklist Stage Gates V0.1 | Active documentation-only | Governance Reviewer / Documentation Owner | Future risk link required | Future evidence link required | Phase gate |
 
 ---
 
@@ -332,6 +337,14 @@ Do not start the next PR until this PR is merged and reviewed.
 ## 15. Status
 
 Documentation-only requirements register starter.
+
+PR #208 updates this existing source-of-truth register with additional documentation-stage and planning-stage requirement rows.
+
+This update does not create a verified requirements baseline.
+This update does not complete risk linkage.
+This update does not complete evidence linkage.
+This update does not complete verification or validation.
+This update does not authorize implementation, clinical use, production use, PHI, SQL, API/FHIR, runtime AI, deployment, regulatory compliance, cybersecurity certification, or medical-device readiness.
 
 No runtime implementation.
 No SQL.

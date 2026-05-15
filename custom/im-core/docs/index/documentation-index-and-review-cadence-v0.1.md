@@ -629,7 +629,15 @@ This document does not replace PR #107.
 
 ---
 
-## 36. Reviewer Checklist
+## 36. Relationship to PR #215
+
+PR #215 aligned the documentation inventory/status matrix with the PR #214 traceability matrix status update.
+
+This document records that the documentation index and review cadence should continue to treat the Traceability Matrix V0.1 and the documentation inventory/status matrix as documentation-stage source-of-truth artifacts requiring ongoing maintenance after traceability-related PRs.
+
+This relationship entry is documentation-only. It does not modify PR #215, does not create runtime evidence, does not prove validation, compliance, certification, release readiness, production readiness, or clinical-use authorization, and does not authorize implementation.
+
+## 37. Reviewer Checklist
 
 Reviewers should confirm:
 
@@ -661,7 +669,7 @@ Reviewers should confirm:
 
 ---
 
-## 37. Definition of Done
+## 38. Definition of Done
 
 This document is complete when:
 
@@ -693,7 +701,7 @@ This document is complete when:
 
 ---
 
-## 38. After-Merge Action
+## 39. After-Merge Action
 
 After this PR is merged, the next planned documentation step is:
 
@@ -709,7 +717,7 @@ Do not start the next PR until:
 
 ---
 
-## 39. Status
+## 40. Status
 
 Documentation-stage documentation index and review cadence.
 

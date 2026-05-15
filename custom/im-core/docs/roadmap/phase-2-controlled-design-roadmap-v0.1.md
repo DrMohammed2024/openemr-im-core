@@ -315,7 +315,28 @@ This roadmap does not replace those documents.
 
 ---
 
-## 16. Reviewer Checklist
+## 16. Post-PR #216 Phase 2 Readiness Planning Decision
+
+Post-PR #216 inspection selected this Phase 2 Controlled Design Roadmap as the single source-of-truth target for recording the next planning decision.
+
+Decision: CONDITIONAL GO for documentation-only Phase 2 readiness planning.
+
+This decision authorizes only narrow documentation planning to record Phase 2 readiness conditions.
+
+It does not authorize Phase 2 execution, implementation, runtime behavior, sandbox execution, real patient data use, PHI use, SQL execution, database migration, API/FHIR implementation, AI/CDS runtime, clinical use, pilot use, production use, deployment, validation, regulatory compliance, cybersecurity certification, production readiness, medical-device readiness, commercial readiness, or Phase closure.
+
+Conditions and missing evidence that remain open:
+
+- Future gate execution is still required before any Phase 2 execution claim.
+- Requirements, risk, evidence, and traceability artifacts still contain needs-population and required-future-evidence signals.
+- Evidence registry population and future evidence review remain required.
+- Risk control linkage, residual risk review, and clinical safety review remain required.
+- Traceability maintenance and complete requirements-risk-control-test-evidence linkage remain required.
+- Any future stronger gate must preserve safety, privacy, claim-control, no-PHI, no-runtime, no-SQL, no-API/FHIR, no-AI/CDS-runtime, and no-clinical-use boundaries.
+
+This entry is documentation-only and records a planning decision only.
+
+## 17. Reviewer Checklist
 
 Reviewers should confirm:
 
@@ -339,7 +360,7 @@ Reviewers should confirm:
 
 ---
 
-## 17. Definition of Done
+## 18. Definition of Done
 
 This document is complete when:
 
@@ -364,7 +385,7 @@ This document is complete when:
 
 ---
 
-## 18. After-Merge Action
+## 19. After-Merge Action
 
 After this PR is merged, the next planned documentation step is:
 
@@ -380,7 +401,7 @@ Do not start the next PR until:
 
 ---
 
-## 19. Status
+## 20. Status
 
 Phase 2 controlled design roadmap.
 

@@ -636,6 +636,12 @@ PR #215 aligned the documentation inventory/status matrix with the PR #214 trace
 This document records that the documentation index and review cadence should continue to treat the Traceability Matrix V0.1 and the documentation inventory/status matrix as documentation-stage source-of-truth artifacts requiring ongoing maintenance after traceability-related PRs.
 
 This relationship entry is documentation-only. It does not modify PR #215, does not create runtime evidence, does not prove validation, compliance, certification, release readiness, production readiness, or clinical-use authorization, and does not authorize implementation.
+### PR #217 Phase 2 readiness planning decision relationship
+
+PR #217 recorded a Phase 2 readiness planning decision as a documentation-stage governance planning artifact. The documentation index should treat that decision as a planning-only relationship item requiring continued governance review before any later Phase 2 execution, sandbox, runtime, pilot, production, clinical-use, validation, compliance, certification, deployment, or closure gate.
+
+This relationship entry is documentation-only. It does not modify PR #217, does not authorize Phase 2 execution, sandbox execution, runtime implementation, clinical use, production use, PHI use, SQL/database migration, API/FHIR implementation, AI/CDS runtime, validation, compliance, certification, deployment, pilot use, production readiness, or Phase closure.
+
 
 ## 37. Reviewer Checklist
 

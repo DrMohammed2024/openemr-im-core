@@ -113,7 +113,7 @@ For each evidence item:
 |---|---|---|---|---|---|---|---|
 | EVID-P0-001 | Current documentation index entry coverage | Documentation index | custom/im-core/docs/index/documentation-index-and-review-cadence-v0.1.md | To verify | To verify | Evidence-needed | Confirm current index completeness |
 | EVID-P0-002 | Phase 0 closure readiness checklist | Phase 0 readiness checklist | custom/im-core/docs/roadmap/phase-0-closure-readiness-checklist-v0.1.md | To verify | To verify | Evidence-needed | Checklist is not closure approval |
-| EVID-P0-003 | Phase 0 governance closure gap summary | Phase 0 gap summary | custom/im-core/docs/governance/phase-0-governance-closure-gap-summary-v0.1.md | To verify | To verify | Evidence-needed | Gap summary is not closure report |
+| EVID-P0-003 | Phase 0 governance closure gap summary | Phase 0 gap summary | custom/im-core/docs/governance/phase-0-governance-closure-gap-summary-v0.1.md | Path identified; content still to verify | To verify | Evidence-needed | Gap summary is not closure report and does not claim Phase 0 closure |
 | EVID-P0-004 | Intended-use, scope, users, and claims boundary | Product intended-use / claims document | To identify | To verify | To verify | Evidence-needed | Must preserve claims boundary |
 | EVID-P0-005 | Human accountability and ownership evidence | Human accountability RACI | To identify | To verify | To verify | Evidence-needed | Must preserve human ownership |
 | EVID-P0-006 | Formal reviewer approval matrix | Reviewer approval matrix | custom/im-core/docs/governance/formal-reviewer-approval-matrix-v0.1.md | To verify | To verify | Evidence-needed | Matrix is not actual approval |
@@ -125,7 +125,7 @@ For each evidence item:
 | EVID-P0-012 | Privacy and security planning status | Threat model and data governance documents | To identify | To verify | To verify | Evidence-needed | No PHI readiness claim |
 | EVID-P0-013 | Claims control status | Commercial claims policy and claims register | To identify | To verify | To verify | Evidence-needed | No unsupported claims |
 | EVID-P0-014 | Current open gaps | Gap summary and readiness checklist | Multiple artifacts | To verify | To verify | Evidence-needed | Must preserve open-gap visibility |
-| EVID-P0-015 | Post-merge verification records | PR audit trail and local verification outputs | To identify | To verify | To verify | Evidence-needed | Must be traceable to merged PRs |
+| EVID-P0-015 | Post-merge verification records | PR audit trail and local verification outputs | To identify, including recent PR #218 and PR #219 post-merge verification logs | To verify | To verify | Evidence-needed | Must be traceable to merged PRs; log references do not authorize Phase 0 closure, implementation, runtime, clinical use, production use, validation, compliance, certification, deployment, pilot use, or production readiness |
 
 ---
 

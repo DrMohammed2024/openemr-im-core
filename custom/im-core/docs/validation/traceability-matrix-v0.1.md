@@ -537,3 +537,35 @@ Not pilot-ready.
 Not production-ready.
 
 Not commercially deployment-ready.
+
+---
+
+## PR #225 Evidence Registry Requirements-Linkage Status Relationship
+
+PR #225 updated the Evidence Registry and Evidence Templates V0.1 to document the evidence-planning relationship created after PR #224 updated the Requirements Register Starter V0.1 inventory status.
+
+Traceability interpretation:
+
+- The Requirements Register Starter V0.1 provides current-stage requirement identifiers.
+- PR #224 updated the documentation inventory/status matrix to reflect that the requirements register is an active current-stage artifact requiring ongoing linkage maintenance.
+- PR #225 updated the evidence registry to record that this relationship supports evidence-planning visibility only.
+- Ongoing traceability maintenance remains required between requirements, risks, controls, evidence records, owner roles, review status, and future evidence needs.
+- This relationship does not complete requirements-to-risk linkage.
+- This relationship does not complete requirements-to-evidence linkage.
+- This relationship does not complete requirements-to-control linkage.
+- This relationship does not complete traceability.
+- This relationship does not establish validation evidence, compliance evidence, certification evidence, release readiness, production readiness, implementation authorization, runtime authorization, or clinical-use authorization.
+
+Current-stage traceability handling:
+
+| Related artifact | Traceability relationship | Current-stage traceability status | Limitation |
+|---|---|---|---|
+| Requirements Register Starter V0.1 | Provides current-stage `IMC-REQ-*` identifiers requiring linkage to risk, evidence, controls, owners, and review status | Documentation-stage traceability planning only | Does not create a verified requirements baseline or complete traceability |
+| Documentation Inventory and Artifact Status Matrix V0.1 | Records the post-PR #224 requirements-register status and ongoing linkage-maintenance gap | Artifact-status signal for traceability maintenance | Does not prove requirements-risk-evidence linkage completeness |
+| Evidence Registry and Evidence Templates V0.1 | Records the post-PR #225 evidence-planning relationship for the requirements register | Evidence-planning signal for future traceability maintenance | Does not upgrade documentation evidence into runtime, validation, compliance, release, production, or clinical-use evidence |
+
+Required future maintenance:
+
+- Maintain requirement-to-risk, requirement-to-control, requirement-to-evidence, owner-role, review-status, and limitation links as source-of-truth artifacts evolve.
+- Preserve planning-only and evidence-needed status unless a future controlled gate, evidence review, and human governance review support a stronger classification.
+- Do not treat this relationship as completed traceability, runtime evidence, clinical validation evidence, regulatory compliance evidence, cybersecurity certification evidence, production readiness evidence, or clinical-use authorization.

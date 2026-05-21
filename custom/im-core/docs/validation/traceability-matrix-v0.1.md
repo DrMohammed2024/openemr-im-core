@@ -410,6 +410,28 @@ This section does not authorize implementation, demo, pilot, production, commerc
 
 ---
 
+## 14A. Requirements Register ID Crosswalk
+
+This section provides a documentation-stage crosswalk between the earlier traceability matrix `REQ-*` identifiers and the current Requirements Register `IMC-REQ-*` identifiers.
+
+This crosswalk is for governance alignment only. It does not rename existing traceability rows, does not retire earlier identifiers, does not claim traceability completeness, and does not establish validation, compliance, certification, production readiness, deployment readiness, pilot readiness, demo readiness, implementation authorization, runtime authorization, or clinical-use authorization.
+
+| Current traceability requirement ID | Related Requirements Register ID(s) | Alignment rationale | Current-stage limitation |
+|---|---|---|---|
+| `REQ-TRACE-001` | `IMC-REQ-VNV-0002` | Both require traceability planning across requirements, risks, controls, evidence, reviewers, and gates. | Planning-only; does not prove traceability completeness. |
+| `REQ-EVID-001` | `IMC-REQ-VNV-0001`; `IMC-REQ-VNV-0003` | Aligns evidence registry maintenance with evidence-before-claims and clean evidence-boundary requirements. | Documentation-stage evidence planning only. |
+| `REQ-SAF-001` | `IMC-REQ-SAF-0001` | Aligns clinician-support-only boundary with preservation of clinician authority. | No clinical-use authorization. |
+| `REQ-SAF-002` | `IMC-REQ-SAF-0002` | Aligns prohibition of autonomous clinical decisions with no autonomous diagnosis, treatment recommendation, prescribing, emergency triage, or autonomous CDS. | No autonomous clinical decision-making. |
+| `REQ-PRIV-001` | `IMC-REQ-SEC-0001`; `IMC-REQ-SEC-0002` | Aligns no-PHI and safe repository requirements with prohibition of PHI, real patient data, credentials, secrets, sensitive logs, and database dumps. | No PHI readiness or runtime privacy audit claim. |
+| `REQ-REL-001` | `IMC-REQ-VNV-0001` | Aligns prevention of unsupported readiness and validation claims with requirement for documented evidence and review before such claims. | No readiness, validation, compliance, certification, or clinical-use claim. |
+| `REQ-RISK-001` | `IMC-REQ-DOC-0007`; `IMC-REQ-VNV-0002` | Aligns risk-register linkage expectations with source-of-truth control and traceability planning. | Risk/evidence links still require population and review. |
+| `REQ-RUNTIME-001` | `IMC-REQ-DOC-0001`; `IMC-REQ-CFG-0001` | Aligns blocked runtime evidence claims with documentation-first posture and phase-gated change control. | No runtime implementation authorization. |
+| `REQ-DEMO-001` | `IMC-REQ-VNV-0001`; `IMC-REQ-SEC-0003` | Aligns synthetic-demo planning limits with evidence-before-readiness and future RBAC evidence requirements. | No demo readiness or pilot readiness claim. |
+| `REQ-CLAIM-001` | `IMC-REQ-VNV-0001`; `IMC-REQ-DOC-0007` | Aligns commercial/external claims review with evidence-before-claims and source-of-truth control. | No commercial readiness claim. |
+
+Future controlled traceability updates may add additional mappings, but any mapping must preserve documentation-only, planning-only, future-gated, pre-runtime, pre-implementation, and pre-clinical-use boundaries.
+
+
 ## 15. Risks
 | Risk | Impact | Control |
 |---|---|---|

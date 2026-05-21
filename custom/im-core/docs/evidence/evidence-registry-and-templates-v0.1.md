@@ -401,3 +401,35 @@ Not clinically validated.
 Not regulatory compliant by default.
 Not cybersecurity certified.
 Not commercially deployment-ready.
+
+---
+
+## PR #224 Requirements Register Linkage Status Relationship
+
+PR #224 updated the documentation inventory/status matrix entry for the Requirements Register Starter V0.1 to reflect that it is an active current-stage artifact requiring ongoing linkage maintenance.
+
+Evidence registry interpretation:
+
+- The Requirements Register Starter V0.1 remains a documentation-stage planning artifact.
+- The requirements register provides starter requirements records and current-stage requirement identifiers.
+- Ongoing linkage maintenance remains required between requirements, risks, evidence records, traceability rows, owner review, and future evidence needs.
+- This relationship supports evidence-planning visibility only.
+- This relationship does not create completed evidence records.
+- This relationship does not complete requirements-to-risk linkage.
+- This relationship does not complete requirements-to-evidence linkage.
+- This relationship does not complete traceability.
+- This relationship does not establish validation evidence, compliance evidence, certification evidence, release readiness, production readiness, implementation authorization, runtime authorization, or clinical-use authorization.
+
+Current-stage evidence handling:
+
+| Related artifact | Relationship to evidence registry | Current-stage evidence status | Limitation |
+|---|---|---|---|
+| Requirements Register Starter V0.1 | Provides current-stage requirement identifiers that require ongoing linkage to risk, evidence, and traceability records | Documentation-stage linkage planning only | Does not create verified requirements baseline, completed evidence records, complete traceability, implementation authorization, validation evidence, compliance evidence, production readiness, or clinical-use authorization |
+| Documentation Inventory and Artifact Status Matrix V0.1 | Records the post-PR #224 current-stage status for the requirements register | Documentation-stage artifact-status evidence only | Does not upgrade evidence registry contents into validation, compliance, certification, release, production, runtime, or clinical-use evidence |
+
+Required future maintenance:
+
+- Maintain evidence IDs where future evidence is required.
+- Keep evidence records linked to requirements, risks, controls, traceability rows, owner roles, review status, and limitations.
+- Preserve evidence-needed and planning-only status unless a future controlled gate, evidence review, and human governance review support a stronger classification.
+- Do not treat this relationship as runtime evidence, clinical validation evidence, regulatory compliance evidence, cybersecurity certification evidence, production readiness evidence, or clinical-use authorization.

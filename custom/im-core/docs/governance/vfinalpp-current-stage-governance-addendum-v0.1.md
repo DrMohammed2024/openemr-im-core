@@ -39,6 +39,8 @@ The purpose of this addendum is to strengthen the current VFinal+ governance exe
 
 This addendum incorporates the external specialized review conclusion that VFinal+ is strong for current documentation-stage governance, but should be adopted only as a current-stage governance system until additional lifecycle, traceability, risk, safety, privacy, security, configuration, validation-planning, and operational-readiness controls are created and reviewed.
 
+For current-stage governance interpretation, this addendum functions as the current-stage integrated governance-control coordination layer for OpenEMR IM Core. It coordinates current-stage governance controls without replacing the Root Safety / Non-Authorization Notice, Lifecycle Phase Gate Control, Human Accountability RACI, Formal Reviewer Approval Matrix, Governance Execution Checklist, roadmap, standards awareness matrix, documentation index, documentation inventory, or specialist requirements, risk, evidence, traceability, clinical safety, privacy/security, AI governance, and human-factors artifacts. Where this addendum conflicts with a stricter safety, privacy, claim-control, lifecycle, reviewer, or source-of-truth boundary, the stricter and safer boundary prevails. This coordination role remains documentation-stage, planning-stage, evidence-gated, human-supervised, future-gated, and non-authorizing.
+
 This addendum introduces VFinal++ as a future-strengthening layer that:
 
 - preserves VFinal+ audit continuity

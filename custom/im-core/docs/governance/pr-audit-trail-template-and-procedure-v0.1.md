@@ -317,6 +317,37 @@ Weak evidence must not support strong claims.
 
 ---
 
+## 7A. PR Evidence Bundle Minimum Fields
+
+Every non-mechanical PR should include a concise PR evidence bundle in the PR body.
+
+The PR evidence bundle should identify, at minimum:
+
+- [ ] PR purpose.
+- [ ] changed files list.
+- [ ] intended source-of-truth document.
+- [ ] whether the PR updates an existing source-of-truth document.
+- [ ] whether the PR creates a new source-of-truth document.
+- [ ] duplicate-document risk assessment.
+- [ ] claim-control scan result.
+- [ ] documentation-only boundary confirmation.
+- [ ] traceability impact statement.
+- [ ] risk-register impact statement.
+- [ ] evidence-registry impact statement.
+- [ ] human review or sign-off status.
+- [ ] GitHub checks expectation of 0 failing and 0 pending before merge.
+- [ ] post-merge verification plan.
+
+The evidence bundle must not overstate what was verified.
+
+A PR evidence bundle may document governance evidence, review evidence, repository evidence, or verification evidence, but it must not claim clinical validation, production readiness, regulatory compliance, cybersecurity certification, medical-device readiness, deployment readiness, pilot readiness, demo readiness, or phase closure unless separately supported by formal evidence and authorized human governance review.
+
+If evidence is missing, incomplete, stale, contradictory, or unclear, the PR body should state the limitation and the merge decision should remain HOLD, CONDITIONAL GO, DEFER, or NO-GO as appropriate.
+
+The evidence bundle is a review aid. It does not replace human review, required reviewer approval, GitHub checks, post-merge verification, source-of-truth review, duplicate-document review, claim-control review, traceability review, risk review, or evidence review.
+
+---
+
 ## 8. Source-of-Truth Expectations
 
 Before creating or modifying governance documentation, the PR should state the applicable source-of-truth relationship.

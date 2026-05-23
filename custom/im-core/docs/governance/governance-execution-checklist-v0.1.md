@@ -139,6 +139,33 @@ Each gate should identify:
 
 The next safest command should be the smallest command block that obtains the missing evidence or performs the approved narrow action for the current gate only.
 
+## 4A.1 Executable Command Generation and Pasted Output Review Rule
+
+AI-assisted command generation must remain gate-bound, evidence-gated, documentation-stage, and human-supervised.
+
+Before generating an executable command, the assistant or reviewer must confirm:
+
+- [ ] the current gate purpose is stated
+- [ ] the command is the smallest safe next action for that gate
+- [ ] repository path verification is included when `git` or `gh` is used
+- [ ] branch verification is included when branch state matters
+- [ ] working tree cleanliness is checked before any write action
+- [ ] open PR status is checked before creating a branch or recommending a new PR
+- [ ] the command is read-only unless an explicit write gate has been justified
+- [ ] no PHI, real patient data, secrets, credentials, production logs, database dumps, runtime execution, SQL/database migration, API/FHIR implementation, AI/model integration, prompt execution, frontend implementation, or OpenEMR core-sensitive behavior change is introduced
+- [ ] `git add .` is not used for controlled documentation PRs
+- [ ] any staging command names only the approved file or files
+- [ ] local evidence logs, if generated, remain outside committed source files
+- [ ] clear stop conditions are included
+- [ ] the command ends with a `FINAL DECISION` line
+
+When Termux or local command output is pasted back for review, the pasted output is evidence only for what it explicitly shows. The reviewer must not infer missing command results, fabricate omitted lines, or treat truncated, stale, contradictory, or unclear output as sufficient evidence for GO.
+
+If pasted output shows an unexpected repository path, wrong branch, dirty working tree, unexpected open PR, unresolved source-of-truth conflict, duplicate-document risk, pending or failing checks, unclear check status, PHI, secrets, runtime drift, SQL/database activity, API/FHIR activity, prompt execution, model integration, OpenEMR core-sensitive behavior change, unsupported readiness claim, or any other safety-boundary breach, the decision must be HOLD, DEFER, NO-GO, SPLIT, or REVERT as appropriate.
+
+A new executable command must not be generated until the previous command output has been reviewed, the current gate decision has been stated, and the next gate is justified.
+
+
 ---
 
 ## 4B. Stage-Based Transition Guard

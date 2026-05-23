@@ -601,3 +601,35 @@ Required future maintenance:
 - Maintain linkage between PR evidence bundles, reviewer approval records, source-of-truth files, risk register entries, evidence registry entries, and traceability rows as governance artifacts evolve.
 - Preserve documentation-stage, planning-stage, evidence-needed status unless a future controlled gate, evidence review, and human governance review support a stronger classification.
 - Do not treat these PRs as completed traceability, runtime evidence, clinical validation evidence, regulatory compliance evidence, cybersecurity certification evidence, production readiness evidence, or clinical-use authorization.
+
+---
+
+## PR #237 Risk-Register Governance-Control Traceability Relationship
+
+PR #237 updated the Risk Register V0.1 to add current-stage governance-control risk rows related to PR evidence discipline, Human-AI advisory review, and traceability maintenance.
+
+Traceability interpretation:
+
+- PR #237 added `RISK-GOV-002` for the risk that AI-assisted advisory review may be mistaken for human approval.
+- PR #237 added `RISK-AUDIT-002` for the risk that PR evidence bundles may be incomplete, stale, or overstated.
+- PR #237 added `RISK-TRACE-002` for the risk that governance-control traceability links may become stale after PR changes.
+- These rows support risk-to-traceability visibility for documentation-stage governance controls only.
+- These rows do not complete requirements-to-risk linkage.
+- These rows do not complete requirements-to-evidence linkage.
+- These rows do not complete requirements-to-control linkage.
+- These rows do not complete traceability.
+- These rows do not establish validation evidence, compliance evidence, certification evidence, release readiness, production readiness, implementation authorization, runtime authorization, or clinical-use authorization.
+
+Current-stage traceability handling:
+
+| Related PR / risk row | Traceability relationship | Current-stage traceability status | Limitation |
+|---|---|---|---|
+| PR #237 / `RISK-GOV-002` | Links Human-AI advisory review fields to the governance risk that AI output may be mistaken for human approval | Risk-to-governance traceability signal | Does not record actual approval, reviewer signature, completed review, validation, compliance, certification, production readiness, or Phase 0 closure |
+| PR #237 / `RISK-AUDIT-002` | Links PR Evidence Bundle Minimum Fields to the risk of incomplete, stale, or overstated PR evidence | Risk-to-audit-evidence traceability signal | Does not replace human review, reviewer approval, GitHub checks, post-merge verification, source-of-truth review, risk review, evidence review, or claim-control review |
+| PR #237 / `RISK-TRACE-002` | Links governance-control PR relationships to traceability-maintenance staleness risk | Risk-to-traceability-maintenance signal | Does not prove completed traceability, runtime evidence, validation evidence, compliance evidence, certification evidence, production readiness, or clinical-use authorization |
+
+Required future maintenance:
+
+- Maintain linkage between new risk rows, PR evidence bundles, reviewer approval records, source-of-truth files, evidence registry entries, and traceability rows as governance artifacts evolve.
+- Preserve documentation-stage, planning-stage, evidence-needed status unless a future controlled gate, evidence review, and human governance review support a stronger classification.
+- Do not treat PR #237 or the new risk rows as completed traceability, runtime evidence, clinical validation evidence, regulatory compliance evidence, cybersecurity certification evidence, production readiness evidence, or clinical-use authorization.

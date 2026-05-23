@@ -108,6 +108,13 @@ This template should not be used as evidence that review occurred unless it is c
 | Non-blocking issues identified | TBD |
 | Required follow-up actions | TBD |
 | Evidence reviewed | TBD |
+| Evidence classification | Repository-verified / file-grounded / user-provided / proposed / assumption / unknown / needs verification |
+| Source-of-truth / duplicate-document review status | TBD |
+| AI-assisted advisory review used | Yes / No / Not applicable |
+| AI-assisted output reviewed by human reviewer | TBD / Not applicable |
+| AI-assisted recommendation, if any | GO / CONDITIONAL GO / DEFER / NO-GO / Not applicable |
+| Human reviewer independent decision confirmation | TBD |
+| AI-human disagreement or override rationale | TBD / Not applicable |
 | Approval limitations | TBD |
 | Non-authorization statement confirmed | TBD |
 | Reviewer comments | TBD |

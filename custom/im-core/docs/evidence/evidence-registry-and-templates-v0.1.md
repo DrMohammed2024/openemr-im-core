@@ -433,3 +433,35 @@ Required future maintenance:
 - Keep evidence records linked to requirements, risks, controls, traceability rows, owner roles, review status, and limitations.
 - Preserve evidence-needed and planning-only status unless a future controlled gate, evidence review, and human governance review support a stronger classification.
 - Do not treat this relationship as runtime evidence, clinical validation evidence, regulatory compliance evidence, cybersecurity certification evidence, production readiness evidence, or clinical-use authorization.
+
+---
+
+## PR #237-#239 Governance-Control Evidence-Planning Relationship
+
+PR #237, PR #238, and PR #239 created a current-stage governance-control linkage sequence across the Risk Register, Traceability Matrix, and Requirements Traceability Population Starter.
+
+Evidence registry interpretation:
+
+- PR #237 added current-stage risk rows for Human-AI advisory review confusion, PR evidence-bundle quality, and traceability-maintenance staleness.
+- PR #238 documented the PR #237 risk rows in the Traceability Matrix as documentation-stage traceability signals.
+- PR #239 linked the new risk rows to relevant requirements traceability starter rows.
+- This relationship supports evidence-planning visibility only.
+- This relationship does not create completed evidence records.
+- This relationship does not complete requirements-to-risk linkage.
+- This relationship does not complete requirements-to-evidence linkage.
+- This relationship does not complete traceability.
+- This relationship does not establish validation evidence, compliance evidence, certification evidence, release-readiness evidence, implementation authorization, runtime authorization, or clinical-use authorization.
+
+Current-stage evidence handling:
+
+| Related PR / artifact | Relationship to evidence registry | Current-stage evidence status | Limitation |
+|---|---|---|---|
+| PR #237 / Risk Register V0.1 | Adds `RISK-GOV-002`, `RISK-AUDIT-002`, and `RISK-TRACE-002` as current-stage governance-control risk rows | Evidence-planning signal for risk visibility | Does not prove control implementation, human approval, completed review, validation evidence, compliance evidence, certification evidence, release authorization, or clinical-use authorization |
+| PR #238 / Traceability Matrix V0.1 | Links PR #237 risk rows to documentation-stage traceability interpretation | Evidence-planning signal for traceability visibility | Does not prove completed traceability, completed evidence, validation evidence, compliance evidence, certification evidence, release authorization, or clinical-use authorization |
+| PR #239 / Requirements Traceability Population Starter V0.1 | Links the new risk rows to relevant `TRACE-REQ-*` starter rows | Evidence-planning signal for requirements-to-risk linkage | Does not prove completed requirements baseline, completed requirements-to-risk linkage, completed evidence, validation evidence, compliance evidence, certification evidence, release authorization, or clinical-use authorization |
+
+Required future maintenance:
+
+- Maintain linkage between evidence IDs, requirements rows, risk rows, traceability rows, PR evidence bundles, owner roles, reviewer roles, review status, and limitations.
+- Preserve evidence-needed and planning-only status unless a future controlled gate, evidence review, and human governance review support a stronger classification.
+- Do not treat PR #237, PR #238, PR #239, or this evidence-planning relationship as completed evidence, completed traceability, runtime evidence, clinical validation evidence, regulatory compliance evidence, cybersecurity certification evidence, release-readiness evidence, or clinical-use authorization.

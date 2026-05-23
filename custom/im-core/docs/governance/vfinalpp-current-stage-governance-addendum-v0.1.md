@@ -59,6 +59,33 @@ This addendum introduces VFinal++ as a future-strengthening layer that:
 
 This addendum does not authorize implementation, runtime activity, PHI handling, real patient data, AI integration, prompt execution, model integration, API/FHIR work, SQL/database migration, OpenEMR core behavior changes, clinical use, production deployment, clinical validation, regulatory compliance, or cybersecurity certification.
 
+### 1.1 GPT / AI-Assisted Governance Execution Routing Model
+
+This subsection defines a routing-only model for GPT / AI-assisted governance support during the current documentation-stage work of OpenEMR IM Core.
+
+It does not create a new source of authority, replace specialist governance artifacts, authorize autonomous decisions, authorize merge automation, or authorize runtime, clinical, AI, API/FHIR, SQL/database, OpenEMR core, or production activity.
+
+When GPT / AI-assisted support is used, the assistant should route the question or proposed action to the controlling current-stage artifact before recommending the next gate.
+
+| Question or decision type | Primary routing target | Current-stage interpretation |
+|---|---|---|
+| Overall current-stage governance coordination | VFinal++ Current-Stage Governance Addendum | Coordinates stricter current-stage controls without replacing specialist artifacts. |
+| GPT / AI-assisted review method | AI-Assisted Governance Review Procedure | Defines advisory-only GPT review, input-package controls, output expectations, and human review requirements. |
+| Whether a decision may be automated | Decision Automation Boundary Policy | Prevents autonomous approval, autonomous risk acceptance, autonomous merge readiness, autonomous clinical safety approval, and autonomous clinical decision-making. |
+| Whether to create or update a document | Documentation Index and Documentation Inventory | Requires source-of-truth and duplicate-document review before creating new artifacts. |
+| Requirements, risk, evidence, and traceability linkage | Traceability Matrix Policy and related requirements, risk, evidence, and traceability artifacts | Supports documentation-stage linkage planning only; does not prove completeness, validation, compliance, or release readiness. |
+| PR execution and stop-rule discipline | Governance Execution Checklist and Merge Readiness Checklist | Requires narrow scope, documentation-only boundaries, human review, and GitHub checks showing 0 failing and 0 pending before merge. |
+| Claims and readiness wording | Intended Use / Scope / Users / Claims and evidence / claim-control artifacts | Prohibits unsupported clinical-use, production-readiness, validation, compliance, certification, pilot, deployment, or commercial-readiness claims. |
+| Runtime, AI, prompt, API/FHIR, SQL/database, or OpenEMR core questions | Runtime, AI, API/FHIR, database, architecture, privacy/security, and lifecycle boundary artifacts | Keeps such work future-gated and non-authorized unless a later formal gate explicitly permits it. |
+
+GPT / AI-assisted support may recommend GO, CONDITIONAL GO, HOLD, DEFER, NO-GO, SPLIT, or REVERT as advisory governance language only.
+
+GPT / AI-assisted support must not be treated as the final authority for clinical safety, privacy/security, risk acceptance, regulatory interpretation, cybersecurity certification, validation, release readiness, phase closure, merge approval, or clinical-use authorization.
+
+If repository state is unknown, the working tree is not clean, open PR conflict exists, source-of-truth conflict exists, duplicate-document risk is unresolved, PHI or secrets are suspected, unsupported readiness claims appear, or GitHub checks are pending or failing, the routed decision must be HOLD, DEFER, NO-GO, SPLIT, or REVERT as appropriate until human review and evidence resolve the issue.
+
+Final approval, merge, phase transition, closure, clinical safety acceptance, privacy/security acceptance, risk acceptance, evidence acceptance, and any future implementation authorization remain human-owned decisions.
+
 ---
 
 ## 2. Relationship to VFinal+

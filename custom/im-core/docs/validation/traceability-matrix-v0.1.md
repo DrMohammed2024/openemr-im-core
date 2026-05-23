@@ -569,3 +569,35 @@ Required future maintenance:
 - Maintain requirement-to-risk, requirement-to-control, requirement-to-evidence, owner-role, review-status, and limitation links as source-of-truth artifacts evolve.
 - Preserve planning-only and evidence-needed status unless a future controlled gate, evidence review, and human governance review support a stronger classification.
 - Do not treat this relationship as completed traceability, runtime evidence, clinical validation evidence, regulatory compliance evidence, cybersecurity certification evidence, production readiness evidence, or clinical-use authorization.
+
+---
+
+## PR #233-#235 Governance-Control Traceability Relationship
+
+PR #233, PR #234, and PR #235 added current-stage governance controls that strengthen AI-assisted repository execution, PR audit evidence, and human review record structure.
+
+Traceability interpretation:
+
+- PR #233 updated the Governance Execution Checklist V0.1 to add executable command generation and pasted-output review discipline.
+- PR #234 updated the PR Audit Trail Template and Procedure V0.1 to add PR Evidence Bundle Minimum Fields.
+- PR #235 updated the Formal Reviewer Approval Record Template V0.1 to add Human-AI advisory review fields.
+- These changes support governance traceability for documentation-stage execution controls only.
+- These changes do not complete requirements-to-risk linkage.
+- These changes do not complete requirements-to-evidence linkage.
+- These changes do not complete requirements-to-control linkage.
+- These changes do not complete traceability.
+- These changes do not establish validation evidence, compliance evidence, certification evidence, release readiness, production readiness, implementation authorization, runtime authorization, or clinical-use authorization.
+
+Current-stage traceability handling:
+
+| Related PR / artifact | Traceability relationship | Current-stage traceability status | Limitation |
+|---|---|---|---|
+| PR #233 / Governance Execution Checklist V0.1 | Adds gate-bound executable command generation and pasted-output review discipline | Governance-control traceability signal | Does not authorize runtime execution, AI/model integration, prompt execution, OpenEMR core behavior change, or clinical use |
+| PR #234 / PR Audit Trail Template and Procedure V0.1 | Adds PR Evidence Bundle Minimum Fields for audit-ready PR body evidence | PR audit and evidence-bundle traceability signal | Does not replace human review, reviewer approval, GitHub checks, post-merge verification, source-of-truth review, risk review, evidence review, or claim-control review |
+| PR #235 / Formal Reviewer Approval Record Template V0.1 | Adds fields separating AI-assisted advisory review from independent human reviewer decision | Human-review and AI-governance traceability signal | Does not record actual approval, reviewer signature, completed review, validation, compliance, certification, production readiness, or Phase 0 closure |
+
+Required future maintenance:
+
+- Maintain linkage between PR evidence bundles, reviewer approval records, source-of-truth files, risk register entries, evidence registry entries, and traceability rows as governance artifacts evolve.
+- Preserve documentation-stage, planning-stage, evidence-needed status unless a future controlled gate, evidence review, and human governance review support a stronger classification.
+- Do not treat these PRs as completed traceability, runtime evidence, clinical validation evidence, regulatory compliance evidence, cybersecurity certification evidence, production readiness evidence, or clinical-use authorization.

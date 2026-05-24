@@ -125,7 +125,7 @@ For each evidence item:
 | EVID-P0-012 | Privacy and security planning status | Threat model and data governance documents | To identify | To verify | To verify | Evidence-needed | No PHI readiness claim |
 | EVID-P0-013 | Claims control status | Commercial claims policy and claims register | To identify | To verify | To verify | Evidence-needed | No unsupported claims |
 | EVID-P0-014 | Current open gaps | Gap summary and readiness checklist | Multiple artifacts | To verify | To verify | Evidence-needed | Must preserve open-gap visibility |
-| EVID-P0-015 | Post-merge verification records | PR audit trail and local verification outputs | To identify, including recent PR #218 and PR #219 post-merge verification logs | To verify | To verify | Evidence-needed | Must be traceable to merged PRs; log references do not authorize Phase 0 closure, implementation, runtime, clinical use, production use, validation, compliance, certification, deployment, pilot use, or production readiness |
+| EVID-P0-015 | Post-merge verification records | PR audit trail and local verification outputs | To identify, including recent PR #218, PR #219, PR #240, PR #241, and PR #242 post-merge verification logs | To verify | To verify | Evidence-needed | Must be traceable to merged PRs; log references do not authorize Phase 0 closure, implementation, runtime, clinical use, production use, validation, compliance, certification, deployment, pilot use, or production readiness |
 
 ---
 

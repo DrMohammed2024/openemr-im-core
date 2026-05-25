@@ -265,6 +265,68 @@ Default rule:
 
 ---
 
+## 4A.2 Project-Wide Preflight and Completion Control Gate
+
+Before creating a branch for any non-mechanical documentation or governance PR, the proposed change must pass a preflight and completion-control review.
+
+This gate is intended to prevent avoidable follow-up PRs while preserving small PR discipline, evidence gating, claim control, source-of-truth control, and human supervision.
+
+Before branch creation, identify and classify:
+
+- [ ] candidate file or files
+- [ ] candidate row, section, heading, or checklist item
+- [ ] neighboring rows or sections in the same artifact
+- [ ] related `To identify`, `To verify`, `Evidence-needed`, `TBD`, `TODO`, `Unknown`, or pending placeholders
+- [ ] related PR references
+- [ ] source-of-truth relationship
+- [ ] duplicate-document risk
+- [ ] documentation index impact
+- [ ] traceability impact
+- [ ] risk or evidence registry impact
+- [ ] claim-control risk
+- [ ] privacy, security, clinical-safety, AI/runtime/API/FHIR/SQL boundary risk
+- [ ] post-merge verification criteria
+
+Each adjacent known gap must be classified as one of:
+
+- [ ] include in current PR
+- [ ] defer to separate PR
+- [ ] exclude as out of scope
+- [ ] needs source discovery
+- [ ] needs human review
+- [ ] not safe to update now
+
+A PR is complete within scope only when the approved local scope is fully discovered, bounded, edited, reviewed, and prepared for post-merge verification.
+
+Complete within scope does not mean:
+
+- project completion
+- evidence acceptance
+- completed evidence package
+- Phase closure
+- clinical validation
+- regulatory compliance
+- cybersecurity certification
+- production readiness
+- pilot readiness
+- deployment readiness
+- runtime readiness
+- clinical-use authorization
+
+Follow-up PRs are acceptable when a gap was explicitly deferred, discovered after merge despite reasonable preflight, requires different reviewer roles, or would create unsafe scope expansion or overclaim risk if included.
+
+Follow-up PRs are not acceptable when they result from failure to run the required preflight scan.
+
+Decision:
+
+- complete local scope identified and adjacent gaps classified: GO may proceed to branch creation
+- source-of-truth uncertainty unresolved: HOLD
+- duplicate-document risk unresolved: HOLD
+- evidence status or claim-control risk unresolved: HOLD
+- privacy, clinical-safety, runtime, AI, API/FHIR, SQL, PHI, or OpenEMR core-sensitive boundary risk unresolved: NO-GO or HOLD pending human review
+
+---
+
 ## 6. Evidence Checklist
 
 Before execution, identify evidence supporting the change.

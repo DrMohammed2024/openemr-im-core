@@ -211,7 +211,7 @@ Safety, privacy, security, and claims-sensitive documents require appropriate cr
 | #94 | Risk Register V0.1 | custom/im-core/docs/risk/ | Risk Owner / Clinical Safety Owner | Approved for current stage |
 | #95 | Pull Request Template and Stop Rules V0.1 | custom/im-core/docs/governance/ | Governance Owner | Approved for current stage |
 | #96 | Clinical Safety Case V0.1 | custom/im-core/docs/clinical-safety/ | Clinical Safety Owner | Approved for current stage |
-| #97 | Human Factors and Usability Risk Plan V0.1 | custom/im-core/docs/human-factors/ | Human Factors Reviewer | Approved for current stage |
+| #97 | Human Factors and Usability Risk Plan V0.1 | custom/im-core/docs/human-factors/human-factors-and-usability-risk-plan-v0.1.md | Human Factors Reviewer | Approved for current stage |
 | #98 | Security / Privacy / RBAC / Audit / Backup Gap Refinement V0.1 | custom/im-core/docs/security/ | Privacy/Security Owner | Approved for current stage |
 | #101 | Threat Model and Data Governance V0.1 | custom/im-core/docs/security/ | Data Governance Owner / Privacy-Security Owner | Approved for current stage |
 | #102 | OpenEMR Integration Boundary Map V0.1 | custom/im-core/docs/integration/ | Technical Owner / Governance Owner | Approved for current stage |

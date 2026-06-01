@@ -216,7 +216,7 @@ Safety, privacy, security, and claims-sensitive documents require appropriate cr
 | #101 | Threat Model and Data Governance V0.1 | custom/im-core/docs/security/ | Data Governance Owner / Privacy-Security Owner | Approved for current stage |
 | #102 | OpenEMR Integration Boundary Map V0.1 | custom/im-core/docs/integration/openemr-integration-boundary-map-v0.1.md | Technical Owner / Governance Owner | Approved for current stage |
 | #103 | ADR Baseline V0.1 | custom/im-core/docs/architecture/ | Technical Owner / Governance Owner | Approved for current stage |
-| #104 | Non-Production Reproducible Install Plan V0.1 | custom/im-core/docs/deployment/ | Technical Owner / Operations Owner | Approved for current stage |
+| #104 | Non-Production Reproducible Install Plan V0.1 | custom/im-core/docs/deployment/non-production-reproducible-install-plan-v0.1.md | Technical Owner / Operations Owner | Approved for current stage |
 | #105 | Synthetic Demo Data and Demo Boundary V0.1 | custom/im-core/docs/data-governance/synthetic-demo-data-and-demo-boundary-v0.1.md | Data Governance Owner / Privacy-Security Owner | Approved for current stage |
 | #106 | Training and Support Package V0.1 | custom/im-core/docs/training/training-and-support-package-v0.1.md | Training Owner / Support Owner | Approved for current stage |
 | #107 | Commercial Claims Policy and Claims Register V0.1 | custom/im-core/docs/claims/commercial-claims-policy-and-claims-register-v0.1.md | Claims Owner / Governance Owner | Approved for current stage |

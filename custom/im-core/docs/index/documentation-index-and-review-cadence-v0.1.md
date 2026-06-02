@@ -210,7 +210,7 @@ Safety, privacy, security, and claims-sensitive documents require appropriate cr
 | #93 | Traceability Matrix V0.1 | custom/im-core/docs/validation/traceability-matrix-v0.1.md | Governance Owner / Technical Owner | Approved for current stage |
 | #94 | Risk Register V0.1 | custom/im-core/docs/risk/risk-register-v0.1.md | Risk Owner / Clinical Safety Owner | Approved for current stage |
 | #95 | Pull Request Template and Stop Rules V0.1 | custom/im-core/docs/governance/ | Governance Owner | Approved for current stage |
-| #96 | Clinical Safety Case V0.1 | custom/im-core/docs/clinical-safety/ | Clinical Safety Owner | Approved for current stage |
+| #96 | Clinical Safety Case V0.1 | custom/im-core/docs/clinical-safety/clinical-safety-case-v0.1.md | Clinical Safety Owner | Approved for current stage |
 | #97 | Human Factors and Usability Risk Plan V0.1 | custom/im-core/docs/human-factors/human-factors-and-usability-risk-plan-v0.1.md | Human Factors Reviewer | Approved for current stage |
 | #98 | Security / Privacy / RBAC / Audit / Backup Gap Refinement V0.1 | custom/im-core/docs/security/ | Privacy/Security Owner | Approved for current stage |
 | #101 | Threat Model and Data Governance V0.1 | custom/im-core/docs/security/ | Data Governance Owner / Privacy-Security Owner | Approved for current stage |

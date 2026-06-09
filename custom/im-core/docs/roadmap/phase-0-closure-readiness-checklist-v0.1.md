@@ -315,7 +315,7 @@ This document is complete when:
 
 After this PR is merged, the next documentation step should be separately approved based on the current roadmap and remaining Phase 0 gaps.
 
-A likely next step is to prepare a Phase 0 closure gap summary or reviewer approval matrix before any Phase 0 closure report.
+The Phase 0 governance closure gap summary and formal reviewer approval matrix now exist as documentation-stage artifacts; any next documentation step should be separately approved based on remaining Phase 0 gaps, evidence population needs, and formal reviewer record completion.
 
 Do not treat this checklist as Phase 0 closure.
 

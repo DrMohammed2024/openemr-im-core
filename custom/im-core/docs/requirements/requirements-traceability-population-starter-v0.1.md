@@ -156,7 +156,7 @@ Future updates to this starter or to the main traceability matrix should follow 
 6. Do not treat requirements as implementation authorization.
 7. Do not make readiness, validation, compliance, certification, commercial, or clinical-use claims without evidence and approval.
 8. Keep changes small and reviewable.
-9. Update the documentation index after this document is merged.
+9. Maintain documentation index alignment when this document is updated or superseded.
 10. Update the traceability matrix through a separate controlled PR if rows are migrated or normalized.
 
 ---
@@ -258,7 +258,7 @@ This document is complete when:
 
 After this PR is merged, the next documentation step should be separately approved based on the current roadmap and open governance gaps.
 
-A likely next step is to update the Documentation Index to include this requirements traceability population starter.
+The Documentation Index already includes this requirements traceability population starter; any next documentation step should be separately approved based on remaining traceability population, evidence linkage, and Phase 0 governance gap needs.
 
 Do not start the next PR until this PR is merged, reviewed, cleaned, and the repository state is verified.
 

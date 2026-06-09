@@ -245,7 +245,7 @@ This document is complete when:
 
 After this PR is merged, the next documentation step should be separately approved based on current roadmap and remaining Phase 0 gaps.
 
-A likely next step is to create a Phase 0 closure gap summary before any Phase 0 closure report.
+The Phase 0 governance closure gap summary now exists as a documentation-stage gap summary; any next documentation step should be separately approved based on remaining Phase 0 gaps, evidence population needs, and formal reviewer record completion.
 
 Do not treat this template as an actual completed review record.
 

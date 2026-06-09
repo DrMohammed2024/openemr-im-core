@@ -312,7 +312,7 @@ This document is complete when:
 
 After this PR is merged, the next documentation step should be separately approved based on current roadmap and remaining Phase 0 gaps.
 
-A likely next step is to create a formal reviewer approval record template or Phase 0 closure gap summary.
+The formal reviewer approval record template and Phase 0 governance closure gap summary now exist; the next documentation step should be separately approved based on remaining Phase 0 gaps, evidence population needs, and formal reviewer record completion.
 
 Do not treat this matrix as actual reviewer approval.
 

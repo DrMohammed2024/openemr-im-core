@@ -1,0 +1,144 @@
+schema_version: "0.1"
+package: "IMCoreGovernanceAgent V0.1"
+stage: "documentation-stage-only"
+status: "advisory-human-supervised"
+purpose: "Controlled evidence and claim classification vocabulary for documentation-stage governance review."
+
+labels:
+  repository_verified:
+    display: "repository-verified"
+    meaning: "Supported by current repository state verified from the active repository, branch, file contents, checks, or PR metadata."
+    reliance: "usable_for_current_repository_reasoning_after_fresh_verification"
+    cautions:
+      - "Requires fresh verification."
+      - "Prior logs do not prove current state."
+      - "Does not imply clinical, production, validation, compliance, or certification status."
+
+  file_grounded:
+    display: "file-grounded"
+    meaning: "Supported by a reviewed file or uploaded artifact."
+    reliance: "usable_for_file_specific_reasoning"
+    cautions:
+      - "File content may be historical or proposed."
+      - "File-grounded does not mean repository-current unless repository location and branch are verified."
+
+  user_provided:
+    display: "user-provided"
+    meaning: "Provided directly by the user in the current workflow."
+    reliance: "usable_as_context_with_verification_limits"
+    cautions:
+      - "May require repository, file, or external verification before reliance."
+
+  documented_only:
+    display: "documented only"
+    meaning: "Described in documentation without evidence of implementation, runtime behavior, validation, compliance, certification, deployment, or clinical use."
+    reliance: "documentation_stage_only"
+    cautions:
+      - "Must not be upgraded into implementation or readiness evidence."
+
+  roadmap_stated:
+    display: "roadmap-stated"
+    meaning: "Stated as a future plan, roadmap item, or future-gated intent."
+    reliance: "future_planning_only"
+    cautions:
+      - "Does not authorize implementation."
+      - "Does not prove feasibility, completion, or readiness."
+
+  proposed:
+    display: "proposed"
+    meaning: "Suggested for review but not accepted, merged, approved, or source-of-truth."
+    reliance: "not_reliable_without_human_review"
+    cautions:
+      - "Requires human governance review."
+      - "Requires source-of-truth and duplicate-document review."
+
+  assumption:
+    display: "assumption"
+    meaning: "A working assumption used to proceed when information is incomplete."
+    reliance: "low"
+    cautions:
+      - "Must be made explicit."
+      - "Must be verified before high-impact decisions."
+
+  inference:
+    display: "inference"
+    meaning: "A reasoned conclusion derived from available evidence but not directly stated."
+    reliance: "conditional"
+    cautions:
+      - "Must identify supporting facts."
+      - "Must not be presented as verified fact."
+
+  unknown:
+    display: "unknown"
+    meaning: "Not known from available information."
+    reliance: "none"
+    cautions:
+      - "Requires verification before reliance."
+
+  needs_verification:
+    display: "needs verification"
+    meaning: "Potentially relevant but not yet verified with current evidence."
+    reliance: "none_until_verified"
+    cautions:
+      - "Must trigger verification before action."
+
+  not_acceptable_for_reliance:
+    display: "not acceptable for reliance"
+    meaning: "Unsupported, unsafe, stale, contradictory, or outside authorized project boundaries."
+    reliance: "none"
+    cautions:
+      - "Must not be used to justify repository action, clinical use, production readiness, validation, compliance, certification, or PHI/real-patient-data use."
+
+forbidden_upgrades:
+  - from: "documented only"
+    to:
+      - "implemented"
+      - "validated"
+      - "production-ready"
+      - "clinical-use authorized"
+      - "regulatory compliant"
+      - "cybersecurity certified"
+
+  - from: "roadmap-stated"
+    to:
+      - "approved"
+      - "implemented"
+      - "ready"
+      - "validated"
+
+  - from: "file-grounded"
+    to:
+      - "repository-verified"
+    unless: "fresh repository verification confirms the same file content on the active branch"
+
+hard_stop_claims:
+  - "clinically validated"
+  - "approved for clinical use"
+  - "production-ready"
+  - "regulatory compliant"
+  - "cybersecurity certified"
+  - "PHI-ready"
+  - "real-patient-data ready"
+  - "runtime AI implemented"
+  - "model integration complete"
+  - "prompt execution enabled"
+  - "autonomous diagnosis"
+  - "autonomous treatment recommendation"
+  - "autonomous prescribing"
+  - "autonomous triage"
+
+required_default_for_current_stage:
+  project_stage: "documentation-stage-only"
+  clinical_use: "not authorized"
+  production_readiness: "not production-ready"
+  clinical_validation: "not clinically validated"
+  regulatory_compliance: "not regulatory compliant"
+  cybersecurity_certification: "not cybersecurity certified"
+  phi_use: "prohibited"
+  real_patient_data_use: "prohibited"
+  runtime_ai: "not authorized"
+  prompt_execution: "not authorized"
+  model_integration: "not authorized"
+
+human_review_required: true
+advisory_only: true

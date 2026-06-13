@@ -1,0 +1,158 @@
+schema_version: "0.1"
+package: "IMCoreGovernanceAgent V0.1"
+stage: "documentation-stage-only"
+status: "advisory-human-supervised"
+purpose: "Safety gates for documentation-stage governance review of IMCoreGovernanceAgent V0.1 outputs and repository actions."
+
+default_decision: "HOLD_UNTIL_VERIFIED"
+
+gate_semantics:
+  GO:
+    meaning: "No obvious documentation-stage blocker detected based on available verified evidence."
+    authority: "advisory_only"
+    requires_human_acceptance: true
+
+  CONDITIONAL_GO:
+    meaning: "Action may be possible only after stated conditions are satisfied and verified."
+    authority: "advisory_only"
+    requires_human_acceptance: true
+
+  NO_GO:
+    meaning: "A blocker was detected that should prevent the proposed action until resolved."
+    authority: "advisory_only"
+    requires_human_review: true
+
+  HOLD:
+    meaning: "Required evidence is missing, stale, contradictory, or insufficient."
+    authority: "advisory_only"
+    requires_verification: true
+
+  DEFER:
+    meaning: "The proposed action belongs to a future stage or depends on prerequisite governance work."
+    authority: "advisory_only"
+    requires_human_review: true
+
+hard_no_go_gates:
+  NO_PHI:
+    trigger: "PHI, patient identifiers, identifiable screenshots, or real patient details are detected or requested."
+    decision: "NO_GO"
+    required_action: "Remove PHI and use de-identified documentation-stage materials only."
+
+  NO_REAL_PATIENT_DATA:
+    trigger: "Real patient data use is detected, requested, or implied."
+    decision: "NO_GO"
+    required_action: "Stop and replace with de-identified synthetic or documentation-stage examples only."
+
+  NO_SECRETS:
+    trigger: "Secrets, credentials, API keys, tokens, production logs, or database dumps are detected."
+    decision: "NO_GO"
+    required_action: "Stop, remove sensitive material, and escalate to human privacy/security review."
+
+  NO_RUNTIME_AI:
+    trigger: "Runtime AI, AI execution, prompt execution, model calls, model orchestration, or model integration is proposed."
+    decision: "NO_GO"
+    required_action: "Defer to a separately authorized future governance stage."
+
+  NO_AUTONOMOUS_AGENT:
+    trigger: "Autonomous agent behavior, autonomous tool use, automatic approval, automatic merge, or unsupervised execution is proposed."
+    decision: "NO_GO"
+    required_action: "Keep outputs advisory and human-supervised only."
+
+  NO_CLINICAL_USE:
+    trigger: "Clinical use, patient-facing use, clinical decision support, diagnosis, treatment, prescribing, or triage authorization is claimed or requested."
+    decision: "NO_GO"
+    required_action: "Reframe as documentation-stage governance only."
+
+  NO_RUNTIME_IMPLEMENTATION:
+    trigger: "Runtime code, OpenEMR plugin/module behavior, frontend implementation, backend service, API/FHIR behavior, SQL, database migration, or schema change is proposed."
+    decision: "NO_GO"
+    required_action: "Reject for current stage and defer to future-gated governance review."
+
+  NO_UNSUPPORTED_READINESS_CLAIMS:
+    trigger: "Production-ready, pilot-ready, demo-ready, commercial-ready, clinically validated, regulatory compliant, cybersecurity certified, or medical-device-ready claim is made."
+    decision: "NO_GO"
+    required_action: "Replace with documentation-stage, not-ready, not-validated, not-compliant, not-certified wording."
+
+  NO_BYPASS_CHECKS:
+    trigger: "Failing or pending required GitHub checks are ignored, bypassed, or treated as acceptable for merge."
+    decision: "NO_GO"
+    required_action: "Require 0 failing and 0 pending required checks before merge consideration."
+
+conditional_go_gates:
+  SOURCE_OF_TRUTH_REVIEW:
+    trigger: "New governance, safety, risk, evidence, requirements, traceability, or claims artifact is proposed."
+    decision: "CONDITIONAL_GO"
+    required_condition: "Verify source-of-truth alignment and duplicate-document risk."
+
+  CLAIM_CONTROL_REVIEW:
+    trigger: "Any claim about stage, readiness, validation, compliance, certification, AI capability, clinical use, or implementation is present."
+    decision: "CONDITIONAL_GO"
+    required_condition: "Classify claim and remove unsupported upgrades."
+
+  TRACEABILITY_REVIEW:
+    trigger: "PR changes governance, requirements, risk, evidence, safety, privacy/security, or review workflow artifacts."
+    decision: "CONDITIONAL_GO"
+    required_condition: "Map changed files to affected source-of-truth, controls, reviewers, and follow-up actions."
+
+  HUMAN_REVIEW_ACCEPTANCE:
+    trigger: "Any GO or CONDITIONAL GO recommendation is produced."
+    decision: "CONDITIONAL_GO"
+    required_condition: "Named human reviewer or maintainer must accept the recommendation before action."
+
+  CURRENT_REPOSITORY_VERIFICATION:
+    trigger: "Any repository action is proposed."
+    decision: "CONDITIONAL_GO"
+    required_condition: "Verify current branch, clean working tree, changed files, open PR state, and relevant checks."
+
+repository_action_requirements:
+  required_before_branch_or_file_action:
+    - "explicit human instruction"
+    - "current branch verified"
+    - "working tree status verified"
+    - "source-of-truth conflict risk reviewed"
+    - "duplicate-document risk reviewed"
+    - "claim-control boundary reviewed"
+
+  required_before_commit:
+    - "explicit human instruction"
+    - "changed files listed"
+    - "diff reviewed"
+    - "no PHI"
+    - "no secrets"
+    - "no runtime implementation"
+    - "no unsupported readiness claims"
+    - "no git add dot"
+
+  required_before_push:
+    - "explicit human instruction"
+    - "commit reviewed"
+    - "branch confirmed"
+    - "remote target confirmed"
+
+  required_before_pr:
+    - "explicit human instruction"
+    - "branch pushed intentionally"
+    - "PR scope limited to one purpose"
+    - "PR body claim-controlled"
+    - "reviewer expectations documented"
+
+  required_before_merge:
+    - "human review complete"
+    - "changed-file scope accepted"
+    - "source-of-truth conflict resolved"
+    - "duplicate-document risk resolved"
+    - "no PHI"
+    - "no secrets"
+    - "no unsupported claims"
+    - "0 failing required checks"
+    - "0 pending required checks"
+
+final_rule:
+  advisory_only: true
+  human_review_required: true
+  no_clinical_use: true
+  no_phi: true
+  no_real_patient_data: true
+  no_runtime_ai: true
+  no_prompt_execution: true
+  no_model_integration: true

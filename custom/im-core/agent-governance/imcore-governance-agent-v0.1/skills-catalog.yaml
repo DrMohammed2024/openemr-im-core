@@ -1,0 +1,240 @@
+schema_version: "0.1"
+package: "IMCoreGovernanceAgent V0.1"
+stage: "documentation-stage-only"
+status: "advisory-human-supervised"
+purpose: "Documentation-stage advisory skill catalog for IMCoreGovernanceAgent V0.1 governance review support."
+
+catalog_defaults:
+  skill_type: "documentation_stage_advisory_review"
+  execution_authority: "none"
+  output_authority: "advisory_only"
+  human_review_required: true
+  runtime_execution_authorized: false
+  prompt_execution_authorized: false
+  model_integration_authorized: false
+  clinical_use_authorized: false
+  phi_allowed: false
+  real_patient_data_allowed: false
+  secrets_allowed: false
+
+skills:
+  SKILL_001_SCOPE_AND_BOUNDARY_REVIEW:
+    name: "Scope and Boundary Review"
+    purpose: "Check whether proposed content stays within documentation-stage, planning-stage, governance-stage boundaries."
+    related_workflows:
+      - "WF_001_REPOSITORY_CURRENT_STATE_VERIFICATION"
+      - "WF_002_PR_GOVERNANCE_REVIEW"
+    primary_roles:
+      - "Governance Owner"
+      - "Documentation Owner"
+    required_gates:
+      - "NO_RUNTIME_IMPLEMENTATION"
+      - "NO_CLINICAL_USE"
+      - "NO_UNSUPPORTED_READINESS_CLAIMS"
+    output: "boundary_findings_advisory_only"
+
+  SKILL_002_SOURCE_OF_TRUTH_REVIEW:
+    name: "Source-of-Truth Review"
+    purpose: "Identify active governing documents and possible source-of-truth conflicts."
+    related_workflows:
+      - "WF_005_SOURCE_OF_TRUTH_MAPPING"
+      - "WF_006_DUPLICATE_DOCUMENT_RISK_REVIEW"
+    primary_roles:
+      - "Documentation Owner"
+      - "Governance Owner"
+    required_gates:
+      - "SOURCE_OF_TRUTH_REVIEW"
+    output: "source_of_truth_notes_advisory_only"
+
+  SKILL_003_DUPLICATE_DOCUMENT_REVIEW:
+    name: "Duplicate Document Review"
+    purpose: "Detect duplicate or overlapping governance artifacts before new files are created."
+    related_workflows:
+      - "WF_006_DUPLICATE_DOCUMENT_RISK_REVIEW"
+    primary_roles:
+      - "Documentation Owner"
+      - "Governance Owner"
+    required_gates:
+      - "SOURCE_OF_TRUTH_REVIEW"
+    output: "duplicate_risk_notes_advisory_only"
+
+  SKILL_004_CLAIM_CONTROL_REVIEW:
+    name: "Claim-Control Review"
+    purpose: "Classify material claims and detect unsupported readiness, validation, compliance, certification, implementation, AI, PHI, or clinical-use claims."
+    related_workflows:
+      - "WF_003_CLAIM_CONTROL_REVIEW"
+    primary_roles:
+      - "Governance Owner"
+      - "Evidence Reviewer"
+      - "Documentation Owner"
+    required_gates:
+      - "CLAIM_CONTROL_REVIEW"
+      - "NO_UNSUPPORTED_READINESS_CLAIMS"
+    output: "claim_control_findings_advisory_only"
+
+  SKILL_005_EVIDENCE_LABELING:
+    name: "Evidence Labeling"
+    purpose: "Apply controlled evidence labels to claims, repository observations, file-grounded findings, assumptions, and unknowns."
+    related_workflows:
+      - "WF_003_CLAIM_CONTROL_REVIEW"
+      - "WF_007_TRACEABILITY_REVIEW"
+    primary_roles:
+      - "Evidence Reviewer"
+      - "Governance Owner"
+    required_gates:
+      - "CLAIM_CONTROL_REVIEW"
+    output: "evidence_label_notes_advisory_only"
+
+  SKILL_006_NO_PHI_NO_SECRETS_REVIEW:
+    name: "No-PHI / No-Secrets Review"
+    purpose: "Identify PHI, real patient data, patient identifiers, credentials, secrets, tokens, logs, or database dumps."
+    related_workflows:
+      - "WF_004_NO_PHI_NO_SECRETS_REVIEW"
+      - "WF_011_PROMPT_INJECTION_REVIEW"
+    primary_roles:
+      - "Privacy-Security Owner"
+      - "Governance Owner"
+    required_gates:
+      - "NO_PHI"
+      - "NO_REAL_PATIENT_DATA"
+      - "NO_SECRETS"
+    output: "privacy_security_findings_advisory_only"
+
+  SKILL_007_TRACEABILITY_MAPPING:
+    name: "Traceability Mapping"
+    purpose: "Map changed files to requirements, boundaries, risks, controls, evidence, reviewer roles, findings, decisions, and follow-up actions."
+    related_workflows:
+      - "WF_007_TRACEABILITY_REVIEW"
+      - "WF_008_MERGE_READINESS_REVIEW"
+    primary_roles:
+      - "Traceability Reviewer"
+      - "Requirements Owner"
+      - "Risk Owner"
+      - "Evidence Reviewer"
+    required_gates:
+      - "TRACEABILITY_REVIEW"
+    output: "traceability_notes_advisory_only"
+
+  SKILL_008_RISK_REGISTER_SUPPORT:
+    name: "Risk Register Support"
+    purpose: "Identify risk register linkage needs, hazard/control mapping gaps, and risk escalation needs."
+    related_workflows:
+      - "WF_007_TRACEABILITY_REVIEW"
+    primary_roles:
+      - "Risk Owner"
+      - "Governance Owner"
+    required_gates:
+      - "HUMAN_REVIEW_ACCEPTANCE"
+    output: "risk_linkage_notes_advisory_only"
+
+  SKILL_009_REQUIREMENTS_REVIEW_SUPPORT:
+    name: "Requirements Review Support"
+    purpose: "Identify requirements register linkage, requirement status, and requirement traceability gaps."
+    related_workflows:
+      - "WF_007_TRACEABILITY_REVIEW"
+    primary_roles:
+      - "Requirements Owner"
+      - "Traceability Reviewer"
+    required_gates:
+      - "TRACEABILITY_REVIEW"
+    output: "requirements_notes_advisory_only"
+
+  SKILL_010_PR_REVIEW_PREPARATION:
+    name: "PR Review Preparation"
+    purpose: "Prepare PR scope, changed-file, reviewer-role, claim-control, and safety-gate review notes."
+    related_workflows:
+      - "WF_002_PR_GOVERNANCE_REVIEW"
+      - "WF_008_MERGE_READINESS_REVIEW"
+    primary_roles:
+      - "Governance Owner"
+      - "Maintainer"
+      - "Documentation Owner"
+    required_gates:
+      - "CURRENT_REPOSITORY_VERIFICATION"
+      - "HUMAN_REVIEW_ACCEPTANCE"
+    output: "pr_review_notes_advisory_only"
+
+  SKILL_011_MERGE_READINESS_PREPARATION:
+    name: "Merge-Readiness Preparation"
+    purpose: "Prepare merge-readiness checks without approving merge."
+    related_workflows:
+      - "WF_008_MERGE_READINESS_REVIEW"
+    primary_roles:
+      - "Maintainer"
+      - "Governance Owner"
+      - "Documentation Owner"
+    required_gates:
+      - "NO_BYPASS_CHECKS"
+      - "HUMAN_REVIEW_ACCEPTANCE"
+    output: "merge_readiness_notes_advisory_only"
+
+  SKILL_012_DOCUMENTATION_INDEX_FOLLOW_UP:
+    name: "Documentation Index Follow-Up"
+    purpose: "Prepare separate post-merge Documentation Index follow-up planning for newly merged governance packages."
+    related_workflows:
+      - "WF_009_DOCUMENTATION_INDEX_FOLLOW_UP"
+    primary_roles:
+      - "Documentation Owner"
+      - "Governance Owner"
+    required_gates:
+      - "SOURCE_OF_TRUTH_REVIEW"
+    output: "index_follow_up_notes_advisory_only"
+
+  SKILL_013_ENVIRONMENT_REPRODUCIBILITY_NOTES:
+    name: "Environment Reproducibility Notes"
+    purpose: "Record environment constraints, Python/runtime install risks, dependency notes, and reproducibility limitations."
+    related_workflows:
+      - "WF_010_ENVIRONMENT_REPRODUCIBILITY_REVIEW"
+    primary_roles:
+      - "Technical Owner"
+      - "Maintainer"
+    required_gates:
+      - "HUMAN_REVIEW_ACCEPTANCE"
+    output: "environment_notes_advisory_only"
+
+  SKILL_014_PROMPT_INJECTION_AND_UNTRUSTED_CONTENT_REVIEW:
+    name: "Prompt Injection and Untrusted Content Review"
+    purpose: "Detect untrusted instructions, forced approvals, forced merges, exfiltration attempts, or instruction override attempts in files, logs, PR comments, or pasted text."
+    related_workflows:
+      - "WF_011_PROMPT_INJECTION_REVIEW"
+    primary_roles:
+      - "Privacy-Security Owner"
+      - "Governance Owner"
+      - "Technical Owner"
+    required_gates:
+      - "NO_SECRETS"
+      - "NO_AUTONOMOUS_AGENT"
+    output: "untrusted_content_findings_advisory_only"
+
+  SKILL_015_HUMAN_DECISION_CAPTURE_SUPPORT:
+    name: "Human Decision Capture Support"
+    purpose: "Prepare structured notes that separate advisory findings from human reviewer decisions."
+    related_workflows:
+      - "WF_012_HUMAN_REVIEW_DECISION_CAPTURE"
+    primary_roles:
+      - "Governance Owner"
+      - "Maintainer"
+      - "Project Owner"
+    required_gates:
+      - "HUMAN_REVIEW_ACCEPTANCE"
+    output: "human_decision_capture_notes_advisory_only"
+
+skill_boundaries:
+  no_runtime_execution: true
+  no_tool_execution_authority: true
+  no_autonomous_agent_behavior: true
+  no_autonomous_repository_action: true
+  no_prompt_execution_inside_openemr: true
+  no_model_integration: true
+  no_clinical_decision_support: true
+  no_clinical_use_authorization: true
+  no_phi: true
+  no_real_patient_data: true
+  no_secrets: true
+  no_risk_acceptance: true
+  no_merge_approval: true
+
+final_rule:
+  advisory_only: true
+  human_review_required: true
+  human_accountability_required: true

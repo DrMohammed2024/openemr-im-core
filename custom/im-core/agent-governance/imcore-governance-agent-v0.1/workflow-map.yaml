@@ -1,0 +1,223 @@
+schema_version: "0.1"
+package: "IMCoreGovernanceAgent V0.1"
+stage: "documentation-stage-only"
+status: "advisory-human-supervised"
+purpose: "Documentation-stage advisory workflow map for governance review support."
+
+workflow_defaults:
+  output_mode: "advisory_only"
+  evidence_labels_required: true
+  safety_gate_required: true
+  human_decision_separate: true
+  human_review_required: true
+  runtime_execution_authorized: false
+  prompt_execution_authorized: false
+  model_integration_authorized: false
+  clinical_use_authorized: false
+  phi_allowed: false
+  real_patient_data_allowed: false
+
+workflows:
+  WF_001_REPOSITORY_CURRENT_STATE_VERIFICATION:
+    name: "Repository Current-State Verification"
+    purpose: "Verify current documentation-state, source-of-truth map, branch context, and repository boundaries."
+    primary_reviewer_roles:
+      - "Governance Owner"
+      - "Documentation Owner"
+      - "Maintainer"
+    steps:
+      - "collect_repository_context"
+      - "verify_branch_and_working_tree"
+      - "identify_active_governance_documents"
+      - "classify_source_status"
+      - "report_unknowns"
+    final_gate: "CURRENT_REPOSITORY_VERIFICATION"
+    output_status: "advisory_only"
+
+  WF_002_PR_GOVERNANCE_REVIEW:
+    name: "PR Governance Review"
+    purpose: "Prepare read-only PR governance gap review."
+    primary_reviewer_roles:
+      - "Governance Owner"
+      - "Maintainer"
+      - "Documentation Owner"
+    steps:
+      - "list_changed_files"
+      - "classify_change_scope"
+      - "map_changed_files_to_governance_boundaries"
+      - "identify_required_reviewers"
+      - "produce_pr_gap_report"
+    final_gate: "HUMAN_REVIEW_ACCEPTANCE"
+    output_status: "advisory_only"
+
+  WF_003_CLAIM_CONTROL_REVIEW:
+    name: "Claim-Control Review"
+    purpose: "Detect unsupported claims and enforce evidence labels."
+    primary_reviewer_roles:
+      - "Governance Owner"
+      - "Evidence Reviewer"
+      - "Documentation Owner"
+    steps:
+      - "extract_material_claims"
+      - "apply_evidence_labels"
+      - "flag_overclaims"
+      - "recommend_safe_wording"
+    final_gate: "CLAIM_CONTROL_REVIEW"
+    output_status: "advisory_only"
+
+  WF_004_NO_PHI_NO_SECRETS_REVIEW:
+    name: "No-PHI / No-Secrets Review"
+    purpose: "Detect PHI, real patient data, secrets, credentials, tokens, logs, and database dumps."
+    primary_reviewer_roles:
+      - "Privacy-Security Owner"
+      - "Governance Owner"
+    steps:
+      - "scan_text_and_file_plan"
+      - "block_or_remove_unsafe_items"
+      - "record_no_phi_no_secrets_status"
+    final_gate: "NO_PHI_OR_SECRETS_REVIEW"
+    output_status: "advisory_only"
+
+  WF_005_SOURCE_OF_TRUTH_MAPPING:
+    name: "Source-of-Truth Mapping"
+    purpose: "Map governing documents and identify active, superseded, duplicate, stale, or unknown artifacts."
+    primary_reviewer_roles:
+      - "Documentation Owner"
+      - "Governance Owner"
+      - "Traceability Reviewer"
+    steps:
+      - "inventory_documents"
+      - "map_artifact_purpose"
+      - "identify_conflicts"
+      - "recommend_update_over_new_document_when_safe"
+    final_gate: "SOURCE_OF_TRUTH_REVIEW"
+    output_status: "advisory_only"
+
+  WF_006_DUPLICATE_DOCUMENT_RISK_REVIEW:
+    name: "Duplicate Document Risk Review"
+    purpose: "Reduce duplication and conflicting governance guidance."
+    primary_reviewer_roles:
+      - "Documentation Owner"
+      - "Governance Owner"
+    steps:
+      - "compare_artifact_titles"
+      - "compare_scope_statements"
+      - "identify_duplicate_risk"
+      - "recommend_existing_source_update_if_safer"
+    final_gate: "SOURCE_OF_TRUTH_REVIEW"
+    output_status: "advisory_only"
+
+  WF_007_TRACEABILITY_REVIEW:
+    name: "Traceability Review"
+    purpose: "Prepare changed-file, requirement, risk, evidence, reviewer, and decision traceability."
+    primary_reviewer_roles:
+      - "Traceability Reviewer"
+      - "Requirements Owner"
+      - "Risk Owner"
+      - "Evidence Reviewer"
+    steps:
+      - "map_changed_files"
+      - "map_requirements_or_boundaries"
+      - "map_risks_controls_and_evidence"
+      - "identify_required_human_reviewers"
+      - "prepare_traceability_notes"
+    final_gate: "TRACEABILITY_REVIEW"
+    output_status: "advisory_only"
+
+  WF_008_MERGE_READINESS_REVIEW:
+    name: "Merge-Readiness Review"
+    purpose: "Prepare merge-readiness checklist without approving merge."
+    primary_reviewer_roles:
+      - "Maintainer"
+      - "Governance Owner"
+      - "Documentation Owner"
+    steps:
+      - "verify_changed_files"
+      - "verify_no_phi_no_secrets"
+      - "verify_no_runtime_implementation"
+      - "verify_claim_control"
+      - "verify_required_human_review"
+      - "verify_zero_failing_zero_pending_checks"
+    final_gate: "HUMAN_REVIEW_ACCEPTANCE"
+    output_status: "advisory_only"
+
+  WF_009_DOCUMENTATION_INDEX_FOLLOW_UP:
+    name: "Documentation Index Follow-Up"
+    purpose: "Prepare after-merge index follow-up planning for new major governance documents."
+    primary_reviewer_roles:
+      - "Documentation Owner"
+      - "Governance Owner"
+    steps:
+      - "confirm_merged_document_path"
+      - "confirm_document_title_and_owner_roles"
+      - "prepare_index_follow_up_scope"
+      - "preserve_separate_index_pr_rule"
+    final_gate: "SOURCE_OF_TRUTH_REVIEW"
+    output_status: "advisory_only"
+
+  WF_010_ENVIRONMENT_REPRODUCIBILITY_REVIEW:
+    name: "Environment Reproducibility Review"
+    purpose: "Record environment constraints, dependency notes, install risks, and reproducibility status."
+    primary_reviewer_roles:
+      - "Technical Owner"
+      - "Maintainer"
+    steps:
+      - "record_python_version"
+      - "record_os_architecture"
+      - "record_dependency_inputs"
+      - "record_install_failures"
+      - "recommend_stable_execution_environment"
+    final_gate: "HUMAN_REVIEW_ACCEPTANCE"
+    output_status: "advisory_only"
+
+  WF_011_PROMPT_INJECTION_REVIEW:
+    name: "Prompt Injection and Untrusted Content Review"
+    purpose: "Detect untrusted instructions embedded in files, PR comments, logs, pasted text, or generated artifacts."
+    primary_reviewer_roles:
+      - "Privacy-Security Owner"
+      - "Governance Owner"
+      - "Technical Owner"
+    steps:
+      - "classify_untrusted_content"
+      - "detect_instruction_override"
+      - "detect_forced_approval_or_merge"
+      - "detect_phi_or_secret_exfiltration_request"
+      - "produce_safe_handling_plan"
+    final_gate: "NO_SECRETS_AND_BOUNDARY_REVIEW"
+    output_status: "advisory_only"
+
+  WF_012_HUMAN_REVIEW_DECISION_CAPTURE:
+    name: "Human Reviewer Decision Capture"
+    purpose: "Record human reviewer decisions separately from AI advisory outputs."
+    primary_reviewer_roles:
+      - "Governance Owner"
+      - "Maintainer"
+      - "Project Owner"
+    steps:
+      - "capture_advisory_summary"
+      - "capture_required_reviewer_roles"
+      - "capture_human_decision_status"
+      - "capture_unresolved_gaps"
+      - "record_no_phi_no_secrets_confirmation"
+    final_gate: "HUMAN_REVIEW_ACCEPTANCE"
+    output_status: "advisory_only"
+
+workflow_boundaries:
+  no_runtime_execution: true
+  no_openemr_runtime_integration: true
+  no_prompt_execution: true
+  no_model_integration: true
+  no_autonomous_agent_behavior: true
+  no_clinical_decision_support: true
+  no_clinical_use: true
+  no_phi: true
+  no_real_patient_data: true
+  no_secrets: true
+  no_autonomous_pr_approval: true
+  no_autonomous_merge: true
+
+final_rule:
+  advisory_only: true
+  human_review_required: true
+  human_decision_separate: true
+  zero_failing_zero_pending_checks_before_merge: true

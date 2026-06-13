@@ -1,0 +1,25 @@
+# IMCoreGovernanceAgent V0.1 - requirements.in
+#
+# Status:
+# - Documentation-stage placeholder only.
+# - No runtime installation authorized.
+# - No AutoGen Studio deployment authorized.
+# - No prompt execution authorized.
+# - No model integration authorized.
+# - No autonomous agent behavior authorized.
+# - No clinical use authorized.
+# - No PHI or real patient data authorized.
+#
+# This file intentionally declares no installable dependencies at the current stage.
+#
+# Future dependency entries, if any, require:
+# - separate human technical-owner review;
+# - package compatibility verification;
+# - security review;
+# - no-PHI/no-secrets review;
+# - runtime boundary review;
+# - AI/model integration boundary review;
+# - maintainer approval;
+# - separate future-gated authorization.
+#
+# Do not run pip install from this file as part of this documentation-only PR.

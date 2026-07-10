@@ -260,5 +260,208 @@
       "type": "boolean",
       "const": true
     }
-  }
+  },
+  "allOf": [
+    {
+      "$comment": "A detected hard-stop claim requires an advisory NO-GO recommendation.",
+      "if": {
+        "properties": {
+          "claim_review_summary": {
+            "properties": {
+              "hard_stop_claims_detected": {
+                "const": true
+              }
+            },
+            "required": [
+              "hard_stop_claims_detected"
+            ]
+          }
+        },
+        "required": [
+          "claim_review_summary"
+        ]
+      },
+      "then": {
+        "properties": {
+          "recommended_decision": {
+            "const": "NO-GO"
+          }
+        }
+      }
+    },
+    {
+      "$comment": "Any detected forbidden claim must be recorded as a hard stop and must produce NO-GO.",
+      "if": {
+        "properties": {
+          "forbidden_claim_scan": {
+            "anyOf": [
+              {
+                "properties": {
+                  "clinically_validated": {
+                    "const": true
+                  }
+                },
+                "required": [
+                  "clinically_validated"
+                ]
+              },
+              {
+                "properties": {
+                  "approved_for_clinical_use": {
+                    "const": true
+                  }
+                },
+                "required": [
+                  "approved_for_clinical_use"
+                ]
+              },
+              {
+                "properties": {
+                  "production_ready": {
+                    "const": true
+                  }
+                },
+                "required": [
+                  "production_ready"
+                ]
+              },
+              {
+                "properties": {
+                  "regulatory_compliant": {
+                    "const": true
+                  }
+                },
+                "required": [
+                  "regulatory_compliant"
+                ]
+              },
+              {
+                "properties": {
+                  "cybersecurity_certified": {
+                    "const": true
+                  }
+                },
+                "required": [
+                  "cybersecurity_certified"
+                ]
+              },
+              {
+                "properties": {
+                  "phi_ready": {
+                    "const": true
+                  }
+                },
+                "required": [
+                  "phi_ready"
+                ]
+              },
+              {
+                "properties": {
+                  "real_patient_data_ready": {
+                    "const": true
+                  }
+                },
+                "required": [
+                  "real_patient_data_ready"
+                ]
+              },
+              {
+                "properties": {
+                  "runtime_ai_implemented": {
+                    "const": true
+                  }
+                },
+                "required": [
+                  "runtime_ai_implemented"
+                ]
+              },
+              {
+                "properties": {
+                  "model_integration_complete": {
+                    "const": true
+                  }
+                },
+                "required": [
+                  "model_integration_complete"
+                ]
+              },
+              {
+                "properties": {
+                  "prompt_execution_enabled": {
+                    "const": true
+                  }
+                },
+                "required": [
+                  "prompt_execution_enabled"
+                ]
+              },
+              {
+                "properties": {
+                  "autonomous_clinical_decision_making": {
+                    "const": true
+                  }
+                },
+                "required": [
+                  "autonomous_clinical_decision_making"
+                ]
+              }
+            ]
+          }
+        },
+        "required": [
+          "forbidden_claim_scan"
+        ]
+      },
+      "then": {
+        "properties": {
+          "claim_review_summary": {
+            "properties": {
+              "hard_stop_claims_detected": {
+                "const": true
+              }
+            }
+          },
+          "recommended_decision": {
+            "const": "NO-GO"
+          }
+        }
+      }
+    },
+    {
+      "$comment": "Unresolved unsupported claims prevent a GO recommendation even when no hard-stop claim exists.",
+      "if": {
+        "properties": {
+          "claim_review_summary": {
+            "properties": {
+              "unsupported_claims_detected": {
+                "const": true
+              },
+              "hard_stop_claims_detected": {
+                "const": false
+              }
+            },
+            "required": [
+              "unsupported_claims_detected",
+              "hard_stop_claims_detected"
+            ]
+          }
+        },
+        "required": [
+          "claim_review_summary"
+        ]
+      },
+      "then": {
+        "properties": {
+          "recommended_decision": {
+            "enum": [
+              "CONDITIONAL GO",
+              "NO-GO",
+              "HOLD",
+              "DEFER"
+            ]
+          }
+        }
+      }
+    }
+  ]
 }

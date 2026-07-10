@@ -189,48 +189,37 @@
       ],
       "properties": {
         "clinically_validated": {
-          "type": "boolean",
-          "const": false
+          "type": "boolean"
         },
         "approved_for_clinical_use": {
-          "type": "boolean",
-          "const": false
+          "type": "boolean"
         },
         "production_ready": {
-          "type": "boolean",
-          "const": false
+          "type": "boolean"
         },
         "regulatory_compliant": {
-          "type": "boolean",
-          "const": false
+          "type": "boolean"
         },
         "cybersecurity_certified": {
-          "type": "boolean",
-          "const": false
+          "type": "boolean"
         },
         "phi_ready": {
-          "type": "boolean",
-          "const": false
+          "type": "boolean"
         },
         "real_patient_data_ready": {
-          "type": "boolean",
-          "const": false
+          "type": "boolean"
         },
         "runtime_ai_implemented": {
-          "type": "boolean",
-          "const": false
+          "type": "boolean"
         },
         "model_integration_complete": {
-          "type": "boolean",
-          "const": false
+          "type": "boolean"
         },
         "prompt_execution_enabled": {
-          "type": "boolean",
-          "const": false
+          "type": "boolean"
         },
         "autonomous_clinical_decision_making": {
-          "type": "boolean",
-          "const": false
+          "type": "boolean"
         }
       }
     },

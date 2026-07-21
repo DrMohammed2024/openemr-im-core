@@ -44,6 +44,28 @@ These observations are environment notes only.
 
 They do not authorize runtime execution.
 
+### 3.1 Evidence and Reliance Classification
+
+| Field | Classification |
+|---|---|
+| Current statement status | `documented only` |
+| Underlying provenance | Historical `user-provided` local observations |
+| Current verification status | `needs verification` |
+| Runtime reliance status | `not acceptable for reliance` |
+| Dependency-compatibility reliance | `not acceptable for reliance` |
+| Installation or deployment reliance | `not acceptable for reliance` |
+| Validation, compliance, or certification reliance | `not acceptable for reliance` |
+
+The original command outputs, environment inventory, package versions,
+and failure logs are not reproduced in this file. Therefore, these
+historical observations must not be treated as current environment
+facts.
+
+Any future reliance requires fresh command output and separate,
+human-authorized, non-clinical technical review. It must not occur as
+part of this documentation-only PR.
+
+
 ---
 
 ## 4. Recommended Future Review Environment

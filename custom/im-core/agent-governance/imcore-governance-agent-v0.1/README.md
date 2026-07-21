@@ -34,6 +34,47 @@ It does not create runtime AI, prompt execution, model integration, autonomous a
 
 ---
 
+## 2.1 Repository-Verified Source-of-Truth Routing
+
+The package must route each material governance question to the
+applicable repository-verified controlling artifact before producing
+an advisory recommendation.
+
+| Governance area | Repository-verified routing source |
+|---|---|
+| Current-stage governance coordination only | `custom/im-core/docs/governance/vfinalpp-current-stage-governance-addendum-v0.1.md` |
+| Intended use, scope, users, stage, and claims | `custom/im-core/docs/product/intended-use-scope-users-claims-v0.1.md` |
+| Decision-automation boundary | `custom/im-core/docs/governance/decision-automation-boundary-policy-v0.1.md` |
+| Traceability rules | `custom/im-core/docs/governance/traceability-matrix-policy-v0.1.md` |
+| Populated current-stage traceability | `custom/im-core/docs/validation/traceability-matrix-v0.1.md` |
+| Requirements governance | `custom/im-core/docs/requirements/requirements-management-plan-v0.1.md` and `custom/im-core/docs/requirements/requirements-register-starter-v0.1.md` |
+| Risk governance | `custom/im-core/docs/risk/risk-register-v0.1.md` |
+| Evidence governance | `custom/im-core/docs/evidence/evidence-registry-and-templates-v0.1.md` |
+| Runtime boundary | `custom/im-core/docs/architecture/runtime-boundary-specification-v0.1.md` |
+| Database and migration boundary | `custom/im-core/docs/architecture/database-boundary-and-migration-policy-v0.1.md` |
+| API/FHIR boundary | `custom/im-core/docs/architecture/api-fhir-boundary-specification-v0.1.md` |
+| Documentation discoverability and status | `custom/im-core/docs/index/documentation-index-and-review-cadence-v0.1.md` and `custom/im-core/docs/index/documentation-inventory-and-artifact-status-matrix-v0.1.md` |
+
+The VFinal++ addendum is a current-stage coordination and routing layer
+only. It does not replace the specialist artifacts listed above,
+package-local Safety Gates, or named human reviewers.
+
+This table lists repository-verified routing sources only. An uploaded,
+external, historical, or otherwise non-repository instruction must not
+be represented as repository evidence unless it is separately added,
+reviewed, and verified through the controlled repository process.
+
+If a required source is missing, stale, contradictory, or unclear, the
+advisory decision must be `HOLD` until a human reviewer resolves the
+source-of-truth question.
+
+Presence of a document in the repository does not prove implementation,
+validation, compliance, certification, production readiness, clinical
+readiness, or authorization for reliance beyond the current
+documentation stage.
+
+---
+
 ## 3. Intended Advisory Purpose
 
 IMCoreGovernanceAgent V0.1 is intended to support documentation-stage governance work for OpenEMR IM Core by helping human reviewers reason about:

@@ -2,15 +2,25 @@
 
 ## AI-Assisted Solo-Owner Applicability
 
-Eligible documentation-stage and pre-runtime changes may use the internal
-review path in the AI-Assisted Solo-Owner Governance Policy V0.1 without
-separate specialist-human approvals as mandatory merge gates.
+Eligible documentation-stage/pre-runtime changes and separately eligible LS-1
+work may use the internal review path in the AI-Assisted Solo-Owner Governance
+Policy V0.1 without separate specialist-human approvals as
+mandatory internal execution or merge gates.
 
-A Project Owner decision under that policy does not close a lifecycle phase,
-authorize a phase transition, or authorize runtime, clinical, PHI, pilot,
-deployment, production, external release, validation, compliance,
-certification, or regulatory activity. All such lifecycle and external gates
-below remain mandatory when triggered.
+A general Project Owner decision under that policy does not close a lifecycle
+phase. For LS-1 only, `POL-GOV-LS1-001` and a current work-item decision may
+authorize the exact Phase 11 preparation/implementation scope recorded below.
+Phase 12 Docker/database/runtime evidence requires a separate later decision.
+All clinical, PHI, AI/API/FHIR, pilot, deployment, production, release,
+validation, compliance, certification, regulatory, and external gates remain.
+
+## LS-1 Controlling Exception
+
+`POL-GOV-LS1-001` is the controlling narrow exception to older blanket
+pre-implementation and no-database statements in this document. It applies
+only to an eligible, owner-authorized work item. Unresolved eligibility,
+scope, evidence, or authority is `HOLD`. All default boundaries continue
+outside that exact exception.
 
 ## Document Status
 
@@ -19,10 +29,10 @@ below remain mandatory when triggered.
 | Document type | Governance control document |
 | Version | V0.1 |
 | Project | OpenEMR IM Core |
-| Stage | Documentation-stage governance |
-| Scope | Documentation-only lifecycle phase gate control |
-| Runtime status | Pre-runtime |
-| Implementation status | Pre-implementation |
+| Stage | Documentation-stage governance plus proposed exact LS-1 gate alignment |
+| Scope | Lifecycle control including the exact IMCORE-LS-001 Phase 11 candidate |
+| Runtime status | No runtime in this amendment; Phase 12 requires separate owner authorization |
+| Implementation status | IMCORE-LS-001 Phase 11 only after policy adoption and work-item decision |
 | Clinical-use status | Not authorized |
 | PHI status | No PHI |
 | Real patient data | Not permitted |
@@ -30,7 +40,7 @@ below remain mandatory when triggered.
 | Prompt execution | Not permitted |
 | Model integration | Not permitted |
 | API/FHIR implementation | Not permitted |
-| SQL/database migration | Not permitted |
+| SQL/database migration | No migration; LS-1 metadata writes only under separate Phase 12 authorization |
 | OpenEMR core behavior change | Not permitted |
 | Production-readiness claim | Not permitted |
 | Clinical-validation claim | Not permitted |
@@ -154,9 +164,13 @@ OpenEMR IM Core remains:
 - no regulatory-compliance claim
 - no cybersecurity-certification claim
 
-Any proposed activity that violates these boundaries is a **NO-GO** unless it is explicitly authorized later through a separate future governance gate with documented evidence, human ownership, privacy review, security review, clinical safety review, and appropriate phase authorization.
+These are the default boundaries. The only current exception model is an
+eligible LS-1 work item governed by `POL-GOV-LS1-001`, its exact current
+Project Owner decision, and the Phase 11/12 separation below.
 
-This document itself grants no such authorization.
+Any other proposed violation is **NO-GO** unless separately authorized through
+an applicable future or external gate. This governance amendment performs no
+implementation, Docker, database, runtime, or evidence-collection activity.
 
 ---
 
@@ -173,7 +187,9 @@ The following principles apply to all lifecycle phase decisions:
 7. Evidence must be documented.
 8. Risks and unresolved gaps must be recorded.
 9. Human ownership is required for final decisions.
-10. Specialized review is required when triggered by risk, scope, clinical impact, privacy/security impact, regulatory wording, validation wording, or future runtime implications.
+10. Specialized-domain analysis is required when triggered. Separate
+    specialist-human approval is required only by a non-eligible or applicable
+    future/external gate; it is not an internal gate for eligible LS-1 work.
 11. The stricter boundary always prevails.
 12. Completion of one phase does not automatically authorize the next phase.
 13. Planning a future phase does not authorize executing that future phase.
@@ -218,8 +234,8 @@ The controlled lifecycle phase model is:
 | 8 | Configuration and Change-Control Planning | Current / Next |
 | 9 | Synthetic Sandbox Planning | Later / Future-gated execution |
 | 10 | Verification and Validation Planning | Later / Planning-only |
-| 11 | Implementation Readiness Gate | Future-gated only |
-| 12 | Synthetic Runtime Evidence Gate | Future-gated only |
+| 11 | Implementation Readiness Gate | Exact IMCORE-LS-001 scope only after policy adoption and work-item decision |
+| 12 | Synthetic Runtime Evidence Gate | Separate owner authorization required for IMCORE-LS-001; otherwise future-gated |
 | 13 | Usability and Clinical Review Planning | Later / Planning-only |
 | 14 | Pilot Readiness Gate | Future-gated only |
 | 15 | Controlled Pilot Planning | Future-gated only |
@@ -227,7 +243,10 @@ The controlled lifecycle phase model is:
 | 17 | Clinic Launch Governance | Future-gated only |
 | 18 | Monitoring, Maintenance, Incident Management, and Continuous Improvement | Future-gated only |
 
-No future-gated phase is currently authorized by this document.
+No broad future-gated phase is authorized. Phase 11 is aligned only for the
+exact `IMCORE-LS-001` candidate after the LS-1 amendment is owner-adopted and
+merged and a complete work-item decision is recorded. On this governance
+branch, that decision is not recorded and the candidate remains `HOLD`.
 
 ---
 
@@ -1122,160 +1141,114 @@ Gate decision:
 
 ## 19. Phase 11 — Implementation Readiness Gate
 
-Objective: Decide whether future implementation may begin.
+Objective: Authorize only the exact bounded preparation and implementation
+scope for `IMCORE-LS-001 — Reproducible Local-Synthetic Visit Context LBF
+Seed`.
 
-Current status: Future-gated only.
+Current status: Authorized only after all of these conditions are current:
 
-Scope:
+- `POL-GOV-LS1-001` is Project-Owner-adopted and merged;
+- the candidate packet is complete;
+- the Project Owner records a Phase 11 work-item decision;
+- the exact base SHA, branch, implementation/test files, and dependency
+  boundary are recorded; and
+- every LS-1 eligibility condition is established.
 
-- gate review only
-- no implementation by default
-- prerequisite evidence review
-- human-owned decision
+On this governance branch those conditions are not complete, no implementation
+is authorized, and the candidate state is `HOLD`.
 
-Required documents may include:
+Allowed Phase 11 scope after authorization:
 
-- Implementation Readiness Review Report
-- prerequisite evidence package
-- open risk register
-- review decision record
+- create the recorded implementation branch from the recorded base SHA;
+- prepare one bounded Visit Context seed implementation;
+- prepare its guarded rollback behavior;
+- run only declared static or isolated tests that do not start Docker, access a
+  database, or execute OpenEMR runtime; and
+- update directly related work-item and evidence documents.
+
+Prohibited in Phase 11:
+
+- Docker execution or image pulls;
+- database connection, read, or write;
+- runtime evidence collection;
+- schema migration;
+- patient or encounter records;
+- PHI, real data, or de-identified real data;
+- AI/model/prompt/agent or API/FHIR operation;
+- dependency or OpenEMR core-sensitive change without separate authority; and
+- pilot, deployment, production, external release, clinical use, validation,
+  compliance, certification, regulatory, or independent-assurance claims.
 
 Required evidence:
 
-- complete prerequisite evidence package
-- human approval
-- review records
-- unresolved risk assessment
-- privacy/security review
-- clinical safety review
-
-Suggested owners:
-
-- human project owner
-- governance owner
-- technical owner
-- clinical safety reviewer
-- privacy/security reviewers
-
-Entry criteria:
-
-- prior planning artifacts complete and reviewed
+- complete `IMCORE-LS-001` packet and `IM-0005` traceability;
+- owner-reviewed eligibility and non-independence disclosure;
+- exact repository, base/head, file, dependency, data, database-design, Git,
+  publication, test, rollback, and stop boundaries;
+- GPT multidisciplinary advisory review; and
+- a current Project Owner final accountable decision.
 
 Exit criteria:
 
-- explicit future authorization or NO-GO
+- authorized Phase 11 implementation is complete with passing required checks
+  and current owner decision; or
+- `HOLD`/`REJECT` is recorded.
 
-GitHub PR strategy:
-
-- gate report PR only
-
-Main risks:
-
-- premature implementation
-- hidden runtime authorization
-- incomplete evidence
-
-Stop rules:
-
-- stop if implementation starts before gate approval
-
-Prohibited actions:
-
-- code implementation
-- runtime
-- SQL/database migration
-- API/FHIR implementation
-- AI integration
-- OpenEMR core behavior change
-
-Boundary status:
-
-- not currently authorized
-
-Gate decision:
-
-- FUTURE-GATED ONLY
+Phase 11 completion does not authorize Phase 12.
 
 ---
-
 ## 20. Phase 12 — Synthetic Runtime Evidence Gate
 
-Objective: Govern possible future non-production synthetic runtime evidence only if separately authorized.
+Objective: Govern subsequent local-synthetic Docker/database/runtime evidence
+for `IMCORE-LS-001` only under a separate later owner authorization.
 
-Current status: Future-gated only.
-
-Scope:
-
-- synthetic-only
-- non-production
-- evidence-gated runtime evidence if later authorized
-- strict privacy/security/clinical safety review
-
-Required documents may include:
-
-- Synthetic Runtime Evidence Plan
-- Test Evidence Plan
-- runtime boundary review
-- synthetic data assurance plan
-
-Required evidence:
-
-- human authorization
-- privacy review
-- security review
-- clinical safety review
-- traceability to requirements and risks
-
-Suggested owners:
-
-- technical owner
-- clinical safety owner
-- privacy owner
-- security owner
-- governance owner
+Current status: Separate Project Owner authorization required. Future-gated and
+`HOLD` until a Phase 12 decision is recorded.
 
 Entry criteria:
 
-- implementation readiness gate explicitly approves
+- adopted LS-1 policy;
+- eligible implementation commit identified;
+- Phase 11 exit evidence accepted;
+- complete six-row database manifest;
+- current local environment and schema compatibility evidence;
+- unique disposable Docker project, network, bind-mount, and volume identifiers;
+- exact commands, tests, rollback, evidence destinations, and cleanup plan;
+- GPT advisory review; and
+- a separate Project Owner final accountable decision.
+
+Allowed only after that decision:
+
+- declared local disposable Docker resources;
+- metadata-only reads of the six declared keys;
+- parameterized transactional writes to the two
+  `layout_group_properties` rows and four `layout_options` rows;
+- absent, exact-match no-op, fail-closed conflict, injected-failure, guarded
+  rollback, unrelated-invariant, and cleanup tests; and
+- sanitized local-synthetic engineering evidence.
+
+Prohibited:
+
+- any other table or row;
+- schema migration;
+- patient or encounter records;
+- PHI, real data, de-identified real data, database dumps, or sensitive logs;
+- unrelated Docker resources;
+- runtime AI/model/prompt/agent or operational API/FHIR;
+- clinical use, pilot, deployment, production, or external release; and
+- validation, compliance, certification, regulatory, production-readiness, or
+  independent-assurance claims.
 
 Exit criteria:
 
-- synthetic evidence accepted, rejected, or deferred
+- evidence accepted, revised, rejected, or deferred by the Project Owner;
+- exact-match idempotency and guarded rollback are verified; and
+- disposable resources are accounted for without affecting unrelated
+  resources.
 
-GitHub PR strategy:
-
-- narrow future PRs only if authorized
-
-Main risks:
-
-- PHI
-- production data
-- clinical use
-- unsafe runtime
-- scope creep into AI/API/FHIR/SQL
-
-Stop rules:
-
-- stop if PHI, real patient data, clinical use, production claims, unapproved AI, unapproved API/FHIR, unapproved SQL, or unapproved model integration appears
-
-Prohibited actions:
-
-- PHI
-- real data
-- production
-- clinical use
-- unapproved AI/model/API/SQL work
-
-Boundary status:
-
-- future-gated only
-
-Gate decision:
-
-- FUTURE-GATED ONLY
+A Phase 12 result remains local-synthetic engineering evidence only.
 
 ---
-
 ## 21. Phase 13 — Usability and Clinical Review Planning
 
 Objective: Plan future usability and clinical review without clinical-use authorization.
@@ -1737,66 +1710,44 @@ Gate decision:
 
 ## 27. Current-Stage Allowed Phases
 
-The following phases, or parts of phases, are allowed now only as documentation-stage, governance-stage, planning-only work:
+Documentation-stage and planning-only work remains allowed in Phases 0, 1, 2,
+4, 5, 6, and 8 under existing controls.
 
-- Phase 0 — Governance Foundation
-- Phase 1 — Documentation Architecture and Source-of-Truth Stabilization
-- Phase 2 — Intended Use, Scope, Users, and Claims Definition
-- Phase 4 — Requirements and Traceability Planning
-- Phase 5 — Clinical Safety and Risk Management Planning
-- Phase 6 — Privacy, Security, and Data Governance Planning
-- Phase 8 — Configuration and Change-Control Planning
+Phase 11 is additionally aligned only for the exact `IMCORE-LS-001`
+preparation/implementation scope after `POL-GOV-LS1-001` is adopted and merged
+and a complete current Project Owner work-item decision is recorded.
 
-Limited planning-only work may also be introduced for:
+No other implementation is authorized. The governance amendment itself
+performs no implementation, Docker execution, image pull, database activity,
+runtime operation, or evidence collection.
 
-- clinical workflow assumptions
-- clinical safety case skeleton
-- cybersecurity readiness planning
-- validation planning skeletons
-- usability planning skeletons
-
-Allowed current-stage work must remain:
-
-- documentation-only
-- planning-only
-- pre-runtime
-- pre-implementation
-- pre-clinical-use
-- no PHI
-- no real patient data
-- no AI implementation
-- no prompt execution
-- no model integration
-- no API/FHIR implementation
-- no SQL/database migration
-- no OpenEMR core behavior change
-- no clinical-use authorization
-- no production-readiness claim
-- no clinical-validation claim
-- no regulatory-compliance claim
-- no cybersecurity-certification claim
+All work remains no-PHI, no-real-data, no-clinical-use, no-runtime-AI/API/FHIR,
+no-migration, no-deployment, no-release, and no prohibited-claim work.
 
 ---
-
 ## 28. Future-Gated Phases
 
-The following phases are not authorized now:
+The following remain future-gated:
 
-- Phase 9 — Synthetic Sandbox Planning, except planning-only documentation
-- Phase 11 — Implementation Readiness Gate
-- Phase 12 — Synthetic Runtime Evidence Gate
-- Phase 14 — Pilot Readiness Gate
-- Phase 15 — Controlled Pilot Planning
-- Phase 16 — Deployment Readiness Gate
-- Phase 17 — Clinic Launch Governance
-- Phase 18 — Monitoring, Maintenance, Incident Management, and Continuous Improvement
+- Phase 9 — Synthetic Sandbox Planning, except planning-only documentation;
+- Phase 12 — Synthetic Runtime Evidence Gate, including `IMCORE-LS-001` until
+  its separate owner authorization;
+- Phase 14 — Pilot Readiness Gate;
+- Phase 15 — Controlled Pilot Planning;
+- Phase 16 — Deployment Readiness Gate;
+- Phase 17 — Clinic Launch Governance; and
+- Phase 18 — Monitoring, Maintenance, Incident Management, and Continuous
+  Improvement.
 
-These phases may be discussed only as future-gated planning concepts unless a later authorized governance gate explicitly permits a defined activity.
+Phase 11 remains future-gated for every work item except the exact eligible and
+owner-authorized `IMCORE-LS-001` preparation/implementation scope.
 
-This document does not authorize runtime, implementation, clinical use, production deployment, PHI use, AI integration, API/FHIR implementation, SQL/database migration, OpenEMR core behavior change, clinical validation, regulatory compliance, or cybersecurity certification.
+No phase language authorizes PHI, real data, clinical use, production,
+AI/model/prompt/agent execution, operational API/FHIR integration, schema
+migration, external release, validation, compliance, certification, regulatory
+claims, or independent assurance.
 
 ---
-
 ## 29. Phase Entry Checklist
 
 Before entering any new phase, the following checklist must be completed:
@@ -1874,6 +1825,10 @@ If a proposed change contains both current-stage documentation work and future-g
 
 ## 32. Current-Stage Stop Rules
 
+These default stop rules apply outside an exact current LS-1 decision. Within
+LS-1, the stricter work-item HOLD/stop rules and Phase 11/12 authority boundary
+apply.
+
 Current-stage work must stop if any PR, document, branch, or proposed change introduces or implies:
 
 - runtime activity
@@ -1909,37 +1864,22 @@ Safety, privacy, runtime, clinical-use, and claim-control breaches are not fix-f
 
 ## 33. Future Runtime Gate Boundary
 
-No runtime activity is authorized by this document.
+This governance amendment authorizes no runtime activity.
 
-Any future runtime-related activity must be separately authorized and must be:
+For `IMCORE-LS-001` only, a later Phase 12 Project Owner decision may authorize
+the exact local-synthetic Docker/database/runtime evidence scope declared in
+`POL-GOV-LS1-001` and the candidate packet. The decision must define the
+environment, Docker resources, synthetic data, six database rows, commands,
+tests, rollback, evidence, stop rules, cleanup, and invalidation triggers.
 
-- non-production
-- synthetic-only
-- evidence-gated
-- risk-assessed
-- human-owned
-- privacy-reviewed
-- security-reviewed
-- clinical-safety-reviewed
-- source-of-truth controlled
-- claim-controlled
-- traceability-controlled
-- documented in a PR audit trail
+No Phase 12 activity may begin from a Phase 11 decision alone. Until the
+separate decision is recorded, Docker execution, image pulls, database access,
+database writes, and runtime evidence remain `HOLD`.
 
-A future runtime-related gate must explicitly define:
-
-- allowed scope
-- prohibited scope
-- data boundary
-- environment boundary
-- evidence requirements
-- review requirements
-- stop rules
-- revert rules
-- human owner
-- post-change verification
-
-Until such a future gate is approved, all runtime-related activity remains NO-GO or FUTURE-GATED ONLY.
+All broader runtime, PHI, real-data, clinical, AI/API/FHIR, migration, pilot,
+deployment, production, external-release, validation, compliance,
+certification, regulatory, and independent-assurance activity remains
+future/external-gated.
 
 ---
 
@@ -1972,9 +1912,11 @@ If repository state changes after a GO decision, the GO expires and the decision
 
 This document is acceptable only if:
 
-- it remains documentation-only
-- it introduces no runtime behavior
-- it introduces no implementation authorization
+- it remains a governance/documentation amendment
+- it introduces no runtime behavior or execution
+- its only implementation alignment is the conditional, exact
+  `IMCORE-LS-001` Phase 11 scope
+- it performs no implementation
 - it introduces no AI implementation
 - it introduces no prompt execution
 - it introduces no model integration
@@ -2003,10 +1945,26 @@ This document is acceptable only if:
 
 ## 36. Final Statement
 
-Lifecycle Phase Gate Control V0.1 establishes a conservative lifecycle governance control for OpenEMR IM Core.
+Lifecycle Phase Gate Control V0.1 retains conservative phase governance while
+aligning one narrow exception:
 
-It supports documentation-stage and governance-stage planning by making phase status, entry criteria, exit criteria, evidence expectations, stop rules, and future-gated boundaries explicit.
+- Phase 11 may authorize only the exact eligible `IMCORE-LS-001`
+  preparation/implementation scope after policy adoption and a complete
+  Project Owner work-item decision.
+- Phase 12 local-synthetic Docker/database/runtime evidence requires a separate
+  later Project Owner authorization.
+- This governance amendment performs neither phase's implementation or
+  execution.
 
-It does not authorize runtime, implementation, PHI use, real patient data use, AI implementation, prompt execution, model integration, API/FHIR implementation, SQL/database migration, OpenEMR core behavior change, clinical use, production readiness, clinical validation, regulatory compliance, or cybersecurity certification.
+The review model is GPT multidisciplinary advisory review plus the Project
+Owner's final accountable internal decision. It is AI-assisted and
+non-independent. Separate specialist-human approvals are not mandatory internal
+gates for eligible LS-1 work.
 
-The safest interpretation always prevails.
+Nothing here authorizes PHI, real or de-identified real data, patient-care
+operation, clinical use, AI/model/prompt/agent execution, operational API/FHIR,
+schema migration, production security changes, pilot, deployment, production,
+external release, clinical validation, compliance, regulatory claims,
+cybersecurity/privacy certification, legal/contractual authority, production
+readiness, or independent assurance. The safest applicable interpretation
+prevails.

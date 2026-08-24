@@ -811,3 +811,61 @@ No PHI. No credentials. No sensitive logs. No database dumps.
 ## 18. Claims allowed after this test
 
 ## 19. Claims still prohibited
+```
+
+## 28. LS-1 Bounded Local-Synthetic Engineering Test Control
+
+`POL-GOV-LS1-001` and the current work-item decision control LS-1 tests. Test
+authorization is split by lifecycle phase:
+
+- Phase 11 may include syntax, lint, repository, spelling, and isolated tests
+  that do not start Docker, access a database, or execute OpenEMR runtime.
+- Phase 12 Docker/database/runtime testing requires a separate later Project
+  Owner decision.
+
+Each LS-1 test record must identify the work item, policy/decision record,
+base/head SHA, exact command, environment, expected result, actual result,
+status, evidence path, and limitation. Unavailable or unexecuted tests are not
+passes.
+
+Minimum applicable LS-1 coverage includes:
+
+- changed-file, prohibited-path, dependency, and schema boundaries;
+- parameter binding and transaction behavior;
+- all-target-rows-absent creation;
+- all-target-rows-exact no-op on rerun;
+- partial, duplicate, or non-exact conflict with zero mutation;
+- injected failure with complete transaction rollback;
+- guarded post-commit rollback;
+- exact declared row count and values;
+- unrelated-row/table invariants;
+- no patient or encounter record creation;
+- no runtime AI/model/prompt/agent or operational API/FHIR activity;
+- Docker project, network, mount, and volume isolation when authorized;
+- disposable-resource cleanup verification;
+- PHI/real-data, patient-identifier, secret, hidden/bidirectional-Unicode,
+  local-link, and prohibited-claim scans; and
+- complete diff and required repository/PR checks.
+
+For `IMCORE-LS-001`, the exact matrix is maintained in
+[the IMCORE-LS-001 candidate packet](../governance/imcore-ls-001-local-synthetic-authorization-packet-v0.1.md). Its first-slice
+`interval_history` baseline is `data_type=2`, `max_length=200`,
+`fld_rows=0`, single-line behavior.
+
+## 29. LS-1 Evidence Interpretation
+
+Passing LS-1 tests demonstrate only the bounded local-synthetic engineering
+behavior actually tested. They do not establish clinical validation, safe
+clinical use, privacy/security certification, regulatory compliance,
+production readiness, clean-install portability beyond the tested environment,
+or independent assurance.
+
+A required failure, pending result, stale result, scope change, unverified
+rollback, or missing separate Phase 12 authorization is `HOLD`.
+
+## 30. Current Status
+
+This document now provides a structurally closed test-case template and the
+LS-1 testing boundary. It does not execute tests, Docker, OpenEMR, a database,
+AI/model/prompt/agent behavior, API/FHIR operations, or clinical workflows. It
+records no implementation or runtime test result.

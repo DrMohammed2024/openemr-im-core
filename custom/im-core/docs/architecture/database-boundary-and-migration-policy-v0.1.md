@@ -152,7 +152,7 @@ Possible categories:
 |---|---|---|
 | No database change | Documentation-only PR | Allowed if scope remains documentation-only |
 | Read-only query planning | Candidate query documentation | Documentation-only |
-| Local synthetic test storage | Non-production synthetic-only storage | Future phase |
+| Local synthetic test storage | Existing-schema metadata rows only | LS-1 only after exact Phase 11 and separate Phase 12 owner decisions |
 | New IM Core table | Project-owned table | Future phase |
 | OpenEMR core table modification | Change to existing OpenEMR schema | High-risk future phase |
 | Migration script | Schema/data migration | Future phase |
@@ -160,6 +160,33 @@ Possible categories:
 | Audit logging storage | Audit persistence | Future phase |
 
 No category is implemented by this document.
+
+### 8.1 LS-1 Existing-Schema Metadata Exception
+
+`POL-GOV-LS1-001` permits a database-capable work item only when every LS-1
+condition and lifecycle decision is current. This is not a migration category.
+
+For `IMCORE-LS-001`, the only future database boundary is:
+
+- existing table `layout_group_properties`: exactly the layout row
+  `(LBFim_followup_v1, empty group ID)` and Visit Context group row
+  `(LBFim_followup_v1, 1)`;
+- existing table `layout_options`: exactly the four declared Visit Context rows
+  for `followup_reason`, `visit_type`, `main_complaint`, and
+  `interval_history`; and
+- no other table or row.
+
+The complete row manifest, parameter-binding mechanism, transaction, exact-
+match no-op, fail-closed conflict behavior, guarded rollback, tests, and
+unrelated-row invariants must be owner-reviewed before database access.
+`interval_history` is controlled as `data_type=2`, `max_length=200`,
+`fld_rows=0`, single-line behavior for this slice.
+
+Phase 11 may authorize preparation/implementation only. A separate Phase 12
+Project Owner decision is required before Docker execution, database access,
+writes, or local-synthetic runtime evidence. No patient or encounter record is
+required or authorized. Any unresolved schema, table, row, value, environment,
+or rollback condition is `HOLD`.
 
 ---
 
@@ -329,6 +356,10 @@ Before any database implementation, reviewers should confirm:
 
 A future database implementation PR may only be considered after:
 
+For eligible LS-1 work, `POL-GOV-LS1-001`, the exact work-item packet, and the
+current Phase 11 decision provide the narrow entry path. A separate Phase 12
+decision is required before database access or execution.
+
 - Component Inventory identifies the candidate component.
 - Trust Boundary Register identifies related boundaries.
 - Runtime Boundary Specification defines runtime constraints.
@@ -359,7 +390,9 @@ Documentation-only PRs must not modify:
 - GitHub Actions workflows.
 - Docker runtime behavior.
 
-Any database implementation must be performed in a separate controlled implementation-phase PR.
+Any database implementation must be performed in a separate controlled
+implementation-phase PR. The documentation/governance Pull Request that
+establishes LS-1 must not contain that implementation.
 
 ---
 

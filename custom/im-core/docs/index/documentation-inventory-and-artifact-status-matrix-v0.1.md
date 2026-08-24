@@ -2,15 +2,15 @@
 
 ## AI-Assisted Solo-Owner Governance Inventory Control
 
-The AI-Assisted Solo-Owner Governance Policy V0.1 is the authoritative policy
-for eligible-work classification and the internal decision path. Existing
-specialist-owner fields remain advisory-domain or future/external-gate mappings
-for eligible work and must not be read as mandatory separate-human merge gates.
+The AI-Assisted Solo-Owner Governance Policy V0.1 controls the internal review
+model. `POL-GOV-LS1-001` separately controls bounded local-synthetic
+eligibility and boundaries after Project Owner adoption and merge. Existing
+specialist-owner fields remain advisory-domain or future/external-gate maps and
+are not mandatory separate-human internal gates for eligible work.
 
-The exact status added below is effective only after the Project Owner records
-adoption and the policy is merged. It does not claim independent approval,
-external assurance, clinical validation, compliance, certification, or
-production readiness.
+These statuses do not claim independent approval, external assurance, clinical
+validation, compliance, certification, regulatory approval, production
+readiness, clinical use, PHI authority, deployment, or external release.
 
 ## 1. Purpose
 
@@ -95,7 +95,8 @@ This document does not claim:
 
 | Status | Meaning |
 |---|---|
-| OWNER-ADOPTED INTERNAL GOVERNANCE — AI-ASSISTED, NON-INDEPENDENT, DOCUMENTATION/PRE-RUNTIME SCOPE | Internal Project Owner governance for eligible work; effective only after recorded owner adoption and merge; no independent or external assurance |
+| OWNER-ADOPTED INTERNAL GOVERNANCE — AI-ASSISTED, NON-INDEPENDENT | Internal Project Owner governance for eligible work; no independent or external assurance |
+| PROPOSED LS-1 GOVERNANCE — HOLD UNTIL OWNER ADOPTION AND MERGE | Proposed bounded local-synthetic category; no work-item implementation or execution authority by itself |
 | Active current-stage artifact | Existing artifact approved or usable for current documentation-stage governance. |
 | Planning-only | Artifact supports planning only and does not authorize implementation. |
 | Future-facing | Artifact describes future work, gates, or evidence needs. |
@@ -132,7 +133,9 @@ Each inventory row may include:
 
 | Artifact ID | Artifact title | File path | Area | Current-stage status | Primary owner role | Index status | Evidence relationship | Key gap | Limitation |
 |---|---|---|---|---|---|---|---|---|---|
-| INV-GOV-007 | AI-Assisted Solo-Owner Governance Policy V0.1 | custom/im-core/docs/governance/ai-assisted-solo-owner-governance-policy-v0.1.md | Governance / Internal decision model | OWNER-ADOPTED INTERNAL GOVERNANCE — AI-ASSISTED, NON-INDEPENDENT, DOCUMENTATION/PRE-RUNTIME SCOPE; effective only after recorded adoption and merge | Project Owner | Indexed in this amendment | Defines GPT advisory review and the mandatory Project Owner decision record for eligible work | Requires recorded owner adoption before effectiveness and future review if scope or external obligations change | Does not provide independent assurance, specialist-human approval, clinical validation, privacy-security certification, regulatory approval, compliance, production readiness, clinical-use authorization, PHI authorization, runtime authorization, deployment, or external release |
+| INV-GOV-007 | AI-Assisted Solo-Owner Governance Policy V0.1 | custom/im-core/docs/governance/ai-assisted-solo-owner-governance-policy-v0.1.md | Governance / Internal decision model | OWNER-ADOPTED INTERNAL GOVERNANCE — AI-ASSISTED, NON-INDEPENDENT | Project Owner | Indexed | Defines GPT advisory review and the mandatory Project Owner decision record for eligible work, including the LS-1 review model only after separate LS-1 adoption | LS-1 requires its own adopted policy and current work-item decision | Does not provide independent assurance, specialist-human approval, clinical validation, privacy-security certification, regulatory approval, compliance, production readiness, clinical-use authorization, PHI authorization, deployment, or external release |
+| INV-GOV-008 | LS-1 — Bounded Local-Synthetic Engineering Policy V0.1 | custom/im-core/docs/governance/ls-1-bounded-local-synthetic-engineering-policy-v0.1.md | Governance / Bounded local engineering | PROPOSED LS-1 GOVERNANCE — HOLD UNTIL OWNER ADOPTION AND MERGE | Project Owner | Indexed in this amendment | Defines eligibility, boundaries, Phase 11/12 authority, tests, rollback, evidence, review, HOLD, invalidation, and external gates | Requires owner adoption/merge and a separate current decision for each work item; Phase 12 remains separately authorized | Does not itself authorize implementation, Docker, database access/write, runtime evidence, clinical use, PHI, deployment, release, validation, compliance, certification, regulatory approval, production readiness, or independent assurance |
+| INV-GOV-009 | IMCORE-LS-001 Local-Synthetic Authorization Packet V0.1 | custom/im-core/docs/governance/imcore-ls-001-local-synthetic-authorization-packet-v0.1.md | Governance / Candidate / Evidence template | Proposed/reserved; current decision HOLD | Project Owner | Indexed in this amendment | Declares the Visit Context target, interval-history decision, six-row future boundary, tests, rollback, local-first issue control, and Phase 11/12 decision fields | Policy adoption and both applicable owner decisions remain outstanding; no implementation evidence exists | Does not authorize or claim implementation, Docker/database/runtime execution, clinical use, PHI, deployment, release, validation, compliance, certification, regulatory approval, production readiness, or independent assurance |
 | INV-ROADMAP-001 | Master Execution and Governance Roadmap V0.1 | custom/im-core/docs/roadmap/master-execution-and-governance-roadmap-v0.1.md | Roadmap / Governance | Active current-stage artifact | Governance Owner / Documentation Owner / Technical Owner | Indexed | Defines governance roadmap expectations | Requires ongoing alignment with newer artifacts | Does not authorize implementation or clinical use |
 | INV-ROADMAP-002 | Phase 2 Controlled Design Roadmap V0.1 | custom/im-core/docs/roadmap/phase-2-controlled-design-roadmap-v0.1.md | Roadmap / Phase gate | Planning-only | Governance Owner / Documentation Owner / Technical Owner | Existing roadmap artifact; aligned after PR #217 and PR #218 | Defines controlled design planning and the post-PR #217 Phase 2 readiness planning relationship context | Future gate execution, governance review, and separate authorization remain required before any Phase 2 execution or sandbox/runtime transition | Does not authorize Phase 2 execution, sandbox execution, runtime implementation, clinical use, production use, PHI use, SQL/database migration, API/FHIR implementation, AI/CDS runtime, validation, compliance, certification, deployment, pilot use, production readiness, or Phase closure |
 | INV-ROADMAP-003 | Comprehensive Governance and Future Clinical-Use Readiness Roadmap V0.1 | custom/im-core/docs/roadmap/comprehensive-governance-and-future-clinical-use-readiness-roadmap-v0.1.md | Roadmap / Governance / Future readiness | Active current-stage artifact | Governance Owner / Documentation Owner | Indexed after PR #192 | Defines future clinical-use readiness pathway and limitations | Requires downstream population of requirements, risk, evidence, and traceability | Does not authorize clinical use |

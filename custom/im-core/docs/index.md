@@ -28,6 +28,8 @@ It does not authorize SQL execution, runtime AI, autonomous clinical decision su
 | Section | Purpose | Current status | Link path | Safety note | Contains implementation? |
 |---|---|---|---|---|---|
 | AI-Assisted Solo-Owner Governance | Defines eligible-work classification, GPT multidisciplinary advisory review, the mandatory Project Owner decision record, non-independence disclosure, automatic HOLD rules, and future external gates. | OWNER-ADOPTED INTERNAL GOVERNANCE — effective only after recorded owner adoption and merge | `custom/im-core/docs/governance/ai-assisted-solo-owner-governance-policy-v0.1.md` | Documentation/pre-runtime only; no independent assurance, PHI, clinical use, runtime, deployment, validation, compliance, certification, or regulatory authorization. | No. Documentation-only. |
+| LS-1 Bounded Local-Synthetic Engineering | Defines the exact eligibility, environment, data, Docker, database/table/row, dependency, Git/GitHub, test, rollback, evidence, review, HOLD, invalidation, and external-gate controls for bounded local-synthetic engineering. | Proposed — effective only after Project Owner adoption and merge | `custom/im-core/docs/governance/ls-1-bounded-local-synthetic-engineering-policy-v0.1.md` | No work-item, Phase 12, clinical, PHI, deployment, validation, compliance, certification, regulatory, or independent-assurance authority by itself. | No. Governance only. |
+| IMCORE-LS-001 Candidate Packet | Identifies the first proposed Visit Context seed candidate, its exact first-slice baseline, six-row future database boundary, Phase 11/12 split, local-first work-item control, tests, rollback, and owner-decision fields. | Proposed/reserved; current decision HOLD | `custom/im-core/docs/governance/imcore-ls-001-local-synthetic-authorization-packet-v0.1.md` | No implementation, implementation branch, Docker, database, runtime, clinical use, deployment, or release is authorized or performed. | No. Candidate governance/evidence packet only. |
 | Project State | Records the current verified, assumed, and unknown project state for continuity. | Existing | `custom/im-core/docs/project-state/current-project-state.md` | Must separate verified facts from assumptions and unknowns. | No. Documentation-only. |
 | Clinical Intelligence | Documents future clinician-reviewed Clinical Intelligence boundaries, rule checks, human-in-the-loop workflow, auditability, explainability, safety boundaries, open loops, summary generation boundary, and trend review planning. | Existing / evolving | `custom/im-core/docs/clinical-intelligence/` | No runtime AI, no autonomous CDS, no diagnosis, no prescribing, no triage. | No. Documentation-only unless explicitly changed in a future reviewed PR. |
 | LBF Scripts Governance | Documents seed/script planning, metadata verification, clean-install planning, SQL non-execution boundaries, backup/rollback planning, target table mapping review, non-production environment requirements, and pre-SQL evidence gates. | Existing | `custom/im-core/lbf/scripts/` | SQL execution remains blocked unless explicitly approved after safety gates. | Documentation-only unless separately approved. |
@@ -47,7 +49,7 @@ It does not authorize SQL execution, runtime AI, autonomous clinical decision su
 
 ## Global Safety Boundary
 
-This documentation index does not authorize:
+This documentation index does not itself authorize:
 
 - PHI
 - Real patient data

@@ -10,7 +10,8 @@
 - Internal review model:
   `GPT_MULTIDISCIPLINARY_ADVISORY_REVIEW` +
   `PROJECT_OWNER_FINAL_ACCOUNTABLE_DECISION`
-- Scope: eligible documentation-stage and pre-runtime work only
+- Scope: eligible documentation-stage/pre-runtime work and separately
+  owner-authorized LS-1 bounded local-synthetic engineering
 - Independence: AI-assisted and non-independent
 - Status: OWNER-ADOPTED INTERNAL GOVERNANCE — AI-ASSISTED,
   NON-INDEPENDENT, DOCUMENTATION/PRE-RUNTIME SCOPE
@@ -31,6 +32,14 @@ approvals mandatory internal merge gates. It does not supersede no-PHI,
 no-secrets, non-runtime, evidence, claim-control, test, lifecycle, external
 release, legal, regulatory, contractual, certification, or qualified-human
 review obligations. An unresolved material source-of-truth conflict is HOLD.
+
+The LS-1 — Bounded Local-Synthetic Engineering Policy V0.1 is the
+authoritative classifier and boundary control for that category. LS-1 uses the
+same internal review model and non-independence disclosure. This policy alone
+does not authorize an LS-1 work item, implementation, Docker execution, or
+database write; the LS-1 policy and a current Project Owner work-item decision
+must also apply. Until the LS-1 amendment is owner-adopted and merged, it is a
+proposal only.
 
 ## 2. Purpose and Non-Authorization Boundary
 
@@ -125,6 +134,24 @@ The model may be used only when evidence establishes every condition below:
 - no pilot, deployment, or production authorization is granted;
 - no compliance, certification, or regulatory approval is claimed; and
 - no independent-assurance claim is made.
+
+### 4.1 LS-1 Eligible Work
+
+Executable or database-capable work is eligible under this internal review
+model only when `POL-GOV-LS1-001` applies and evidence establishes every LS-1
+condition, including the local-only and synthetic-only boundaries, no patient
+or encounter record, exact table/row scope, no migration or new dependency,
+parameterized transactional writes, fail-closed conflicts, exact-match
+idempotency, guarded rollback, objective tests, separate lifecycle authority,
+and preserved external gates.
+
+Separate specialist-human approvals are not mandatory internal execution or
+merge gates for eligible LS-1 work. The Project Owner must personally review
+the work-item evidence and record the final accountable internal decision.
+
+AI assistance for repository authoring and advisory review does not authorize
+execution of an OpenEMR IM Core AI/model/prompt/agent capability. Unresolved
+LS-1 eligibility is `HOLD`.
 
 Eligibility is evidence-based, not extension-based. Markdown and other prose
 documents are not automatically eligible merely because they look like
@@ -277,7 +304,8 @@ The following claims must not be made solely on the basis of this model:
 
 The decision must be HOLD if any of the following is found:
 
-- runtime or executable behavior;
+- runtime or executable behavior outside a current, exact LS-1 Phase 11 or
+  separately required Phase 12 authorization;
 - executable AI, model, or prompt integration;
 - autonomous agent operation;
 - clinical decision-support execution;
@@ -285,11 +313,13 @@ The decision must be HOLD if any of the following is found:
 - credentials or secrets;
 - security-sensitive production implementation;
 - operational API or FHIR integration;
-- SQL or database migration;
+- SQL/database work outside current LS-1 table/row/write authority, or any
+  database migration;
 - pilot, deployment, production, or external release activity;
 - a validation, compliance, certification, or regulatory claim;
 - an applicable external obligation requiring qualified human review;
-- insufficient evidence to classify the work as documentation-only; or
+- insufficient evidence to classify the work as eligible documentation/
+  pre-runtime work or eligible LS-1 work; or
 - an unresolved material source-of-truth conflict.
 
 HOLD may be cleared only by removing the triggering scope or by completing the
@@ -349,3 +379,7 @@ policy.
 This policy must be reviewed again if project stage, repository integration,
 actor authority, applicable external obligations, or any prohibited boundary
 changes.
+
+The LS-1 amendment is effective only after its own recorded Project Owner
+adoption decision and merge. Existing adoption of this policy does not
+pre-adopt LS-1.

@@ -200,3 +200,68 @@ Remove the added workflows and PR-template metadata if this guardrail model is r
 
 ### Notes
 This entry tracks the introduction of repository-specific CI governance beyond inherited upstream workflows.
+
+---
+
+### Customization ID
+`IM-0005`
+
+### Title
+Reproducible Local-Synthetic Visit Context LBF Seed
+
+### Status
+Proposed
+
+### Category
+Configuration / Verification
+
+### Objective
+Prepare a bounded, reproducible local-synthetic seed for
+`LBFim_followup_v1` group `1` / Visit Context under work item
+`IMCORE-LS-001`.
+
+### Why Upstream Is Insufficient
+The IM Core Visit Context configuration is a project-specific LBF
+customization. Repository history contains manual off-repository runtime
+attestations but no executable, cleanly reproducible seed on `master`.
+
+### Affected Paths
+- Proposed one-file implementation under
+  `custom/im-core/lbf/scripts/`; exact path requires the Phase 11 owner decision.
+- Proposed isolated tests; exact paths require the Phase 11 owner decision.
+- `custom/im-core/docs/governance/imcore-ls-001-local-synthetic-authorization-packet-v0.1.md`
+- Directly related evidence/state updates only.
+
+### Risk Level
+Medium
+
+### Upstream Compatibility Impact
+Low, subject to current-schema verification before Phase 12.
+
+### Validation Requirement
+Establish all LS-1 eligibility conditions and verify parameterized
+transactional writes, exact-match idempotency, fail-closed conflicts, guarded
+rollback, the exact six-row boundary, unrelated-row invariants, no schema
+change, no patient/encounter record, and isolated disposable Docker resources.
+Docker/database/runtime tests require separate Phase 12 owner authorization.
+
+### Rollback Note
+The future implementation must roll back the active transaction on failure.
+Post-commit rollback may remove only rows proven to have been inserted by this
+work item and still exactly matching its manifest. Ambiguity is `HOLD`.
+
+### Related Issue
+Deferred under proposed owner-controlled local-first control. A GitHub issue
+must exist before the implementation branch is pushed or an implementation
+Pull Request is opened.
+
+### Related Pull Request
+Governance amendment branch:
+`governance/authorize-local-synthetic-engineering-v0-1`. One Pull Request to
+`master` is required and must remain unmerged pending Project Owner review.
+Implementation Pull Request: not created.
+
+### Notes
+Reserved/proposed only. No implementation, implementation branch, Docker
+execution, database write, clinical use, deployment, validation, compliance,
+certification, or production-readiness claim is recorded by this entry.

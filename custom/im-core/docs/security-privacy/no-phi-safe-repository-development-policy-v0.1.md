@@ -124,3 +124,61 @@ Synthetic data must use obviously fake identifiers, such as:
 SYN-PAT-0001
 SYN-ENC-0001
 SYN-LAB-0001
+```
+
+Synthetic identifiers must be obviously fictional, must not match known real
+records, and must not be derived from or transformed from a real person,
+patient, encounter, clinician, staff member, facility, payer, or customer.
+
+## 6. LS-1 Local-Synthetic Data Boundary
+
+For `LS-1 — BOUNDED LOCAL-SYNTHETIC ENGINEERING`:
+
+- synthetic configuration and test data only are allowed;
+- de-identified real data is prohibited;
+- production-derived data is prohibited;
+- no patient or encounter record may be required, selected, or created;
+- only the exact tables and rows in the current work-item decision may be
+  accessed;
+- sanitized metadata evidence must be limited to those declared rows; and
+- Docker volumes and databases must be disposable, isolated, and dedicated to
+  the work item.
+
+AI assistance for repository authoring and advisory review does not authorize
+runtime AI/model/prompt/agent execution or the submission of suspected
+sensitive data to GPT.
+
+## 7. Evidence and Scan Handling
+
+Repository evidence may record commands, status, counts, file paths, synthetic
+identifiers, and sanitized configuration metadata. It must not include raw
+database dumps, credentials, connection strings, tokens, private keys,
+production configuration, sensitive logs, or suspected PHI/real-data values.
+
+If a high-confidence scan flags possible sensitive content, do not reproduce
+the value in a review message or evidence record. Stop, contain the artifact,
+and follow the applicable incident/remediation process.
+
+## 8. Automatic HOLD and Stop Conditions
+
+Work is `HOLD` and must stop if:
+
+- the data origin is unknown;
+- a value may be real or derived from real data;
+- a patient or encounter record becomes necessary;
+- an undeclared table or row is required;
+- evidence cannot be sanitized without losing the ability to review it;
+- a secret, credential, sensitive log, database dump, or production export is
+  discovered; or
+- the environment cannot be established as isolated, local, and synthetic.
+
+This policy cannot waive an external privacy, security, legal, regulatory, or
+contractual obligation.
+
+## 9. Status and Non-Claims
+
+This policy is a repository and local-synthetic data-boundary control. It does
+not authorize PHI, real or de-identified real data, clinical use, patient care,
+deployment, production, external release, clinical validation, compliance,
+certification, regulatory approval, privacy/security certification, production
+readiness, or independent assurance.

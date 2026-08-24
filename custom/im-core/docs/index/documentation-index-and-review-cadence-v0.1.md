@@ -2,16 +2,16 @@
 
 ## AI-Assisted Solo-Owner Governance Index Control
 
-The AI-Assisted Solo-Owner Governance Policy V0.1 is the authoritative source
-for eligible-work classification and its internal decision path. Its controlled
-status is OWNER-ADOPTED INTERNAL GOVERNANCE — AI-ASSISTED, NON-INDEPENDENT,
-DOCUMENTATION/PRE-RUNTIME SCOPE, effective only after a recorded Project Owner
-adoption decision and merge.
+The AI-Assisted Solo-Owner Governance Policy V0.1 controls the internal review
+model. `POL-GOV-LS1-001` is the authoritative classifier and boundary for
+bounded local-synthetic engineering after its own recorded Project Owner
+adoption and merge.
 
-Older entries listing multiple primary or reviewer roles remain useful domain
-maps and historical records. They do not create separate specialist-human merge
-gates for eligible work. Future and external qualified-human gates remain
-unchanged.
+Both use GPT multidisciplinary advisory review plus the Project Owner's final
+accountable decision and are AI-assisted and non-independent. Older entries
+listing multiple roles remain domain maps and historical records; they do not
+create separate specialist-human internal gates for eligible work. Future and
+external qualified-human gates remain unchanged.
 
 ## 1. Purpose
 
@@ -219,7 +219,9 @@ Safety, privacy, security, and claims-sensitive documents require appropriate cr
 
 | PR | Document | Path | Primary Owner | Status |
 |---|---|---|---|---|
-| POL-GOV-AISO-001 | AI-Assisted Solo-Owner Governance Policy V0.1 | custom/im-core/docs/governance/ai-assisted-solo-owner-governance-policy-v0.1.md | Project Owner | OWNER-ADOPTED INTERNAL GOVERNANCE — AI-ASSISTED, NON-INDEPENDENT, DOCUMENTATION/PRE-RUNTIME SCOPE; effective only after recorded adoption and merge |
+| POL-GOV-AISO-001 | AI-Assisted Solo-Owner Governance Policy V0.1 | custom/im-core/docs/governance/ai-assisted-solo-owner-governance-policy-v0.1.md | Project Owner | OWNER-ADOPTED INTERNAL GOVERNANCE — AI-ASSISTED, NON-INDEPENDENT; includes LS-1 internal review model only after the separate LS-1 amendment is adopted and merged |
+| POL-GOV-LS1-001 | LS-1 — Bounded Local-Synthetic Engineering Policy V0.1 | custom/im-core/docs/governance/ls-1-bounded-local-synthetic-engineering-policy-v0.1.md | Project Owner | Proposed; current governance amendment only; no work-item implementation or execution authority until owner adoption, merge, and a separate current work-item decision |
+| IMCORE-LS-001 | Reproducible Local-Synthetic Visit Context LBF Seed Candidate Packet V0.1 | custom/im-core/docs/governance/imcore-ls-001-local-synthetic-authorization-packet-v0.1.md | Project Owner | Proposed/reserved; current decision HOLD; Phase 11 decision not recorded and Phase 12 requires separate later authorization |
 | #92 | Evidence Registry and Evidence Templates V0.1 | custom/im-core/docs/evidence/evidence-registry-and-templates-v0.1.md | Documentation Owner / Governance Owner | Approved for current stage |
 | #93 | Traceability Matrix V0.1 | custom/im-core/docs/validation/traceability-matrix-v0.1.md | Governance Owner / Technical Owner | Approved for current stage |
 | #94 | Risk Register V0.1 | custom/im-core/docs/risk/risk-register-v0.1.md | Risk Owner / Clinical Safety Owner | Approved for current stage |

@@ -1,5 +1,17 @@
 # Merge Readiness Checklist V0.1
 
+## AI-Assisted Solo-Owner Decision Gate
+
+For work classified as eligible by the AI-Assisted Solo-Owner Governance Policy
+V0.1, merge readiness requires a current Project Owner decision record in
+addition to the checks below. The record must disclose that review was
+AI-assisted and non-independent.
+
+Separate specialist-human approvals are not mandatory internal merge gates for
+eligible work. They remain mandatory when the work is non-eligible or a
+future/external qualified-human gate is triggered. This change does not relax
+the 0-failing, 0-pending rule or any safety boundary.
+
 This checklist is documentation-stage governance guidance.
 
 It does not modify GitHub Actions workflows, runtime code, npm dependencies, database schema, clinical workflows, AI behavior, API behavior, or OpenEMR core behavior.

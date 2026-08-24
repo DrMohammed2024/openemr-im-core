@@ -1,5 +1,19 @@
 # Formal Reviewer Approval Record Template V0.1 - OpenEMR IM Core
 
+## AI-Assisted Solo-Owner Applicability
+
+This template is used for a specialist or external review when one is required
+for non-eligible work, a future/external gate, or when such review is
+voluntarily obtained. It is not the required internal decision record for
+eligible work.
+
+Eligible work uses the mandatory Project Owner decision record defined by the
+AI-Assisted Solo-Owner Governance Policy V0.1. That record requires the
+AI-assisted and non-independent disclosure, author-owner-reviewer relationship,
+conflicts of interest, exact base/head SHAs and file scope, evidence reviewed by
+GPT and the Project Owner, tests, limitations, rationale, conditions, and
+invalidation triggers.
+
 ## 1. Purpose
 
 This document provides a formal reviewer approval record template for future OpenEMR IM Core documentation reviews.
@@ -113,7 +127,7 @@ This template should not be used as evidence that review occurred unless it is c
 | AI-assisted advisory review used | Yes / No / Not applicable |
 | AI-assisted output reviewed by human reviewer | TBD / Not applicable |
 | AI-assisted recommendation, if any | GO / CONDITIONAL GO / DEFER / NO-GO / Not applicable |
-| Human reviewer independent decision confirmation | TBD |
+| Reviewer decision relationship and independence | Independent / Non-independent / Not claimed; explain author-owner-reviewer relationship |
 | AI-human disagreement or override rationale | TBD / Not applicable |
 | Approval limitations | TBD |
 | Non-authorization statement confirmed | TBD |

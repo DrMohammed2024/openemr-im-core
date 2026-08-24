@@ -1,5 +1,17 @@
 # Decision Automation Boundary Policy V0.1
 
+## AI-Assisted Solo-Owner Applicability
+
+This policy's prohibition on automated final decisions remains unchanged. For
+work classified as eligible by the AI-Assisted Solo-Owner Governance Policy
+V0.1, GPT is advisory and the Project Owner makes the final accountable
+internal decision and records it.
+
+Role-specific human approvals described below are advisory for eligible work
+and mandatory only for non-eligible work or a triggered future/external gate.
+The Project Owner decision is a human decision, not automated risk acceptance,
+independent review, or professional certification.
+
 ## 1. Document Status
 
 | Field | Value |

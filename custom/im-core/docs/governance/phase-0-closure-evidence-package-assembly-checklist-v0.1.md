@@ -1,5 +1,16 @@
 # Phase 0 Closure Evidence Package Assembly Checklist V0.1 - OpenEMR IM Core
 
+## AI-Assisted Solo-Owner Applicability
+
+The specialist reviewer records in this checklist are future Phase 0 closure
+evidence, not mandatory internal merge gates for eligible documentation-stage
+work. Eligible work follows the AI-Assisted Solo-Owner Governance Policy V0.1.
+
+GPT advisory review plus a Project Owner decision record does not complete the
+future closure evidence package, close Phase 0, authorize a phase transition, or
+claim independent review. Those future gates remain open until separately
+satisfied.
+
 ## 1. Purpose
 
 This checklist provides a controlled, documentation-only worksheet for assembling a future Phase 0 closure evidence package for OpenEMR IM Core.

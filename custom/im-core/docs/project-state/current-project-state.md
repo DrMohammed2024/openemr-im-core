@@ -1,5 +1,19 @@
 # OpenEMR IM Core — Current Project State
 
+## AI-Assisted Solo-Owner Governance State
+
+The controlled internal governance model for eligible documentation-stage and
+pre-runtime work is AI-ASSISTED SOLO-OWNER GOVERNANCE after the Project Owner
+records adoption and the policy is merged. GPT performs multidisciplinary
+advisory review and the Project Owner makes the final accountable internal
+decision.
+
+The review is AI-assisted and non-independent. This state does not authorize
+clinical use, PHI or real patient data, runtime AI or prompts, autonomous
+agents, API/FHIR operation, SQL/database changes, pilot or production
+deployment, external release, validation, compliance, certification,
+regulatory claims, or a lifecycle phase transition.
+
 ## 1. Purpose
 
 This document records the latest verified state of the OpenEMR IM Core project.

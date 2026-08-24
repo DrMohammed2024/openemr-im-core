@@ -1,5 +1,16 @@
 # Evidence Registry and Evidence Templates V0.1 - OpenEMR IM Core
 
+## AI-Assisted Solo-Owner Applicability
+
+For eligible work, evidence-review status may be established through GPT
+multidisciplinary advisory analysis and the Project Owner decision record
+defined by the AI-Assisted Solo-Owner Governance Policy V0.1. Separate
+specialist-human approvals are not mandatory internal merge gates.
+
+This internal, non-independent review does not convert planned evidence into
+completed evidence and does not establish validation, control effectiveness,
+compliance, certification, production readiness, or external assurance.
+
 ## 1. Purpose
 
 This document defines a documentation-only evidence registry and evidence template baseline for OpenEMR IM Core.

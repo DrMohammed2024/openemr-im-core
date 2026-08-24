@@ -1,5 +1,16 @@
 # Internal Medicine Visit Documentation Workflow V0.1
 
+## AI-Assisted Solo-Owner Applicability
+
+Eligible documentation-stage changes to this proposed workflow may use GPT
+clinical-boundary advisory review and the Project Owner decision record under
+the AI-Assisted Solo-Owner Governance Policy V0.1. Separate clinical or other
+specialist-human approval is not a mandatory internal merge gate.
+
+Actual clinical use, validation, runtime execution, PHI processing, or clinical
+authorization remains a future or external gate requiring applicable
+qualified-human review.
+
 ## 1. Document Status
 
 Status: Draft for governance review.

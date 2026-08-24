@@ -1,5 +1,18 @@
 # Governance Execution Checklist V0.1
 
+## AI-Assisted Solo-Owner Applicability
+
+For eligible work, this checklist is executed through GPT multidisciplinary
+advisory review and Project Owner evidence review, followed by the Project Owner
+decision record required by the AI-Assisted Solo-Owner Governance Policy V0.1.
+Separate specialist-human approvals are not mandatory internal merge gates.
+
+References below to required human or specialist review are scoped to
+non-eligible work or a triggered future/external gate. The general
+stricter-rule principle does not reinstate a separate-human gate that the
+authoritative policy expressly supersedes for eligible work. All safety,
+privacy, evidence, CI, and non-authorization controls remain in force.
+
 ## Document Status
 
 | Field | Value |

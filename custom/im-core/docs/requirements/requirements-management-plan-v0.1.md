@@ -1,5 +1,16 @@
 # Requirements Management Plan V0.1 - OpenEMR IM Core
 
+## AI-Assisted Solo-Owner Applicability
+
+For eligible documentation-stage requirements artifacts, the reviewer-role
+tables below identify GPT advisory domains and do not require separate
+specialist-human approvals as internal merge gates. The Project Owner decision
+record under the AI-Assisted Solo-Owner Governance Policy V0.1 is required.
+
+Requirements validation, implementation authorization, clinical use, runtime,
+PHI, deployment, compliance, certification, regulatory claims, and external
+release remain future or external gates.
+
 ## 1. Purpose
 
 This document defines a documentation-only requirements management plan for OpenEMR IM Core.

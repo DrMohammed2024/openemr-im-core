@@ -1,5 +1,16 @@
 # Requirements Register Starter V0.1 - OpenEMR IM Core
 
+## AI-Assisted Solo-Owner Applicability
+
+For eligible documentation-stage register updates, listed reviewer roles are
+GPT advisory-domain mappings. Separate specialist-human approvals are not
+mandatory internal merge gates; the Project Owner decision record under the
+AI-Assisted Solo-Owner Governance Policy V0.1 is required.
+
+No such decision validates requirements or authorizes implementation, clinical
+use, PHI, runtime, deployment, compliance, certification, regulatory claims, or
+external release.
+
 ## 1. Purpose
 
 This document defines a documentation-only starter requirements register for OpenEMR IM Core.

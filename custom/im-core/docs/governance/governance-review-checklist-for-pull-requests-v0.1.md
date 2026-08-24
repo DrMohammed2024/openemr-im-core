@@ -1,5 +1,19 @@
 # Governance Review Checklist for Pull Requests V0.1
 
+## AI-Assisted Solo-Owner Applicability
+
+For work classified as eligible by the AI-Assisted Solo-Owner Governance Policy
+V0.1, this checklist is completed through GPT multidisciplinary advisory review
+and Project Owner evidence review. The Project Owner records the final
+accountable internal decision.
+
+The roles in Section 13 are advisory-domain coverage for eligible work; their
+separate approvals are not mandatory internal merge gates. References to
+required roles elsewhere in this checklist mean the Project Owner decision
+record for eligible work, or the applicable specialist/external reviewer for
+non-eligible work and triggered future/external gates. All stop boundaries and
+passing-check requirements remain mandatory.
+
 ## 1. Document Status
 
 Status: Draft for governance review.

@@ -1,5 +1,17 @@
 # Commercial Claims Policy and Claims Register V0.1 - OpenEMR IM Core
 
+## AI-Assisted Solo-Owner Applicability
+
+Eligible internal documentation-stage changes to this claims-control artifact
+may use GPT regulatory-claims advisory review and the Project Owner decision
+record under the AI-Assisted Solo-Owner Governance Policy V0.1. Its reviewer
+matrix is advisory for that eligible internal work.
+
+Making an external, commercial, clinical, validation, compliance,
+certification, regulatory, production-readiness, deployment, or legal claim is
+outside this model and remains subject to every applicable qualified-human and
+external gate.
+
 ## 1. Purpose
 
 This document defines the commercial claims policy and claims register for OpenEMR IM Core.

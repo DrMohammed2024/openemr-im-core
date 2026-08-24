@@ -1,5 +1,16 @@
 # Clinical Documentation Quality Rules V0.1 - OpenEMR IM Core
 
+## AI-Assisted Solo-Owner Applicability
+
+Eligible documentation-stage changes to these proposed rules may use GPT
+clinical-boundary advisory review and the Project Owner decision record under
+the AI-Assisted Solo-Owner Governance Policy V0.1 without a separate clinical
+reviewer approval as an internal merge gate.
+
+Clinical authority, validation, runtime use, patient-care use, PHI, or any
+clinical-quality or safety claim remains outside the model and requires the
+applicable qualified-human and external gates.
+
 ## 1. Purpose
 
 This document defines documentation-only clinical documentation quality rules for OpenEMR IM Core.

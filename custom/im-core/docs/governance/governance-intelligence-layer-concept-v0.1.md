@@ -1,5 +1,17 @@
 # Governance Intelligence Layer Concept V0.1
 
+## AI-Assisted Solo-Owner Applicability
+
+For work classified as eligible by the AI-Assisted Solo-Owner Governance Policy
+V0.1, this concept's reviewer-role mapping is used as GPT multidisciplinary
+advisory coverage and the Project Owner makes the final accountable internal
+decision. Separate specialist-human approvals are not mandatory internal merge
+gates for eligible work.
+
+Missing-role DEFER and required-human-review rules below apply as mandatory
+only to non-eligible work or a triggered future/external qualified-human gate.
+GPT remains non-authoritative and may not accept risk.
+
 ## 1. Document Status
 
 | Field | Value |

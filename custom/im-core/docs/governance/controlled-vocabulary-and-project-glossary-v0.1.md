@@ -1,5 +1,13 @@
 # Controlled Vocabulary and Project Glossary V0.1
 
+## AI-Assisted Solo-Owner Policy Relationship
+
+The AI-Assisted Solo-Owner Governance Policy V0.1 is authoritative for its
+governance-model, eligibility, actor, disclosure, and owner-decision terms. A
+generic stricter-language rule does not reinstate separate specialist-human
+approvals that the policy expressly supersedes for eligible work. Safety,
+privacy, lifecycle, claims, and future/external gates remain unchanged.
+
 ## Document Status
 
 | Field | Value |
@@ -413,19 +421,112 @@ OpenEMR core behavior changes are not authorized.
 
 Approval means a human-owned documented decision.
 
-AI tools may recommend but do not approve.
+GPT may recommend but does not make the final accountable decision. For eligible
+work, approval means a recorded Project Owner decision under the AI-Assisted
+Solo-Owner Governance Policy V0.1.
 
 Safe wording:
 
-- human-owned GO
-- reviewer accepted
-- project owner approved
+- Project Owner APPROVE decision for eligible work
+- Project Owner APPROVE_WITH_CONDITIONS decision for eligible work
+- qualified-human or external approval when a triggered gate requires it
 
 Unsafe wording:
 
 - AI approved
 - automatically approved
+- independently approved when the review is non-independent
+- specialist-approved when no specialist-human approval occurred
 - model-approved
+
+---
+
+### AI-Assisted Solo-Owner Governance
+
+AI-Assisted Solo-Owner Governance means the internal model for eligible
+documentation-stage and pre-runtime work in which GPT performs multidisciplinary
+advisory review and the Project Owner makes the final accountable decision.
+
+It is not independent assurance, specialist-human approval, professional
+certification, clinical validation, compliance, or regulatory approval.
+
+---
+
+### Eligible Work
+
+Eligible work means a narrow documentation-stage or pre-runtime change that
+satisfies every eligibility condition in the authoritative AI-Assisted
+Solo-Owner Governance Policy V0.1.
+
+Eligibility is evidence-based. If executable behavior, PHI, secrets, runtime,
+deployment, an external claim, an applicable qualified-human obligation, or
+classification uncertainty exists, the decision is HOLD.
+
+---
+
+### GPT Multidisciplinary Advisory Review
+
+GPT Multidisciplinary Advisory Review means non-binding repository, evidence,
+technical, documentation, risk, clinical-boundary, privacy-security-boundary,
+regulatory-claims, AI-governance, test, and consistency analysis.
+
+GPT is not an independent human reviewer, licensed professional, risk-acceptance
+authority, regulator, certification authority, or final decision-maker.
+
+---
+
+### Project Owner Final Accountable Decision
+
+Project Owner Final Accountable Decision means the human Project Owner's
+evidence-based decision after personally reviewing the evidence and GPT
+findings, recording the mandatory fields, and disclosing the
+author-owner-reviewer relationship and non-independence.
+
+It is an internal decision only and cannot satisfy an external or
+qualified-human gate unless that external authority expressly permits it.
+
+---
+
+### Non-Independent Review
+
+Non-independent review means the author, owner, reviewer, or advisory tool
+relationships do not provide organizational or professional independence.
+
+The relationship must be disclosed. Non-independent review must not be described
+as independent assurance or independent verification.
+
+---
+
+### APPROVE
+
+APPROVE means the Project Owner has found an eligible change internally
+acceptable within the exact reviewed scope and current evidence.
+
+It does not authorize activity outside the policy boundary.
+
+---
+
+### APPROVE_WITH_CONDITIONS
+
+APPROVE_WITH_CONDITIONS means the Project Owner has found an eligible change
+internally acceptable subject to explicit, owned conditions. Conditions needed
+for eligibility, safety, privacy, source-of-truth integrity, or passing required
+checks must be resolved before merge.
+
+---
+
+### HOLD
+
+HOLD means the Project Owner cannot approve or reject safely until a blocking
+condition, missing fact, classification uncertainty, or triggered external gate
+is resolved.
+
+---
+
+### REJECT
+
+REJECT means the Project Owner has decided the proposed eligible-work change
+must not proceed in its reviewed form.
 
 ---
 
@@ -467,9 +568,12 @@ A governance gate must be human-owned and evidence-supported.
 
 ### GO
 
-GO means a current, state-dependent authorization to proceed with the smallest safe next action.
+GO remains an advisory governance recommendation used by older artifacts and
+GPT review procedures. Under the AI-Assisted Solo-Owner Governance Policy V0.1,
+GO is not the final Project Owner decision value.
 
-GO expires if repository state, evidence, scope, branch, PR status, or risk changes.
+A GO recommendation expires if repository state, evidence, scope, branch, PR
+status, or risk changes.
 
 ---
 

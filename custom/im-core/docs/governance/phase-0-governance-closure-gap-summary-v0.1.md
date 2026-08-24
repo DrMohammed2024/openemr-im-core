@@ -1,5 +1,17 @@
 # Phase 0 Governance Closure Gap Summary V0.1 - OpenEMR IM Core
 
+## AI-Assisted Solo-Owner Applicability
+
+Formal specialist approval gaps in this summary remain future Phase 0 closure
+gates; they are not mandatory internal merge gates for an otherwise eligible
+documentation-stage change. Eligible work uses GPT multidisciplinary advisory
+review and the Project Owner decision record defined by the AI-Assisted
+Solo-Owner Governance Policy V0.1.
+
+No decision under that policy closes Phase 0 or authorizes a phase transition.
+Any closure or authorization claim, or a triggered external obligation, is HOLD
+pending the applicable separate gate.
+
 ## 1. Purpose
 
 This document summarizes the current Phase 0 governance foundation status for the OpenEMR IM Core project and identifies remaining gaps before any future Phase 0 closure report may be considered.

@@ -1,5 +1,17 @@
 # VFinal++ Current-Stage Governance Addendum V0.1
 
+## AI-Assisted Solo-Owner Policy Relationship
+
+The AI-Assisted Solo-Owner Governance Policy V0.1 is authoritative for
+classifying eligible documentation-stage and pre-runtime work and selecting its
+internal review and decision path. For eligible work, separate specialist-human
+approvals described in this addendum or coordinated artifacts are advisory and
+are not mandatory internal merge gates. The Project Owner decision record
+defined by that policy is required.
+
+All no-PHI, non-runtime, evidence, claim-control, lifecycle, and future external
+or qualified-human gates coordinated by this addendum remain in force.
+
 ## Document Status
 
 | Field | Value |

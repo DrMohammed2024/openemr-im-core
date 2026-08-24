@@ -1,5 +1,15 @@
 # Phase 0 Closure Evidence Package Plan V0.1 - OpenEMR IM Core
 
+## AI-Assisted Solo-Owner Applicability
+
+Separate reviewer records described by this plan remain future Phase 0 closure
+evidence. They are not mandatory internal merge gates for work classified as
+eligible by the AI-Assisted Solo-Owner Governance Policy V0.1.
+
+The eligible-work Project Owner decision is AI-assisted and non-independent and
+does not complete a closure package, close Phase 0, authorize a phase
+transition, or satisfy an external qualified-human obligation.
+
 ## 1. Purpose
 
 This document defines a planning-only structure for a future Phase 0 closure evidence package for the OpenEMR IM Core project.

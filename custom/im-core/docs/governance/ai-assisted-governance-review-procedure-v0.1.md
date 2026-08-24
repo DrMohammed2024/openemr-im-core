@@ -1,5 +1,19 @@
 # AI-Assisted Governance Review Procedure V0.1
 
+## AI-Assisted Solo-Owner Applicability
+
+For work classified as eligible by the AI-Assisted Solo-Owner Governance Policy
+V0.1, this procedure supplies the GPT multidisciplinary advisory method and the
+Project Owner is the sole final accountable internal decision-maker. The
+role-specific review sections below are GPT advisory lenses; separate
+specialist-human approvals are not mandatory internal merge gates.
+
+All references below to a required role review, sign-off, missing-review DEFER,
+or role-specific final decision are mandatory only for non-eligible work or a
+triggered future/external qualified-human gate. Eligible work instead requires
+the Project Owner decision record, non-independence disclosure, and allowed
+decision values defined by the authoritative policy.
+
 ## 1. Document Status
 
 | Field | Value |

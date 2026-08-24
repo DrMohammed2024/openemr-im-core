@@ -1,5 +1,17 @@
 # PR Audit Trail Template and Procedure V0.1
 
+## AI-Assisted Solo-Owner Applicability
+
+For eligible work, the PR audit trail must link the GPT multidisciplinary
+advisory review and the complete Project Owner decision record required by the
+AI-Assisted Solo-Owner Governance Policy V0.1. It must disclose the
+author-owner-reviewer relationship and that review is AI-assisted and
+non-independent.
+
+Separate specialist-human approvals are not mandatory internal merge gates for
+eligible work. They remain required for non-eligible work and any triggered
+future or external qualified-human gate.
+
 ## Document Status
 
 | Field | Value |
@@ -344,7 +356,11 @@ A PR evidence bundle may document governance evidence, review evidence, reposito
 
 If evidence is missing, incomplete, stale, contradictory, or unclear, the PR body should state the limitation and the merge decision should remain HOLD, CONDITIONAL GO, DEFER, or NO-GO as appropriate.
 
-The evidence bundle is a review aid. It does not replace human review, required reviewer approval, GitHub checks, post-merge verification, source-of-truth review, duplicate-document review, claim-control review, traceability review, risk review, or evidence review.
+The evidence bundle is a review aid. It does not replace the applicable
+Project Owner decision record or triggered external/qualified-human review,
+GitHub checks, post-merge verification, source-of-truth review,
+duplicate-document review, claim-control review, traceability review, risk
+review, or evidence review.
 
 ---
 

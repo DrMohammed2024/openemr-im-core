@@ -1,5 +1,17 @@
 # AI-Output Evaluation Checklist V0.1
 
+## AI-Assisted Solo-Owner Applicability
+
+When an AI-assisted governance or documentation output is itself an eligible
+non-executable artifact, GPT may apply this checklist as multidisciplinary
+advisory review and the Project Owner makes the final accountable internal
+decision. Separate specialist-human approvals are not mandatory internal merge
+gates.
+
+This does not authorize prompt/model execution, clinical use, PHI, or reliance
+on GPT as an independent reviewer. Any triggered qualified-human or external
+gate remains mandatory.
+
 ## 1. Document Status
 
 Status: Draft for governance review.

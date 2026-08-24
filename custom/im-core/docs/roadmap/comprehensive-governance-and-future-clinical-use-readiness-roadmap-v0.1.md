@@ -1,5 +1,16 @@
 # Comprehensive Governance and Future Clinical-Use Readiness Roadmap V0.1 - OpenEMR IM Core
 
+## AI-Assisted Solo-Owner Applicability
+
+Eligible documentation-stage roadmap edits may use GPT multidisciplinary
+advisory review and the Project Owner decision record under the AI-Assisted
+Solo-Owner Governance Policy V0.1. Separate specialist-human approvals are not
+mandatory internal merge gates for those edits.
+
+All roadmap reviewer approvals tied to phase transition, clinical use, PHI,
+runtime, pilot, deployment, production, external claims or release, validation,
+compliance, certification, or regulation remain future or external gates.
+
 ## 1. Purpose and Non-Authorization Notice
 
 This document defines the comprehensive governance, documentation, safety, requirements, risk, traceability, evidence, workflow, and future-readiness roadmap for OpenEMR IM Core.

@@ -1,5 +1,16 @@
 # Pharmacy, Billing, and Administrative Linkage Plans V0.1 - OpenEMR IM Core
 
+## AI-Assisted Solo-Owner Applicability
+
+Eligible documentation-stage changes to these plans may use GPT
+multidisciplinary boundary review and the Project Owner decision record under
+the AI-Assisted Solo-Owner Governance Policy V0.1. The reviewer column is
+advisory for eligible internal work.
+
+Operational prescribing, pharmacy, billing, claims, PHI, API/FHIR, runtime,
+deployment, compliance, legal, payer, or external-release activity remains
+outside this model and retains applicable qualified-human and external gates.
+
 ## 1. Purpose
 
 This document defines documentation-only planning for pharmacy linkage, medication documentation boundaries, billing linkage boundaries, administrative workflow linkage, and related safety controls in OpenEMR IM Core.

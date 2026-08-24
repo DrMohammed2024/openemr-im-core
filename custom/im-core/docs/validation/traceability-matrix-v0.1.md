@@ -1,5 +1,17 @@
 # Traceability Matrix V0.1 - OpenEMR IM Core
 
+## AI-Assisted Solo-Owner Applicability
+
+For eligible work, new traceability rows may identify GPT multidisciplinary
+advisory review and the Project Owner decision record under the AI-Assisted
+Solo-Owner Governance Policy V0.1. Separate specialist-human approvals are not
+mandatory internal merge gates.
+
+Existing rows describing earlier PRs remain historical records. They do not
+override the current policy, and the owner review must be disclosed as
+AI-assisted and non-independent. Future external and qualified-human gates
+remain unchanged.
+
 ## 1. Purpose
 
 This document defines the documentation-only traceability matrix for OpenEMR IM Core.

@@ -1,5 +1,19 @@
 # Stop Rules V0.1 - OpenEMR IM Core
 
+## AI-Assisted Solo-Owner Applicability
+
+All safety, privacy, runtime, evidence, claim, CI, and scope stop rules remain
+mandatory. For work classified as eligible by the AI-Assisted Solo-Owner
+Governance Policy V0.1, the "Required Owner Review" and "Required Reviewer"
+columns below identify advisory domains covered by GPT and reviewed by the
+Project Owner; separate specialist-human approvals are not mandatory internal
+merge gates.
+
+For eligible work, STOP-REVIEW-001 and "required reviewer approval" mean a
+missing or invalid Project Owner decision record. For non-eligible work or a
+triggered future/external gate, they mean the applicable qualified-human or
+external review. An unresolved applicability question is HOLD.
+
 ## 1. Purpose
 
 This document defines mandatory stop rules for OpenEMR IM Core pull requests.

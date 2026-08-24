@@ -1,5 +1,16 @@
 # Data Flow Diagram Plan V0.1 - OpenEMR IM Core
 
+## AI-Assisted Solo-Owner Applicability
+
+Eligible non-executable documentation changes to this plan may use GPT
+technical, privacy-security, and clinical-boundary advisory review plus the
+Project Owner decision record under the AI-Assisted Solo-Owner Governance Policy
+V0.1. Listed reviewer roles are advisory for eligible work.
+
+Operational integration, PHI/data flows, runtime, API/FHIR, database,
+production-security, deployment, validation, or external release remains
+outside this model and retains applicable qualified-human gates.
+
 ## 1. Purpose
 
 This document defines the Data Flow Diagram Plan V0.1 for OpenEMR IM Core.

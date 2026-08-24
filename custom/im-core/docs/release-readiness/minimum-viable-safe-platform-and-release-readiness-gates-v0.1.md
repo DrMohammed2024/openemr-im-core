@@ -1,5 +1,16 @@
 # Minimum Viable Safe Platform and Release Readiness Gates V0.1 - OpenEMR IM Core
 
+## AI-Assisted Solo-Owner Applicability
+
+Eligible documentation-stage edits to these future gates may use GPT
+multidisciplinary advisory review and the Project Owner decision record under
+the AI-Assisted Solo-Owner Governance Policy V0.1 without separate
+specialist-human approvals as internal merge gates.
+
+No Project Owner decision under that policy satisfies a release gate or
+authorizes pilot, deployment, production, external release, clinical use, PHI,
+validation, compliance, certification, or regulatory claims.
+
 ## 1. Purpose
 
 This document defines a documentation-only Minimum Viable Safe Platform and Release Readiness Gates baseline for OpenEMR IM Core.

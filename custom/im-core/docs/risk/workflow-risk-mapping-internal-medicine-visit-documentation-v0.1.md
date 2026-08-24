@@ -1,5 +1,16 @@
 # Workflow Risk Mapping: Internal Medicine Visit Documentation V0.1
 
+## AI-Assisted Solo-Owner Applicability
+
+Eligible documentation-stage risk-mapping changes may use GPT risk and
+clinical-boundary advisory review and the Project Owner decision record under
+the AI-Assisted Solo-Owner Governance Policy V0.1. Listed reviewer roles are
+advisory for eligible work.
+
+GPT may not accept risk. Clinical or operational residual-risk acceptance,
+runtime use, patient-care use, PHI, validation, or deployment remains outside
+this model and retains applicable qualified-human or external gates.
+
 ## 1. Document Status
 
 Status: Draft for governance review.

@@ -1,5 +1,16 @@
 # Core Clinic Workflow Plans V0.1 - OpenEMR IM Core
 
+## AI-Assisted Solo-Owner Applicability
+
+Eligible documentation-stage changes to these plans may use GPT
+multidisciplinary boundary review and the Project Owner decision record under
+the AI-Assisted Solo-Owner Governance Policy V0.1. Separate specialist-human
+approvals are not mandatory internal merge gates.
+
+Clinical or operational use, PHI, runtime implementation, validation, pilot,
+deployment, production, or external release remains outside this model and
+retains applicable qualified-human and external gates.
+
 ## 1. Purpose
 
 This document defines documentation-only core clinic workflow plans for OpenEMR IM Core.

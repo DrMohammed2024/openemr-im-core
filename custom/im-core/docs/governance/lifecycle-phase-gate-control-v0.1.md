@@ -1,5 +1,17 @@
 # Lifecycle Phase Gate Control V0.1
 
+## AI-Assisted Solo-Owner Applicability
+
+Eligible documentation-stage and pre-runtime changes may use the internal
+review path in the AI-Assisted Solo-Owner Governance Policy V0.1 without
+separate specialist-human approvals as mandatory merge gates.
+
+A Project Owner decision under that policy does not close a lifecycle phase,
+authorize a phase transition, or authorize runtime, clinical, PHI, pilot,
+deployment, production, external release, validation, compliance,
+certification, or regulatory activity. All such lifecycle and external gates
+below remain mandatory when triggered.
+
 ## Document Status
 
 | Field | Value |

@@ -1,5 +1,18 @@
 # Governance Ownership Model V0.1 - OpenEMR IM Core
 
+## AI-Assisted Solo-Owner Applicability
+
+For work classified as eligible by the AI-Assisted Solo-Owner Governance Policy
+V0.1, the Project Owner is the sole final accountable internal decision-maker.
+GPT supplies multidisciplinary advisory review. The specialist roles and RACI
+assignments below identify review domains and may be consulted, but their
+separate approvals are not mandatory internal merge gates for eligible work.
+
+For non-eligible work and triggered future or external gates, the specialized
+roles below retain their stated responsibilities. Nothing in this applicability
+rule authorizes clinical use, PHI, runtime behavior, deployment, external
+release, validation, compliance, certification, or regulatory claims.
+
 ## 1. Purpose
 
 This document defines a documentation-only governance ownership model for OpenEMR IM Core.

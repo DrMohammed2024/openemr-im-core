@@ -1,5 +1,19 @@
 # Human Accountability and RACI Model V0.1
 
+## AI-Assisted Solo-Owner Applicability
+
+For work classified as eligible by the AI-Assisted Solo-Owner Governance Policy
+V0.1, GPT performs multidisciplinary advisory review and the Human Project Owner
+makes the final accountable internal decision. The RACI and specialist-role
+tables below remain domain-coverage maps; separate specialist-human approvals
+are not mandatory internal merge gates for eligible work.
+
+References in this document to required specialist review, human sign-off, or
+role-specific accountability apply as mandatory gates only to non-eligible work
+or a triggered future, external, legal, regulatory, contractual,
+certification, clinical, PHI, runtime, deployment, or release gate. GPT does not
+accept risk and the review is non-independent.
+
 ## Document Status
 
 | Field | Value |

@@ -1,5 +1,17 @@
 # Reviewer Approval Workflow SOP V0.1 - OpenEMR IM Core
 
+## AI-Assisted Solo-Owner Applicability
+
+For work classified as eligible by the AI-Assisted Solo-Owner Governance Policy
+V0.1, this SOP does not require separate specialist-human approval records. The
+required internal record is the AI-assisted, non-independent Project Owner
+decision record defined by that policy.
+
+This SOP continues to govern specialist or external approval records for
+non-eligible work, triggered future/external gates, and voluntarily obtained
+specialist reviews. References below to required approvals and reviewer
+re-checks have that narrowed scope.
+
 ## 1. Purpose
 
 This SOP defines how formal reviewer approval records are used in the OpenEMR IM Core project during the current documentation-stage, governance-stage, planning-only, pre-runtime, pre-implementation, and pre-clinical-use phase.
@@ -180,7 +192,8 @@ The PR audit trail should not overstate approval. It should distinguish:
 
 A PR requiring formal reviewer approval may be merged only when:
 
-- required reviewer approvals are complete or explicitly deferred by governance decision
+- the applicable Project Owner decision record or triggered
+  specialist/external approvals are complete
 - approval records are current and not stale
 - GitHub checks have 0 failing and 0 pending required checks
 - changed files match approved scope

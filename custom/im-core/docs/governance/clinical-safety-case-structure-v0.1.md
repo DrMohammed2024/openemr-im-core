@@ -1,5 +1,18 @@
 # Clinical Safety Case Structure V0.1
 
+## AI-Assisted Solo-Owner Applicability
+
+A documentation-only change to this structure may use GPT clinical-boundary
+advisory review and the Project Owner decision record when it is eligible under
+the AI-Assisted Solo-Owner Governance Policy V0.1. Separate clinical or other
+specialist-human approval is not a mandatory internal merge gate for eligible
+work.
+
+A completed clinical safety case, clinical validation, patient-care use,
+clinical risk acceptance, or any applicable qualified-clinician review remains
+outside this model and is a future or external gate. Missing such a triggered
+review remains HOLD.
+
 ## 1. Document Status
 
 | Field | Value |

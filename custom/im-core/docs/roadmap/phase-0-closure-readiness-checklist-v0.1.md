@@ -1,5 +1,15 @@
 # Phase 0 Closure Readiness Checklist V0.1 - OpenEMR IM Core
 
+## AI-Assisted Solo-Owner Applicability
+
+Required reviewer roles in this checklist are future Phase 0 closure roles, not
+mandatory internal merge gates for an eligible documentation-stage change.
+Eligible work uses the AI-Assisted Solo-Owner Governance Policy V0.1.
+
+The Project Owner decision under that policy does not close Phase 0, authorize a
+phase transition, or claim independent review, clinical validation, compliance,
+certification, production readiness, or clinical-use authorization.
+
 ## 1. Purpose
 
 This document defines a readiness checklist for evaluating whether OpenEMR IM Core Phase 0 may later be considered for closure.

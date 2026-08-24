@@ -1,5 +1,16 @@
 # Phase 2 Controlled Design Roadmap V0.1 - OpenEMR IM Core
 
+## AI-Assisted Solo-Owner Applicability
+
+Eligible documentation-stage edits to this roadmap may use GPT
+multidisciplinary advisory review and the Project Owner decision record under
+the AI-Assisted Solo-Owner Governance Policy V0.1. Required reviewer tables are
+advisory for those eligible edits.
+
+No such decision authorizes Phase 2 execution or a lifecycle transition.
+Runtime, clinical, PHI, pilot, deployment, production, validation, compliance,
+certification, regulatory, or external-release gates remain unchanged.
+
 ## 1. Purpose
 
 This document defines the Phase 2 Controlled Design Roadmap for OpenEMR IM Core.

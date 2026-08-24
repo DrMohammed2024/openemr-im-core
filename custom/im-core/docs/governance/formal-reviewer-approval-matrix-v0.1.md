@@ -1,5 +1,18 @@
 # Formal Reviewer Approval Matrix V0.1 - OpenEMR IM Core
 
+## AI-Assisted Solo-Owner Applicability
+
+This matrix is not the internal approval path for work classified as eligible
+under the AI-Assisted Solo-Owner Governance Policy V0.1. For eligible work, its
+role columns are advisory-domain coverage used by GPT and the Project Owner;
+separate specialist-human approvals are not mandatory internal merge gates.
+
+The matrix remains a mandatory role-assignment control for non-eligible work
+and for any triggered future or external qualified-human gate. In this document,
+"Required" and "Required if AI-related" have that narrowed meaning. The
+Project Owner decision record in the authoritative policy is the required
+internal record for eligible work.
+
 ## 1. Purpose
 
 This document defines the formal reviewer approval matrix for OpenEMR IM Core Phase 0 governance artifacts.
@@ -143,10 +156,10 @@ A reviewer approval does not mean:
 
 | Status | Meaning |
 |---|---|
-| Required | Reviewer role should review and approve before artifact is considered review-complete |
+| Required | Reviewer role must review and approve when the work is non-eligible or a future/external qualified-human gate is triggered; advisory domain coverage only for eligible work |
 | Consulted | Reviewer role should be consulted when relevant issues are present |
 | Optional | Reviewer role may review but is not normally required for the artifact type |
-| Required if AI-related | Reviewer role is required if the artifact references AI/ML, prompt execution, model integration, autonomous CDS, or future AI governance |
+| Required if AI-related | Reviewer role is required when AI-related work is non-eligible or triggers a future/external gate; a documentation-only AI reference does not alone create a separate-human gate |
 | Future-gated | Review is deferred to a later phase and does not authorize current implementation |
 | Not approved | Reviewer role has not approved the artifact |
 | Approved for current stage | Artifact may proceed within documentation-only planning scope only |

@@ -1,5 +1,17 @@
 # Traceability Matrix Policy V0.1
 
+## AI-Assisted Solo-Owner Applicability
+
+For eligible work, the traceability chain terminates in the Project Owner
+decision record defined by the AI-Assisted Solo-Owner Governance Policy V0.1.
+GPT supplies multidisciplinary advisory traceability analysis. Separate
+specialist-human sign-offs are not mandatory internal merge gates.
+
+References below to required human review or sign-off mean the Project Owner
+record for eligible work, or the applicable qualified-human/external record for
+non-eligible work and triggered future or external gates. No independent
+evidence-verification claim is created.
+
 ## 1. Document Status
 
 | Field | Value |

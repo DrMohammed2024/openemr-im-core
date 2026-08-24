@@ -1,5 +1,17 @@
 # Evidence and Claim-Control Register V0.1
 
+## AI-Assisted Solo-Owner Applicability
+
+For eligible work, GPT may map evidence and claims and the Project Owner makes
+the final accountable internal decision under the AI-Assisted Solo-Owner
+Governance Policy V0.1. Separate specialist-human approvals are not mandatory
+internal merge gates for eligible work.
+
+That decision is non-independent and does not independently verify evidence or
+support clinical, privacy-security, regulatory, compliance, certification,
+production-readiness, deployment, or external-release claims. Triggered future
+or external evidence-review obligations remain mandatory.
+
 ## 1. Document Status
 
 | Field | Value |

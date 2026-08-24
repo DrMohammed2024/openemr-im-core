@@ -1,5 +1,18 @@
 # Risk Register Structure V0.1
 
+## AI-Assisted Solo-Owner Applicability
+
+For eligible work, GPT may perform the multidisciplinary risk and evidence
+mapping in this structure and the Project Owner makes the final accountable
+internal documentation-stage decision under the AI-Assisted Solo-Owner
+Governance Policy V0.1. Separate Risk Owner or domain-owner approval is not a
+mandatory internal merge gate for eligible work.
+
+This does not give GPT risk-acceptance authority or permit the Project Owner
+decision to claim independent, clinical, production, regulatory, certified, or
+externally accepted residual risk. Operational or clinical risk acceptance and
+any triggered qualified-human gate remain future or external controls.
+
 ## 1. Document Status
 
 | Field | Value |

@@ -147,9 +147,27 @@ Risk register impact:
 - [ ] Update required in this PR
 - [ ] Update required in a later documentation PR
 
-## 9. Required Reviewers
+## 9. Internal Review and Decision
 
-Select required reviewers for this PR:
+Eligibility classification:
+
+- [ ] Eligible documentation-stage/pre-runtime work under the AI-Assisted
+      Solo-Owner Governance Policy V0.1
+- [ ] Non-eligible or a future/external qualified-human gate is triggered
+- [ ] HOLD — eligibility or applicable obligations are unresolved
+
+For eligible work:
+
+- [ ] GPT multidisciplinary advisory review is complete
+- [ ] Project Owner personally reviewed the stated evidence
+- [ ] Project Owner decision record is linked and current
+- [ ] Decision is APPROVE or merge-permitting APPROVE_WITH_CONDITIONS
+- [ ] Review is disclosed as AI-assisted and non-independent
+- [ ] Author-owner-reviewer relationship and conflicts are disclosed
+- [ ] No separate specialist-human approval is claimed
+
+For non-eligible work or a triggered future/external gate, select the
+applicable qualified-human reviewers:
 
 - [ ] Documentation Owner
 - [ ] Clinical Safety Owner

@@ -1,5 +1,16 @@
 # Internal Medicine Workflow Specification Template V0.1
 
+## AI-Assisted Solo-Owner Applicability
+
+Eligible documentation-stage changes to this template may use GPT
+clinical-boundary advisory review and the Project Owner decision record under
+the AI-Assisted Solo-Owner Governance Policy V0.1. Separate clinical or other
+specialist-human approval is not a mandatory internal merge gate.
+
+Use in real care, clinical validation, runtime execution, PHI processing, or
+clinical authorization remains a future or external gate requiring applicable
+qualified-human review.
+
 ## 1. Document Status
 
 Status: Draft for governance review.

@@ -1,5 +1,18 @@
 # Clinical AI Governance and Scientific Evaluation Framework V0.1
 
+## AI-Assisted Solo-Owner Applicability
+
+For eligible documentation-stage work, reviewer-role requirements in this
+framework are GPT multidisciplinary advisory lenses and the Project Owner makes
+the final accountable internal decision under the AI-Assisted Solo-Owner
+Governance Policy V0.1. Separate specialist-human approvals are not mandatory
+internal merge gates.
+
+Any AI or prompt execution, clinical workflow use, clinical claim, PHI,
+validation, deployment, production, regulatory, compliance, certification, or
+external-release activity remains outside this model and retains every
+applicable qualified-human or external gate.
+
 ## 1. Document Status
 
 Status: Draft for governance review.

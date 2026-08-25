@@ -7,7 +7,7 @@
 - Record date: 2026-08-25
 - Controlled baseline branch: `master`
 - Controlled baseline SHA:
-  `d995dd91081b317502b00baa1220693bfb6ff0d1`
+  `76548a0f714177cde38d4d1201aa6095bcba0dfd`
 - Source-of-truth role: current repository and governance state
 - Runtime effect: none
 - Clinical-use authorization: none
@@ -19,13 +19,15 @@ merely because the artifact is tracked.
 
 ## 2. Controlled Repository State
 
-The baseline was verified before this governance amendment:
+The baseline was verified before this documentation alignment:
 
-- local `master` and fetched `origin/master` matched the controlled SHA;
+- local `master`, local `origin/master`, and live remote `master` matched the
+  controlled SHA;
 - the working tree was clean;
 - `core.ignorecase=false`;
 - directory case sensitivity was enabled;
-- PR #266 was merged as the controlled baseline; and
+- PR #267 was merged as the controlled baseline and adoption/reconfirmation
+  evidence remained present; and
 - PR #265 remained open, unmerged, excluded, and unchanged by this work.
 
 PR/check status is point-in-time evidence and must be refreshed before a later
@@ -47,9 +49,29 @@ authority, risk-acceptance authority, or final accountable authority. The
 Project Owner personally reviews the evidence and records the final accountable
 internal decision.
 
-`POL-GOV-LS1-001` is a proposed amendment on the current governance branch. It
-is not effective until the Project Owner records adoption and the amendment is
-merged.
+`POL-GOV-LS1-001` is adopted and active on `master` under
+`POL-GOV-LS1-001-ADOPTION-001` and PR #267, merged at the controlled SHA. The
+Project Owner reconfirmed that adoption with limitations under
+`POL-GOV-LS1-001-ADOPTION-001-RECONFIRMATION-001`.
+
+### Post-Merge Workflow Limitations
+
+- Whitespace run `32788377634` failed on unrelated inherited trailing
+  whitespace in `CUSTOMIZATION_POLICY.md` and `README.md`; neither file was
+  changed by PR #267.
+- Test All Configurations run `32788377823` remains failed with 169 successful
+  and two unresolved failed E2E jobs. No successful rerun exists.
+- Scheduled run `32832190339` remains failed with 160 successful, two failed,
+  and one skipped job. Its MySQL setup failure is external or environmental
+  with the precise cascading cause partly unverified; its MariaDB E2E failure
+  remains unresolved.
+
+These failures are not established as caused by PR #267's 12-file
+Markdown-only scope. They remain failed or unresolved and are not passing
+runtime, verification, validation, readiness, compliance, certification, or
+clinical evidence. Documentation alignment is conditionally authorized;
+whitespace repair and CI investigation remain separate work items. Merge is
+not authorized.
 
 ## 4. Repository-Merged Implementation
 
@@ -115,9 +137,9 @@ textarea/2,000-character statement is superseded for this slice and deferred to
 a separate redesign work item. It is not a runtime ambiguity or accepted
 alternative for `IMCORE-LS-001`.
 
-## 7. Proposed Implementation — Not Authorized
+## 7. Identified Implementation Candidate — Not Authorized
 
-The initial proposed candidate is:
+The initial reserved/proposed future candidate is:
 
 - work item: `IMCORE-LS-001`;
 - customization: reserved/proposed `IM-0005`;
@@ -130,23 +152,23 @@ The initial proposed candidate is:
 - candidate packet:
   `custom/im-core/docs/governance/imcore-ls-001-local-synthetic-authorization-packet-v0.1.md`.
 
-This governance amendment identifies the candidate but does not authorize or
-begin implementation. The implementation branch does not exist as a result of
-this task. No implementation code, Docker action, image pull, database
-connection, database read/write, runtime operation, or evidence run is part of
-this amendment.
+Policy adoption and reconfirmation identify the governing category but do not
+authorize or begin this candidate. The implementation branch is not authorized
+and does not exist. No implementation code, Docker action, image pull, database
+connection, database read/write, runtime operation, or evidence run is
+established by the policy or this alignment.
 
 ## 8. Lifecycle Authority
 
-Phase 11 is aligned only for the exact `IMCORE-LS-001` preparation and
-implementation scope after:
+The LS-1 policy-adoption prerequisite is satisfied. Phase 11 remains `HOLD`
+and may be authorized only for the exact `IMCORE-LS-001` preparation and
+implementation scope after both remaining conditions are satisfied:
 
-1. `POL-GOV-LS1-001` is Project-Owner-adopted and merged;
-2. LS-1 eligibility is completely established; and
-3. the Project Owner records a current Phase 11 work-item decision.
+1. LS-1 eligibility is completely established; and
+2. the Project Owner records a current Phase 11 work-item decision.
 
-On this governance branch, the work-item decision is not recorded and the
-candidate remains `HOLD`.
+The work-item decision is not recorded, implementation-branch creation is not
+authorized, and the candidate remains `HOLD`.
 
 Phase 12 Docker/database/runtime local-synthetic evidence collection requires a
 separate later Project Owner authorization. Phase 11 does not authorize Phase
@@ -196,14 +218,14 @@ requiring external authority.
 
 ## 12. Next Controlled Actions
 
-1. Complete this governance amendment's validation and open its unmerged Pull
-   Request.
-2. Project Owner reviews the complete evidence and records adoption, rejection,
-   or revision.
-3. If adopted and merged, prepare a separate Phase 11 work-item decision.
-4. Only after that decision, create the proposed implementation branch.
-5. Create the GitHub issue before the implementation branch is pushed or its
-   Pull Request is opened.
+1. Validate and open the conditionally authorized documentation-alignment Pull
+   Request; do not merge it under this authorization.
+2. Project Owner personally reviews that Pull Request and current checks.
+3. Separately prepare a Phase 11 work-item decision if the Project Owner elects
+   to consider `IMCORE-LS-001`.
+4. Only after a Phase 11 approval, create the proposed implementation branch.
+5. Create the required GitHub issue before the implementation branch is pushed
+   or its Pull Request is opened.
 6. Obtain a separate Phase 12 owner decision before Docker, database, runtime,
    or local-synthetic evidence activity.
 

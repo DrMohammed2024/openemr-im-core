@@ -22,6 +22,27 @@ only to an eligible, owner-authorized work item. Unresolved eligibility,
 scope, evidence, or authority is `HOLD`. All default boundaries continue
 outside that exact exception.
 
+## LS-1 Adoption and Reconfirmation State
+
+- Policy adoption is complete under `POL-GOV-LS1-001-ADOPTION-001`; PR #267 is
+  merged on `master` at `76548a0f714177cde38d4d1201aa6095bcba0dfd`.
+- The Project Owner reconfirmed adoption with limitations under
+  `POL-GOV-LS1-001-ADOPTION-001-RECONFIRMATION-001`.
+- Post-merge Whitespace run `32788377634` failed on unrelated inherited
+  trailing whitespace in `CUSTOMIZATION_POLICY.md` and `README.md`.
+- Test All Configurations run `32788377823` remains failed with 169 successful
+  and two unresolved failed E2E jobs; no successful rerun exists.
+- Scheduled run `32832190339` remains failed with 160 successful, two failed,
+  and one skipped job. Its MySQL setup failure is external or environmental
+  with the precise cascading cause partly unverified; its MariaDB E2E failure
+  remains unresolved.
+- The failed and skipped results are not passing runtime, verification,
+  validation, readiness, compliance, certification, or clinical evidence and
+  are not established as caused by PR #267's Markdown-only scope.
+- Documentation alignment is authorized with conditions. Whitespace repair
+  and CI investigation remain separate work items. Merge is not authorized.
+- `IMCORE-LS-001` remains `HOLD`; Phase 11 and Phase 12 are not authorized.
+
 ## Document Status
 
 | Field | Value |
@@ -29,10 +50,10 @@ outside that exact exception.
 | Document type | Governance control document |
 | Version | V0.1 |
 | Project | OpenEMR IM Core |
-| Stage | Documentation-stage governance plus proposed exact LS-1 gate alignment |
+| Stage | Documentation-stage governance plus adopted and reconfirmed LS-1 gate control |
 | Scope | Lifecycle control including the exact IMCORE-LS-001 Phase 11 candidate |
 | Runtime status | No runtime in this amendment; Phase 12 requires separate owner authorization |
-| Implementation status | IMCORE-LS-001 Phase 11 only after policy adoption and work-item decision |
+| Implementation status | IMCORE-LS-001 remains HOLD; Phase 11 work-item decision not recorded |
 | Clinical-use status | Not authorized |
 | PHI status | No PHI |
 | Real patient data | Not permitted |
@@ -234,7 +255,7 @@ The controlled lifecycle phase model is:
 | 8 | Configuration and Change-Control Planning | Current / Next |
 | 9 | Synthetic Sandbox Planning | Later / Future-gated execution |
 | 10 | Verification and Validation Planning | Later / Planning-only |
-| 11 | Implementation Readiness Gate | Exact IMCORE-LS-001 scope only after policy adoption and work-item decision |
+| 11 | Implementation Readiness Gate | HOLD — policy adoption complete; separate IMCORE-LS-001 work-item decision not recorded |
 | 12 | Synthetic Runtime Evidence Gate | Separate owner authorization required for IMCORE-LS-001; otherwise future-gated |
 | 13 | Usability and Clinical Review Planning | Later / Planning-only |
 | 14 | Pilot Readiness Gate | Future-gated only |
@@ -244,9 +265,9 @@ The controlled lifecycle phase model is:
 | 18 | Monitoring, Maintenance, Incident Management, and Continuous Improvement | Future-gated only |
 
 No broad future-gated phase is authorized. Phase 11 is aligned only for the
-exact `IMCORE-LS-001` candidate after the LS-1 amendment is owner-adopted and
-merged and a complete work-item decision is recorded. On this governance
-branch, that decision is not recorded and the candidate remains `HOLD`.
+exact `IMCORE-LS-001` candidate. LS-1 policy adoption and reconfirmation are
+complete, but the work-item decision is not recorded and the candidate remains
+`HOLD`.
 
 ---
 
@@ -1145,17 +1166,19 @@ Objective: Authorize only the exact bounded preparation and implementation
 scope for `IMCORE-LS-001 — Reproducible Local-Synthetic Visit Context LBF
 Seed`.
 
-Current status: Authorized only after all of these conditions are current:
+Current status: `HOLD`. Policy adoption is complete, but authorization requires
+all remaining conditions below to be current:
 
-- `POL-GOV-LS1-001` is Project-Owner-adopted and merged;
+- `POL-GOV-LS1-001` remains adopted and reconfirmed under the decision records
+  identified above;
 - the candidate packet is complete;
 - the Project Owner records a Phase 11 work-item decision;
 - the exact base SHA, branch, implementation/test files, and dependency
   boundary are recorded; and
 - every LS-1 eligibility condition is established.
 
-On this governance branch those conditions are not complete, no implementation
-is authorized, and the candidate state is `HOLD`.
+The remaining conditions are not complete, no implementation or implementation
+branch is authorized, and the candidate state is `HOLD`.
 
 Allowed Phase 11 scope after authorization:
 
@@ -1713,9 +1736,10 @@ Gate decision:
 Documentation-stage and planning-only work remains allowed in Phases 0, 1, 2,
 4, 5, 6, and 8 under existing controls.
 
-Phase 11 is additionally aligned only for the exact `IMCORE-LS-001`
-preparation/implementation scope after `POL-GOV-LS1-001` is adopted and merged
-and a complete current Project Owner work-item decision is recorded.
+LS-1 policy adoption and reconfirmation are complete. Phase 11 remains
+`HOLD` and may be authorized only for the exact `IMCORE-LS-001`
+preparation/implementation scope after a complete current Project Owner
+work-item decision is recorded.
 
 No other implementation is authorized. The governance amendment itself
 performs no implementation, Docker execution, image pull, database activity,
@@ -1948,9 +1972,9 @@ This document is acceptable only if:
 Lifecycle Phase Gate Control V0.1 retains conservative phase governance while
 aligning one narrow exception:
 
-- Phase 11 may authorize only the exact eligible `IMCORE-LS-001`
-  preparation/implementation scope after policy adoption and a complete
-  Project Owner work-item decision.
+- LS-1 policy adoption and reconfirmation are complete, but Phase 11 may
+  authorize only the exact eligible `IMCORE-LS-001` preparation/implementation
+  scope after a complete Project Owner work-item decision.
 - Phase 12 local-synthetic Docker/database/runtime evidence requires a separate
   later Project Owner authorization.
 - This governance amendment performs neither phase's implementation or

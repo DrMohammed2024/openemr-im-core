@@ -11,17 +11,33 @@
   `GPT_MULTIDISCIPLINARY_ADVISORY_REVIEW` +
   `PROJECT_OWNER_FINAL_ACCOUNTABLE_DECISION`
 - Independence: AI-assisted and non-independent
-- Status: proposed governance amendment pending Project Owner decision and
-  merge to the controlled base branch
+- Status: Project Owner-adopted and active on `master`; reconfirmed with
+  limitations
+- Adoption decision: `POL-GOV-LS1-001-ADOPTION-001`
+- Adoption PR and merge: PR #267 at
+  `76548a0f714177cde38d4d1201aa6095bcba0dfd`
+- Reconfirmation decision:
+  `POL-GOV-LS1-001-ADOPTION-001-RECONFIRMATION-001`
+- Reconfirmation record:
+  https://github.com/DrMohammed2024/openemr-im-core/pull/267#issuecomment-5413441066
+- Reconfirmation scope: recorded documentation-stage governance scope only
+- Documentation alignment: authorized with conditions; merge is not
+  authorized
 - Runtime effect of this document: none
 - Implementation authorization created by this document alone: none
 - Clinical-use authorization: none
 - PHI or real-patient-data authorization: none
 
-This policy becomes effective only after the Project Owner records adoption
-and the governance amendment is merged to the controlled base branch. A work
-item then requires its own current Project Owner decision record before the
-authorized activity begins.
+This policy became effective for its defined eligible scope when the Project
+Owner recorded adoption and PR #267 was merged to `master`. The Project Owner
+later reconfirmed that adoption with limitations after reviewing failed and
+unresolved post-merge workflow evidence. Those results are not passing runtime,
+verification, validation, readiness, compliance, certification, or clinical
+evidence and are not established as caused by PR #267's Markdown-only scope.
+
+Policy adoption and reconfirmation do not retroactively authorize
+`IMCORE-LS-001`. Every LS-1 work item requires its own current, scope-specific
+Project Owner decision record before the authorized activity begins.
 
 For eligible LS-1 work, separate specialist-human approvals are not mandatory
 internal execution or merge gates. GPT remains advisory and cannot claim

@@ -256,12 +256,21 @@ must exist before the implementation branch is pushed or an implementation
 Pull Request is opened.
 
 ### Related Pull Request
-Governance amendment branch:
-`governance/authorize-local-synthetic-engineering-v0-1`. One Pull Request to
-`master` is required and must remain unmerged pending Project Owner review.
+
+Policy adoption PR #267 was merged to `master` at
+`76548a0f714177cde38d4d1201aa6095bcba0dfd`. Adoption was reconfirmed with
+limitations under `POL-GOV-LS1-001-ADOPTION-001-RECONFIRMATION-001`.
 Implementation Pull Request: not created.
 
 ### Notes
-Reserved/proposed only. No implementation, implementation branch, Docker
-execution, database write, clinical use, deployment, validation, compliance,
+
+Reserved/proposed future work item; current state `HOLD`. Its governing policy
+is adopted and active, but Phase 11 implementation and local branch creation
+are not authorized. A related GitHub issue is required before any future
+implementation branch is pushed or its Pull Request is opened. Phase 12 remains
+separately gated. The disclosed failed and unresolved workflows are not passing
+runtime or validation evidence and remain separate corrective work.
+
+No executable implementation, runtime or database evidence, Docker execution,
+database write, clinical use, deployment, validation, compliance,
 certification, or production-readiness claim is recorded by this entry.

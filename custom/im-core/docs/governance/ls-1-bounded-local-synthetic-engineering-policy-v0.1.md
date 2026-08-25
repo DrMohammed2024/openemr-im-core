@@ -21,8 +21,12 @@
 - Reconfirmation record:
   https://github.com/DrMohammed2024/openemr-im-core/pull/267#issuecomment-5413441066
 - Reconfirmation scope: recorded documentation-stage governance scope only
-- Documentation alignment: authorized with conditions; merge is not
-  authorized
+- Reconfirmation-state alignment: merged through PR #268 at
+  `70ad9016af4d9e706bbd7b20fbd9d5848f41f44b`
+- Blocker-resolution decision:
+  `DEC-LS1-IMCORE-LS-001-P11-BLOCKER-RESOLUTION-001`
+- Blocker-resolution state: approved with conditions; `IMCORE-LS-001`, Phase
+  11, and Phase 12 remain `HOLD`
 - Runtime effect of this document: none
 - Implementation authorization created by this document alone: none
 - Clinical-use authorization: none
@@ -38,6 +42,33 @@ evidence and are not established as caused by PR #267's Markdown-only scope.
 Policy adoption and reconfirmation do not retroactively authorize
 `IMCORE-LS-001`. Every LS-1 work item requires its own current, scope-specific
 Project Owner decision record before the authorized activity begins.
+
+### 1.1 Source-of-Truth SHA Semantics
+
+LS-1 decision gates distinguish four SHA roles:
+
+- `DOCUMENT_REVISION_BASIS_SHA` is the immutable commit inspected when a
+  document revision is prepared. It is not a permanent assertion about live
+  `master`.
+- `HISTORICAL_MERGE_SHA` is the immutable merge commit for a completed Pull
+  Request and is not rewritten when `master` advances.
+- `LIVE_MASTER_SHA_AT_GATE` is the volatile value freshly obtained from local
+  Git, `origin`, and live GitHub evidence at a decision gate.
+- `DECISION_BASE_SHA` is the exact immutable base selected by the Project Owner
+  for one authorized work item.
+
+Embedded SHAs are evidence labels. Live Git and GitHub evidence, not an
+embedded mutable SHA, control the current gate. A difference between
+`LIVE_MASTER_SHA_AT_GATE` and an owner-recorded `DECISION_BASE_SHA` is `HOLD`
+until reassessed.
+
+The Project Owner approved this model under
+`DEC-LS1-IMCORE-LS-001-P11-BLOCKER-RESOLUTION-001`. That decision also approved
+the deterministic canonical six-row manifest, conditionally approved an
+external append-only `PREPARED`/`COMMITTED` ownership receipt, selected a
+dedicated general-purpose WSL2 environment for separately authorized future
+provisioning, and selected a strict clean-`master` condition for Phase 11. None
+of those blocker dispositions is a Phase 11 or Phase 12 authorization.
 
 For eligible LS-1 work, separate specialist-human approvals are not mandatory
 internal execution or merge gates. GPT remains advisory and cannot claim

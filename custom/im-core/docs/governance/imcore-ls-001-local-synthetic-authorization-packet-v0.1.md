@@ -14,18 +14,31 @@
   `76548a0f714177cde38d4d1201aa6095bcba0dfd`
 - Reconfirmation decision:
   `POL-GOV-LS1-001-ADOPTION-001-RECONFIRMATION-001`
+- Reconfirmation-state alignment: PR #268 merged at
+  `70ad9016af4d9e706bbd7b20fbd9d5848f41f44b`
+- Blocker-resolution decision:
+  `DEC-LS1-IMCORE-LS-001-P11-BLOCKER-RESOLUTION-001`
+- Blocker-resolution final decision: `APPROVE_WITH_CONDITIONS`
 - Proposed implementation branch:
   `codex/feat-im-core-lbf-visit-context-seed`
 - Candidate state: reserved/proposed future work item; `HOLD`
-- Phase 11 authorization: not yet recorded
+- Canonical manifest: approved; 124 controlled values; SHA-256 recorded in
+  Section 8
+- Ownership receipt: append-only `PREPARED` and `COMMITTED` design approved
+  with conditions
+- Future test environment: dedicated general-purpose WSL2 selected; provisioning
+  is not authorized by this decision
+- Phase 11 owner condition: strict clean `master`
+- Phase 11 authorization: not yet recorded; `HOLD`
 - Phase 11 implementation branch creation: not authorized
-- Phase 12 execution/evidence authorization: not granted
+- Phase 12 execution/evidence authorization: not granted; `HOLD`
 - Implementation status: not started
 - Docker execution: not authorized by this packet state
-- Database writes: not authorized by this packet state
-- Final Project Owner decision: not recorded
-- Current gate result: `HOLD`; the policy-adoption prerequisite is satisfied,
-  but a complete current Phase 11 Project Owner decision is not recorded
+- Database reads or writes: not authorized by this packet state
+- Phase 11 Project Owner decision: not recorded
+- Current gate result: `HOLD`; current required checks are not clean, the WSL2
+  environment is not provisioned, exact implementation scope is not recorded,
+  and a separate Phase 11 Project Owner decision is absent
 
 This packet identifies the initial LS-1 candidate. It is not implementation,
 runtime, database-write, Docker, merge, clinical-use, deployment, validation,
@@ -33,24 +46,27 @@ compliance, certification, or release authorization.
 
 ### Policy Prerequisite and Workflow Limitations
 
-Policy adoption and reconfirmation satisfy the policy prerequisite only. The
-post-merge Whitespace run `32788377634` failed on inherited content outside PR
-#267's file scope. Test All Configurations run `32788377823` remains failed
-with two unresolved E2E jobs and no successful rerun. Scheduled run
-`32832190339` remains failed with an external or environmental MySQL setup
-failure whose precise cascading cause is partly unverified, an unresolved
-MariaDB E2E failure, and one skipped job.
+Policy adoption and reconfirmation satisfy the policy prerequisite only. At the
+blocker-resolution gate, Whitespace run `32879084778` remained failed on
+inherited `CUSTOMIZATION_POLICY.md` content outside PR #268's Markdown-only
+scope. Test All Configurations run `32879085498` remained failed with 169
+successful jobs and two failed MySQL services jobs. No successful rerun is
+recorded.
 
-These results are not established as caused by PR #267 and are not passing
+These results are not established as caused by PR #268 and are not passing
 runtime, verification, validation, readiness, compliance, certification, or
-clinical evidence. Whitespace repair and CI investigation are separate work
-items and do not authorize this candidate or either lifecycle phase.
+clinical evidence. Under the selected strict clean-`master` condition they
+block Phase 11 authorization. Whitespace correction and CI investigation remain
+separate work items and do not authorize this candidate or either lifecycle
+phase.
 
 ## 2. Objective
 
-Prepare one future implementation slice that can reproduce the Visit Context
-group of the existing `LBFim_followup_v1` LBF configuration in an isolated,
-disposable, local-synthetic OpenEMR development environment.
+Prepare one future implementation slice that can install the owner-approved,
+deterministic canonical Visit Context configuration for
+`LBFim_followup_v1` in an isolated, disposable, local-synthetic OpenEMR
+development environment. The canonical objective does not claim exact
+reproduction of unknown historical values.
 
 The slice must be reversible, parameterized, transactional, fail closed on
 conflict, exact-match idempotent, and bounded to the rows in Section 8.
@@ -59,8 +75,23 @@ conflict, exact-match idempotent, and bounded to the rows in Section 8.
 
 ### Repository-verified facts
 
-At the controlled baseline
-`76548a0f714177cde38d4d1201aa6095bcba0dfd`:
+The SHA roles for this packet are:
+
+- `DOCUMENT_REVISION_BASIS_SHA`:
+  `70ad9016af4d9e706bbd7b20fbd9d5848f41f44b`;
+- `HISTORICAL_MERGE_SHA` for PR #267:
+  `76548a0f714177cde38d4d1201aa6095bcba0dfd`;
+- `HISTORICAL_MERGE_SHA` for PR #268:
+  `70ad9016af4d9e706bbd7b20fbd9d5848f41f44b`;
+- `LIVE_MASTER_SHA_AT_GATE`: refreshed from Git and GitHub, observed as
+  `70ad9016af4d9e706bbd7b20fbd9d5848f41f44b` on 2026-08-26; and
+- `DECISION_BASE_SHA` for the blocker-resolution decision:
+  `70ad9016af4d9e706bbd7b20fbd9d5848f41f44b`.
+
+The live value is point-in-time evidence and must be refreshed at a later gate.
+Embedded SHAs do not permanently define live `master`.
+
+At the document revision basis:
 
 - `custom/im-core/` contains Markdown documentation only;
 - no executable IM Core seed implementation exists on `master`;
@@ -213,10 +244,39 @@ written if absent:
 | `LBFim_followup_v1` | empty string | Layout row: Internal Medicine Follow-Up V1, mapping/category Clinical |
 | `LBFim_followup_v1` | `1` | Group row: Visit Context |
 
-No other row in `layout_group_properties` is authorized. The future
-implementation manifest must declare every written column value. If a complete
-payload cannot be derived and reviewed against the current schema before the
-Phase 12 decision, the decision is `HOLD`.
+The deterministic canonical manifest fixes all 20 schema columns for both
+rows:
+
+| Column | Layout row | Visit Context group row |
+|---|---|---|
+| `grp_form_id` | `LBFim_followup_v1` | `LBFim_followup_v1` |
+| `grp_group_id` | `""` | `"1"` |
+| `grp_title` | `Internal Medicine Follow-Up V1` | `Visit Context` |
+| `grp_subtitle` | `""` | `""` |
+| `grp_mapping` | `Clinical` | `""` |
+| `grp_seq` | `0` | `0` |
+| `grp_activity` | `1` | `1` |
+| `grp_repeats` | `0` | `0` |
+| `grp_columns` | `4` | `0` |
+| `grp_size` | `9` | `0` |
+| `grp_issue_type` | `""` | `""` |
+| `grp_aco_spec` | `""` | `""` |
+| `grp_save_close` | `0` | `0` |
+| `grp_init_open` | `0` | `0` |
+| `grp_referrals` | `0` | `0` |
+| `grp_unchecked` | `0` | `0` |
+| `grp_services` | `""` | `""` |
+| `grp_products` | `""` | `""` |
+| `grp_diags` | `""` | `""` |
+| `grp_last_update` | `null` | `null` |
+
+The layout values `Clinical`, `4`, and `9` follow the repository's native
+new-layout defaults. The group uses native/schema defaults for values not
+supplied by native group creation. The explicit initial
+`grp_last_update=null` value is included in equality and digest checks. A later
+native timestamp change is a value change and makes rollback ineligible.
+
+No other row in `layout_group_properties` is authorized.
 
 ### 8.2 `layout_options`
 
@@ -229,13 +289,57 @@ Exactly these four row identities and controlled values are permitted:
 | `LBFim_followup_v1` | `main_complaint` | `1` | 30 | Main complaint | 2 | 1 | 40 | 255 | 1 | 3 | 0 | `F` |
 | `LBFim_followup_v1` | `interval_history` | `1` | 40 | Interval history since last visit | 2 | 1 | 60 | 200 | 1 | 3 | 0 | `F` |
 
-The future manifest must also declare the exact values for all remaining
-`layout_options` columns before Phase 12 authorization. Empty, default, or
-`NULL` values must be explicit; they must not be guessed at execution time.
+The remaining eight schema columns have these explicit values on each of the
+four rows:
+
+| Column | Exact value |
+|---|---|
+| `list_id` | `""` |
+| `default_value` | `""` |
+| `edit_options` | `""` |
+| `description` | `""` |
+| `list_backup_id` | `""` |
+| `conditions` | `null` |
+| `validation` | `null` |
+| `codes` | `""` |
 
 No other `layout_options` row is authorized.
 
-### 8.3 Explicitly unauthorized tables
+### 8.3 Manifest Canonicalization and Digest
+
+- Manifest version: `IMCORE-LS-001-MANIFEST-1`
+- Controlled row count: `6`
+- Controlled manifest value count: `124`
+  (`2 * 20 layout_group_properties` values plus
+  `4 * 21 layout_options` values)
+- Row order: layout row, Visit Context group row, then the four option rows in
+  ascending integer `seq`
+- Object-key order: ascending Unicode code point; all defined keys are ASCII
+- Strings: UTF-8, Unicode NFC
+- Empty string: JSON `""`
+- Null: JSON `null`, distinct from an empty string
+- Integers: canonical base-10 JSON integers; no floating-point values
+- Serialization: no insignificant whitespace, no BOM, and no trailing newline
+- SHA-256 input: the exact UTF-8 bytes of the single JSON line between the
+  markers below
+
+<!-- IMCORE-LS-001-CANONICAL-MANIFEST-BEGIN -->
+```json
+{"manifest_version":"IMCORE-LS-001-MANIFEST-1","rows":[{"table":"layout_group_properties","values":{"grp_aco_spec":"","grp_activity":1,"grp_columns":4,"grp_diags":"","grp_form_id":"LBFim_followup_v1","grp_group_id":"","grp_init_open":0,"grp_issue_type":"","grp_last_update":null,"grp_mapping":"Clinical","grp_products":"","grp_referrals":0,"grp_repeats":0,"grp_save_close":0,"grp_seq":0,"grp_services":"","grp_size":9,"grp_subtitle":"","grp_title":"Internal Medicine Follow-Up V1","grp_unchecked":0}},{"table":"layout_group_properties","values":{"grp_aco_spec":"","grp_activity":1,"grp_columns":0,"grp_diags":"","grp_form_id":"LBFim_followup_v1","grp_group_id":"1","grp_init_open":0,"grp_issue_type":"","grp_last_update":null,"grp_mapping":"","grp_products":"","grp_referrals":0,"grp_repeats":0,"grp_save_close":0,"grp_seq":0,"grp_services":"","grp_size":0,"grp_subtitle":"","grp_title":"Visit Context","grp_unchecked":0}},{"table":"layout_options","values":{"codes":"","conditions":null,"data_type":2,"datacols":3,"default_value":"","description":"","edit_options":"","field_id":"followup_reason","fld_length":40,"fld_rows":0,"form_id":"LBFim_followup_v1","group_id":"1","list_backup_id":"","list_id":"","max_length":255,"seq":10,"source":"F","title":"Follow-up reason","titlecols":1,"uor":1,"validation":null}},{"table":"layout_options","values":{"codes":"","conditions":null,"data_type":2,"datacols":3,"default_value":"","description":"","edit_options":"","field_id":"visit_type","fld_length":30,"fld_rows":0,"form_id":"LBFim_followup_v1","group_id":"1","list_backup_id":"","list_id":"","max_length":100,"seq":20,"source":"F","title":"Visit type","titlecols":1,"uor":1,"validation":null}},{"table":"layout_options","values":{"codes":"","conditions":null,"data_type":2,"datacols":3,"default_value":"","description":"","edit_options":"","field_id":"main_complaint","fld_length":40,"fld_rows":0,"form_id":"LBFim_followup_v1","group_id":"1","list_backup_id":"","list_id":"","max_length":255,"seq":30,"source":"F","title":"Main complaint","titlecols":1,"uor":1,"validation":null}},{"table":"layout_options","values":{"codes":"","conditions":null,"data_type":2,"datacols":3,"default_value":"","description":"","edit_options":"","field_id":"interval_history","fld_length":60,"fld_rows":0,"form_id":"LBFim_followup_v1","group_id":"1","list_backup_id":"","list_id":"","max_length":200,"seq":40,"source":"F","title":"Interval history since last visit","titlecols":1,"uor":1,"validation":null}}]}
+```
+<!-- IMCORE-LS-001-CANONICAL-MANIFEST-END -->
+
+- Canonical UTF-8 byte count: `2488`
+- Canonical manifest SHA-256:
+  `9fd062558f2284f770468dd44d7332ada976311b2c3167e19ab846325edbc163`
+- Digest verification: independently required before commit and publication
+
+Every column participates in exact comparison and the manifest digest. Strings
+must be compared byte-exact after retrieval rather than by a case-insensitive
+database collation. Any value change, including a later timestamp change,
+invalidates exact-match and guarded-rollback eligibility.
+
+### 8.4 Explicitly unauthorized tables
 
 All other tables are prohibited, including every patient, encounter, billing,
 audit, result, prescription, medication, order, appointment, insurance, claim,
@@ -278,6 +382,85 @@ Guarded post-commit rollback may remove only rows proven by the execution
 record to have been inserted by `IMCORE-LS-001` and still exactly matching the
 authorized manifest. Pre-existing exact rows must never be deleted. Missing
 provenance, changed values, dependent rows, or ambiguity is `HOLD`.
+
+### 10.1 Approved External Ownership Receipt Contract
+
+The Project Owner conditionally approved an append-only external receipt. No
+extra database table, marker row, seventh configuration row, schema change, or
+repository receipt file is permitted.
+
+The future Phase 12 decision must select an exact absolute path within an
+owner-controlled, local-synthetic evidence root outside the repository. It must
+not be a shared path, symlink or reparse target, container filesystem, database,
+repository subdirectory, or automatically deleted temporary location.
+
+Each operation uses a new, exclusively created directory containing:
+
+```text
+receipt.prepared.json
+receipt.committed.json
+```
+
+Both records use the manifest's canonical JSON and SHA-256 rules and contain at
+minimum:
+
+```text
+receipt_schema_version
+work_item_id
+customization_id
+phase11_decision_id
+phase12_decision_id
+repository_base_sha
+implementation_commit_sha
+manifest_version
+manifest_sha256
+operation_id
+environment_id
+synthetic_site_id
+database_engine_and_version
+before_state
+created_row_keys
+after_row_digests
+prepared_at_utc
+committed_at_utc
+receipt_state
+prepared_receipt_sha256
+receipt_payload_sha256
+```
+
+Required behavior:
+
+1. Fail before database activity if the operation ID or receipt path exists, is
+   malformed, is not exclusively owned, or cannot be protected.
+2. Create and flush `receipt.prepared.json` with
+   `before_state=ALL_SIX_ABSENT`, exactly six ordered keys, the approved manifest
+   digest, `receipt_state=PREPARED`, and `committed_at_utc=null`.
+3. Begin the separately authorized database transaction, reclassify only the
+   six identities, insert and verify exactly six rows, and commit.
+4. Create, flush, and same-filesystem atomically rename a new file to the
+   previously absent `receipt.committed.json`. It must link to the PREPARED
+   digest, record all six full-row after-state digests, and set
+   `receipt_state=COMMITTED`.
+5. Never overwrite either final receipt. Retain both through teardown and the
+   owner-approved retention period.
+
+The future environment must enforce owner-only permissions (`0700` directory
+and `0600` files on POSIX, or an equivalently restricted reviewed Windows ACL).
+The receipt must contain no credential, token, password, connection string,
+PHI, patient/encounter information, database dump, raw SQL, stack trace, or
+sensitive exception content.
+
+A PREPARED-only record after a database commit is `COMMIT_UNCERTAIN`; a missing,
+malformed, altered, digest-invalid, wrong-environment, wrong-commit, or
+wrong-manifest receipt is `HOLD`. Rows that match without a valid COMMITTED
+receipt do not establish ownership. No automatic rollback is allowed in any
+ambiguous state.
+
+Post-commit rollback is eligible only under separate authorization when the
+COMMITTED receipt, environment, decision IDs, implementation commit, manifest,
+six keys, and all current full-row digests match exactly. Deletion must use the
+six exact parameterized keys in one transaction and verify absence before
+commit. Any changed value or dependent row blocks deletion.
 
 ## 11. Mandatory Test and Evidence Matrix
 
@@ -330,7 +513,81 @@ On a trigger, stop before the next mutation, roll back the active transaction
 when applicable, preserve synthetic-safe evidence, and obtain a new review and
 Project Owner decision.
 
-## 13. Project Owner Decision Record — Phase 11
+## 13. Project Owner Blocker-Resolution Decision Record
+
+- Decision-record ID:
+  `DEC-LS1-IMCORE-LS-001-P11-BLOCKER-RESOLUTION-001`
+- Decision date: 2026-08-26
+- Project Owner: `DrMohammed2024`
+- Decision layer: blocker-resolution and documentation alignment only; this is
+  not the Phase 11 implementation decision
+- Repository: `DrMohammed2024/openemr-im-core`
+- Document revision basis and decision base:
+  `master` at `70ad9016af4d9e706bbd7b20fbd9d5848f41f44b`
+- Source-of-truth model: `FOUR_SHA_GATE_MODEL — APPROVED`
+- Manifest objective: `DETERMINISTIC_CANONICAL — APPROVED`
+- Manifest values: approved exactly as recorded in Section 8
+- Controlled manifest value count: `124`, not 126
+- Manifest SHA-256:
+  `9fd062558f2284f770468dd44d7332ada976311b2c3167e19ab846325edbc163`
+- Rollback provenance:
+  `APPEND_ONLY_PREPARED_AND_COMMITTED_RECEIPT — APPROVED_WITH_CONDITIONS`
+- Non-Docker test environment:
+  `DEDICATED_GENERAL_PURPOSE_WSL2 — SELECTED_FOR_FUTURE_SEPARATELY_AUTHORIZED_PROVISIONING`
+- Current workflow disposition:
+  `STRICT_CLEAN_MASTER — SELECTED_AS_A_PHASE_11_OWNER_CONDITION`
+- Current check evidence: Whitespace run `32879084778` and Test All
+  Configurations run `32879085498` remain failed; no passing rerun is recorded
+- Future documentation alignment: authorized only for the five Markdown files
+  named below
+- `IMCORE-LS-001` status: `HOLD`
+- Phase 11 status: `HOLD`; not authorized
+- Phase 12 status: `HOLD`; not authorized
+- Implementation branch: absent and not authorized
+- Dependency, Docker, database, runtime, API/FHIR, AI, PHI, clinical, deployment,
+  validation, compliance, certification, and merge authority: none
+- Author/owner/reviewer relationship: the Project Owner is the repository owner
+  and accountable decision-maker; Codex performed AI-assisted advisory analysis
+- Independence/conflict limitation: review is non-independent; no independent
+  specialist or conflict-of-interest determination is claimed
+- Final blocker-resolution decision:
+  `APPROVE_WITH_CONDITIONS — BLOCKER RESOLUTION ONLY`
+
+Authorized documentation paths:
+
+1. `custom/im-core/docs/governance/ls-1-bounded-local-synthetic-engineering-policy-v0.1.md`
+2. `custom/im-core/docs/governance/lifecycle-phase-gate-control-v0.1.md`
+3. `custom/im-core/docs/governance/imcore-ls-001-local-synthetic-authorization-packet-v0.1.md`
+4. `custom/im-core/docs/project-state/current-project-state.md`
+5. `custom/im-core/docs/index/documentation-index-and-review-cadence-v0.1.md`
+
+Conditions and follow-up:
+
+- the canonical manifest bytes and digest must verify independently before
+  commit and publication;
+- the documentation-only Pull Request requires separate Project Owner review;
+- current required checks must satisfy strict clean-`master` before any Phase 11
+  approval;
+- WSL2, PHP, Composer, packages, extensions, and dependencies require separate
+  future provisioning authority and verified supply-chain evidence;
+- exact implementation/test scope and a separate Phase 11 decision remain
+  required; and
+- a separate Phase 12 decision remains required for Docker, database, runtime,
+  or local-synthetic execution evidence.
+
+Invalidation triggers include digest mismatch, manifest value change, source-of-
+truth drift, protected-scope change, receipt ambiguity, failed required checks,
+missing separate authorization, or any prohibited data or activity.
+
+> This is an AI-assisted, non-independent Project Owner blocker-resolution
+> decision. GPT/Codex performed multidisciplinary advisory analysis. The Project
+> Owner remains the final accountable internal decision-maker. This record does
+> not authorize implementation, Phase 11, Phase 12, Docker, database activity,
+> OpenEMR execution, PHI, patient or encounter data, API/FHIR, AI execution,
+> deployment, clinical use, validation, compliance, certification, regulatory
+> claims, or merge.
+
+## 14. Project Owner Decision Record — Phase 11
 
 - Decision-record ID: `DEC-LS1-IMCORE-LS-001-P11-001`
 - Decision date: not recorded
@@ -349,11 +606,13 @@ Project Owner decision.
 - GPT advisory evidence reviewed: packet design retained; final Phase 11 review
   not recorded
 - Required tests and results: not run
-- Blocking findings: Phase 11 decision, exact scope, and branch authority remain
-  outstanding; policy adoption is satisfied
-- Non-blocking findings: post-merge workflow debt is separately controlled
+- Blocking findings: the strict clean-`master` condition is not satisfied; the
+  WSL2 environment is not provisioned; exact implementation/test scope, branch
+  authority, and the separate Phase 11 decision remain outstanding
+- Non-blocking findings: the four-SHA model, deterministic canonical manifest,
+  and conditional external receipt design are recorded
 - Unresolved limitations: no implementation or execution evidence exists; the
-  recorded failed and skipped workflow results are not passing evidence
+  current failed workflow results are not passing evidence
 - Author/owner/reviewer relationship: not recorded
 - Conflicts of interest: not recorded
 - Non-independence disclosure: required, not yet signed
@@ -362,14 +621,14 @@ Project Owner decision.
 - Conditions/follow-up: separate Phase 11 Project Owner review and decision
 - Invalidation triggers: Sections 12 and `POL-GOV-LS1-001`
 
-## 14. Project Owner Decision Record — Phase 12
+## 15. Project Owner Decision Record — Phase 12
 
 - Decision-record ID: `DEC-LS1-IMCORE-LS-001-P12-001`
 - Decision date: not recorded
 - Project Owner: not recorded
 - Eligible implementation commit SHA: not available
 - Local environment and Docker identifiers: not recorded
-- Complete six-row manifest: not recorded
+- Complete six-row manifest: deterministic canonical design approved with 124 controlled values and recorded SHA-256; runtime/schema compatibility remains unverified
 - Commands/tests/rollback/evidence destinations: not recorded
 - Evidence personally reviewed: not recorded
 - GPT advisory evidence reviewed: not recorded
@@ -377,7 +636,7 @@ Project Owner decision.
 - Final decision: `HOLD — SEPARATE FUTURE AUTHORIZATION REQUIRED`
 - Invalidation triggers: Sections 5 and 12 and `POL-GOV-LS1-001`
 
-## 15. Mandatory Disclosure for a Future Decision
+## 16. Mandatory Disclosure for a Future Decision
 
 > This is an AI-assisted, non-independent Project Owner review. GPT performed
 > multidisciplinary advisory analysis. The Project Owner personally reviewed
@@ -387,7 +646,7 @@ Project Owner decision.
 > regulatory approval, production readiness, clinical-use authorization, PHI
 > authorization, deployment, or external release is claimed.
 
-## 16. Post-Implementation Verification and Future Gates
+## 17. Post-Implementation Verification and Future Gates
 
 Before implementation merge, verify the exact authorized diff, current checks,
 issue traceability, dependency boundary, isolated tests, non-execution boundary

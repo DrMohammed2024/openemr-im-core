@@ -5,24 +5,36 @@
 The AI-Assisted Solo-Owner Governance Policy V0.1 controls the internal review
 model. `POL-GOV-LS1-001` is the authoritative classifier and boundary for
 bounded local-synthetic engineering. It is adopted and active under
-`POL-GOV-LS1-001-ADOPTION-001`, PR #267, and merge
-`76548a0f714177cde38d4d1201aa6095bcba0dfd`, and was reconfirmed with
+`POL-GOV-LS1-001-ADOPTION-001`; PR #267 historically merged at
+`76548a0f714177cde38d4d1201aa6095bcba0dfd`; and adoption was reconfirmed with
 limitations under `POL-GOV-LS1-001-ADOPTION-001-RECONFIRMATION-001`.
+Reconfirmation-state alignment PR #268 historically merged at
+`70ad9016af4d9e706bbd7b20fbd9d5848f41f44b`.
 
-Both use GPT multidisciplinary advisory review plus the Project Owner's final
-accountable decision and are AI-assisted and non-independent. Older entries
-listing multiple roles remain domain maps and historical records; they do not
-create separate specialist-human internal gates for eligible work. Future and
-external qualified-human gates remain unchanged.
+The Project Owner recorded
+`DEC-LS1-IMCORE-LS-001-P11-BLOCKER-RESOLUTION-001`, approving the four-SHA gate
+model and deterministic 124-value canonical manifest, conditionally approving
+the append-only ownership receipt, selecting a dedicated general-purpose WSL2
+environment for future separately authorized provisioning, and selecting strict
+clean `master` as a Phase 11 condition.
 
-The cited post-merge Whitespace, Test All Configurations, and scheduled runs
-remain failed or unresolved; skipped work is not passing evidence. The failures
-are not established as caused by PR #267's Markdown-only scope. Inherited
-whitespace repair and CI investigation are separate work items. Policy adoption
-and reconfirmation do not authorize `IMCORE-LS-001`, Phase 11, or Phase 12, and
-do not create runtime, validation, readiness, compliance, certification, or
-clinical evidence. Documentation alignment is conditional; merge is not
-authorized.
+Embedded SHAs identify document-revision bases, historical merges, or exact
+owner decision bases. Current live `master` must be freshly retrieved from Git
+and GitHub at each gate and is not permanently defined by this index.
+
+Both governance policies use GPT multidisciplinary advisory review plus the
+Project Owner's final accountable decision and are AI-assisted and
+non-independent. Older entries listing multiple roles remain domain maps and
+historical records; they do not create separate specialist-human internal gates
+for eligible work. Future and external qualified-human gates remain unchanged.
+
+Current Whitespace run `32879084778` and Test All Configurations run
+`32879085498` remain failed. They are not established as caused by PR #268 and
+are not passing runtime, verification, validation, readiness, compliance,
+certification, or clinical evidence. Whitespace correction and CI investigation
+remain separate work items. `IMCORE-LS-001`, Phase 11, and Phase 12 remain
+`HOLD`. This documentation alignment does not authorize implementation,
+provisioning, runtime activity, or merge.
 
 ## 1. Purpose
 
@@ -231,8 +243,8 @@ Safety, privacy, security, and claims-sensitive documents require appropriate cr
 | PR | Document | Path | Primary Owner | Status |
 |---|---|---|---|---|
 | POL-GOV-AISO-001 | AI-Assisted Solo-Owner Governance Policy V0.1 | custom/im-core/docs/governance/ai-assisted-solo-owner-governance-policy-v0.1.md | Project Owner | OWNER-ADOPTED INTERNAL GOVERNANCE — AI-ASSISTED, NON-INDEPENDENT; includes the LS-1 internal review model but does not authorize a work item or either lifecycle phase |
-| POL-GOV-LS1-001 | LS-1 — Bounded Local-Synthetic Engineering Policy V0.1 | custom/im-core/docs/governance/ls-1-bounded-local-synthetic-engineering-policy-v0.1.md | Project Owner | ADOPTED / ACTIVE; reconfirmed with limitations; every work item requires a separate current owner decision; no implementation or execution authority by policy alone |
-| IMCORE-LS-001 | Reproducible Local-Synthetic Visit Context LBF Seed Candidate Packet V0.1 | custom/im-core/docs/governance/imcore-ls-001-local-synthetic-authorization-packet-v0.1.md | Project Owner | Proposed/reserved future work item; HOLD; Phase 11 decision and branch creation not authorized; Phase 12 requires separate later authorization |
+| POL-GOV-LS1-001 | LS-1 — Bounded Local-Synthetic Engineering Policy V0.1 | custom/im-core/docs/governance/ls-1-bounded-local-synthetic-engineering-policy-v0.1.md | Project Owner | ADOPTED / ACTIVE; reconfirmed with limitations; four-SHA gate model and blocker resolutions recorded; every work item still requires a separate current owner decision; no implementation or execution authority by policy alone |
+| IMCORE-LS-001 | Reproducible Local-Synthetic Visit Context LBF Seed Candidate Packet V0.1 | custom/im-core/docs/governance/imcore-ls-001-local-synthetic-authorization-packet-v0.1.md | Project Owner | Proposed/reserved future work item; HOLD; deterministic 124-value manifest and conditional receipt design approved; strict clean-master and separately provisioned WSL2 conditions remain unmet; Phase 11 decision/branch and Phase 12 are not authorized |
 | #92 | Evidence Registry and Evidence Templates V0.1 | custom/im-core/docs/evidence/evidence-registry-and-templates-v0.1.md | Documentation Owner / Governance Owner | Approved for current stage |
 | #93 | Traceability Matrix V0.1 | custom/im-core/docs/validation/traceability-matrix-v0.1.md | Governance Owner / Technical Owner | Approved for current stage |
 | #94 | Risk Register V0.1 | custom/im-core/docs/risk/risk-register-v0.1.md | Risk Owner / Clinical Safety Owner | Approved for current stage |

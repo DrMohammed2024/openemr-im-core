@@ -28,20 +28,35 @@ outside that exact exception.
   merged on `master` at `76548a0f714177cde38d4d1201aa6095bcba0dfd`.
 - The Project Owner reconfirmed adoption with limitations under
   `POL-GOV-LS1-001-ADOPTION-001-RECONFIRMATION-001`.
-- Post-merge Whitespace run `32788377634` failed on unrelated inherited
-  trailing whitespace in `CUSTOMIZATION_POLICY.md` and `README.md`.
-- Test All Configurations run `32788377823` remains failed with 169 successful
-  and two unresolved failed E2E jobs; no successful rerun exists.
-- Scheduled run `32832190339` remains failed with 160 successful, two failed,
-  and one skipped job. Its MySQL setup failure is external or environmental
-  with the precise cascading cause partly unverified; its MariaDB E2E failure
-  remains unresolved.
-- The failed and skipped results are not passing runtime, verification,
-  validation, readiness, compliance, certification, or clinical evidence and
-  are not established as caused by PR #267's Markdown-only scope.
-- Documentation alignment is authorized with conditions. Whitespace repair
-  and CI investigation remain separate work items. Merge is not authorized.
+- Reconfirmation-state alignment PR #268 is merged on `master` at
+  `70ad9016af4d9e706bbd7b20fbd9d5848f41f44b`.
+- At the blocker-resolution gate, local, tracking, and live `master` matched
+  that PR #268 merge SHA and the worktree was clean.
+- Current Whitespace run `32879084778` remains failed on inherited
+  `CUSTOMIZATION_POLICY.md` content outside PR #268's Markdown-only scope.
+- Current Test All Configurations run `32879085498` remains failed with 169
+  successful jobs and two failed MySQL services jobs. No successful rerun is
+  recorded.
+- Those failures are not established as caused by PR #268 and are not passing
+  runtime, verification, validation, readiness, compliance, certification, or
+  clinical evidence.
+- The Project Owner recorded blocker-resolution decision
+  `DEC-LS1-IMCORE-LS-001-P11-BLOCKER-RESOLUTION-001`. It authorizes this
+  documentation alignment only; merge remains a separate owner action.
 - `IMCORE-LS-001` remains `HOLD`; Phase 11 and Phase 12 are not authorized.
+
+### Gate SHA Roles
+
+- `DOCUMENT_REVISION_BASIS_SHA` records the immutable commit inspected while
+  preparing a document revision.
+- `HISTORICAL_MERGE_SHA` records an immutable completed-PR merge commit.
+- `LIVE_MASTER_SHA_AT_GATE` is refreshed from Git and GitHub for each gate and
+  is not established permanently by embedded Markdown.
+- `DECISION_BASE_SHA` is the exact immutable base selected by the Project Owner
+  for one work item.
+
+If refreshed live state differs from an owner-recorded decision base, the gate
+returns to `HOLD`; historical merge evidence is not rewritten.
 
 ## Document Status
 
@@ -53,7 +68,7 @@ outside that exact exception.
 | Stage | Documentation-stage governance plus adopted and reconfirmed LS-1 gate control |
 | Scope | Lifecycle control including the exact IMCORE-LS-001 Phase 11 candidate |
 | Runtime status | No runtime in this amendment; Phase 12 requires separate owner authorization |
-| Implementation status | IMCORE-LS-001 remains HOLD; Phase 11 work-item decision not recorded |
+| Implementation status | IMCORE-LS-001 remains HOLD; blocker-resolution decisions recorded, but strict clean-master evidence, environment provisioning, exact implementation scope, and a Phase 11 work-item decision remain outstanding |
 | Clinical-use status | Not authorized |
 | PHI status | No PHI |
 | Real patient data | Not permitted |
@@ -255,7 +270,7 @@ The controlled lifecycle phase model is:
 | 8 | Configuration and Change-Control Planning | Current / Next |
 | 9 | Synthetic Sandbox Planning | Later / Future-gated execution |
 | 10 | Verification and Validation Planning | Later / Planning-only |
-| 11 | Implementation Readiness Gate | HOLD — policy adoption complete; separate IMCORE-LS-001 work-item decision not recorded |
+| 11 | Implementation Readiness Gate | HOLD — blocker resolutions recorded; strict clean-master, environment, exact scope, and separate Phase 11 decision conditions remain outstanding |
 | 12 | Synthetic Runtime Evidence Gate | Separate owner authorization required for IMCORE-LS-001; otherwise future-gated |
 | 13 | Usability and Clinical Review Planning | Later / Planning-only |
 | 14 | Pilot Readiness Gate | Future-gated only |
@@ -265,9 +280,9 @@ The controlled lifecycle phase model is:
 | 18 | Monitoring, Maintenance, Incident Management, and Continuous Improvement | Future-gated only |
 
 No broad future-gated phase is authorized. Phase 11 is aligned only for the
-exact `IMCORE-LS-001` candidate. LS-1 policy adoption and reconfirmation are
-complete, but the work-item decision is not recorded and the candidate remains
-`HOLD`.
+exact `IMCORE-LS-001` candidate. Policy adoption, reconfirmation, and the
+blocker-resolution decision are complete, but that decision is not the Phase 11
+work-item decision. The candidate remains `HOLD`.
 
 ---
 
@@ -1166,19 +1181,25 @@ Objective: Authorize only the exact bounded preparation and implementation
 scope for `IMCORE-LS-001 — Reproducible Local-Synthetic Visit Context LBF
 Seed`.
 
-Current status: `HOLD`. Policy adoption is complete, but authorization requires
-all remaining conditions below to be current:
+Current status: `HOLD`. Policy adoption and the blocker-resolution decision are
+complete, but the latter is not a Phase 11 implementation decision. The
+following conditions remain mandatory:
 
 - `POL-GOV-LS1-001` remains adopted and reconfirmed under the decision records
   identified above;
-- the candidate packet is complete;
-- the Project Owner records a Phase 11 work-item decision;
+- the approved 124-value canonical manifest and its SHA-256 remain unchanged;
+- the append-only ownership receipt conditions remain satisfiable;
+- a dedicated general-purpose WSL2 environment is separately authorized,
+  provisioned, and verified without Docker or database activity;
+- current required `master` checks satisfy the selected strict clean-`master`
+  condition;
 - the exact base SHA, branch, implementation/test files, and dependency
-  boundary are recorded; and
-- every LS-1 eligibility condition is established.
+  boundary are recorded;
+- every LS-1 eligibility condition is established; and
+- the Project Owner records a separate Phase 11 work-item decision.
 
-The remaining conditions are not complete, no implementation or implementation
-branch is authorized, and the candidate state is `HOLD`.
+These conditions are not complete, no implementation or implementation branch
+is authorized, and the candidate state is `HOLD`.
 
 Allowed Phase 11 scope after authorization:
 
@@ -1736,10 +1757,11 @@ Gate decision:
 Documentation-stage and planning-only work remains allowed in Phases 0, 1, 2,
 4, 5, 6, and 8 under existing controls.
 
-LS-1 policy adoption and reconfirmation are complete. Phase 11 remains
-`HOLD` and may be authorized only for the exact `IMCORE-LS-001`
-preparation/implementation scope after a complete current Project Owner
-work-item decision is recorded.
+LS-1 policy adoption, reconfirmation, and blocker-resolution decisions are
+complete. Phase 11 remains `HOLD` and may be authorized only for the exact
+`IMCORE-LS-001` preparation/implementation scope after every recorded condition
+is satisfied and a separate current Project Owner work-item decision is
+recorded.
 
 No other implementation is authorized. The governance amendment itself
 performs no implementation, Docker execution, image pull, database activity,
@@ -1972,9 +1994,10 @@ This document is acceptable only if:
 Lifecycle Phase Gate Control V0.1 retains conservative phase governance while
 aligning one narrow exception:
 
-- LS-1 policy adoption and reconfirmation are complete, but Phase 11 may
-  authorize only the exact eligible `IMCORE-LS-001` preparation/implementation
-  scope after a complete Project Owner work-item decision.
+- LS-1 policy adoption, reconfirmation, and blocker-resolution decisions are
+  complete, but Phase 11 remains `HOLD` until the recorded strict clean-master,
+  environment, exact-scope, eligibility, and separate owner-decision conditions
+  are satisfied.
 - Phase 12 local-synthetic Docker/database/runtime evidence requires a separate
   later Project Owner authorization.
 - This governance amendment performs neither phase's implementation or

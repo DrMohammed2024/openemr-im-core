@@ -4,11 +4,21 @@
 
 - Project: OpenEMR IM Core
 - Repository: `DrMohammed2024/openemr-im-core`
-- Record date: 2026-08-25
-- Controlled baseline branch: `master`
-- Controlled baseline SHA:
+- Record date: 2026-08-26
+- Controlled branch: `master`
+- `DOCUMENT_REVISION_BASIS_SHA`:
+  `70ad9016af4d9e706bbd7b20fbd9d5848f41f44b`
+- PR #267 `HISTORICAL_MERGE_SHA`:
   `76548a0f714177cde38d4d1201aa6095bcba0dfd`
-- Source-of-truth role: current repository and governance state
+- PR #268 `HISTORICAL_MERGE_SHA`:
+  `70ad9016af4d9e706bbd7b20fbd9d5848f41f44b`
+- `LIVE_MASTER_SHA_AT_GATE`: observed as
+  `70ad9016af4d9e706bbd7b20fbd9d5848f41f44b`; point-in-time evidence that must
+  be refreshed at each later gate
+- Blocker-resolution `DECISION_BASE_SHA`:
+  `70ad9016af4d9e706bbd7b20fbd9d5848f41f44b`
+- Source-of-truth role: current repository and governance state without treating
+  an embedded SHA as a permanent live-`master` assertion
 - Runtime effect: none
 - Clinical-use authorization: none
 
@@ -19,19 +29,21 @@ merely because the artifact is tracked.
 
 ## 2. Controlled Repository State
 
-The baseline was verified before this documentation alignment:
+The repository was freshly verified before the blocker-decision alignment:
 
 - local `master`, local `origin/master`, and live remote `master` matched the
-  controlled SHA;
+  document revision basis and decision base;
 - the working tree was clean;
 - `core.ignorecase=false`;
 - directory case sensitivity was enabled;
-- PR #267 was merged as the controlled baseline and adoption/reconfirmation
+- PR #267 adoption/reconfirmation evidence and PR #268 merge/owner-approval
   evidence remained present; and
 - PR #265 remained open, unmerged, excluded, and unchanged by this work.
 
-PR/check status is point-in-time evidence and must be refreshed before a later
-decision or merge.
+Repository, PR, and check status are point-in-time evidence. Live Git and GitHub
+must be refreshed before a later decision, publication, or merge. Historical
+merge SHAs remain immutable evidence and are not rewritten when `master`
+advances.
 
 ## 3. Current Governance Model
 
@@ -50,28 +62,26 @@ Project Owner personally reviews the evidence and records the final accountable
 internal decision.
 
 `POL-GOV-LS1-001` is adopted and active on `master` under
-`POL-GOV-LS1-001-ADOPTION-001` and PR #267, merged at the controlled SHA. The
-Project Owner reconfirmed that adoption with limitations under
-`POL-GOV-LS1-001-ADOPTION-001-RECONFIRMATION-001`.
+`POL-GOV-LS1-001-ADOPTION-001` and PR #267, historically merged at
+`76548a0f714177cde38d4d1201aa6095bcba0dfd`. The Project Owner reconfirmed that
+adoption with limitations under
+`POL-GOV-LS1-001-ADOPTION-001-RECONFIRMATION-001`; PR #268 later merged the
+reconfirmation-state alignment at
+`70ad9016af4d9e706bbd7b20fbd9d5848f41f44b`.
 
-### Post-Merge Workflow Limitations
+### Current Master Workflow Limitations
 
-- Whitespace run `32788377634` failed on unrelated inherited trailing
-  whitespace in `CUSTOMIZATION_POLICY.md` and `README.md`; neither file was
-  changed by PR #267.
-- Test All Configurations run `32788377823` remains failed with 169 successful
-  and two unresolved failed E2E jobs. No successful rerun exists.
-- Scheduled run `32832190339` remains failed with 160 successful, two failed,
-  and one skipped job. Its MySQL setup failure is external or environmental
-  with the precise cascading cause partly unverified; its MariaDB E2E failure
-  remains unresolved.
+- Whitespace run `32879084778` remains failed on inherited
+  `CUSTOMIZATION_POLICY.md` content outside PR #268's Markdown-only scope.
+- Test All Configurations run `32879085498` remains failed with 169 successful
+  jobs and two failed MySQL services jobs. No successful rerun is recorded.
 
-These failures are not established as caused by PR #267's 12-file
-Markdown-only scope. They remain failed or unresolved and are not passing
-runtime, verification, validation, readiness, compliance, certification, or
-clinical evidence. Documentation alignment is conditionally authorized;
-whitespace repair and CI investigation remain separate work items. Merge is
-not authorized.
+These failures are not established as caused by PR #268. They remain failed
+and are not passing runtime, verification, validation, readiness, compliance,
+certification, or clinical evidence. Under
+`DEC-LS1-IMCORE-LS-001-P11-BLOCKER-RESOLUTION-001`, strict clean `master` is a
+Phase 11 owner condition. Whitespace correction and CI investigation remain
+separate work items. This documentation alignment does not authorize merge.
 
 ## 4. Repository-Merged Implementation
 
@@ -152,27 +162,40 @@ The initial reserved/proposed future candidate is:
 - candidate packet:
   `custom/im-core/docs/governance/imcore-ls-001-local-synthetic-authorization-packet-v0.1.md`.
 
-Policy adoption and reconfirmation identify the governing category but do not
-authorize or begin this candidate. The implementation branch is not authorized
-and does not exist. No implementation code, Docker action, image pull, database
-connection, database read/write, runtime operation, or evidence run is
-established by the policy or this alignment.
+Policy adoption, reconfirmation, and blocker-resolution decision
+`DEC-LS1-IMCORE-LS-001-P11-BLOCKER-RESOLUTION-001` identify and constrain the
+candidate but do not authorize or begin it. The decision approves the four-SHA
+model, the deterministic 124-value canonical manifest with SHA-256
+`9fd062558f2284f770468dd44d7332ada976311b2c3167e19ab846325edbc163`, the
+conditional external ownership-receipt design, the future WSL2 selection, and
+the strict clean-`master` condition only. The implementation branch is not
+authorized and does not exist. No implementation code, dependency installation,
+Docker action, image pull, database connection, database read/write, runtime
+operation, or evidence run is established by those decisions or this alignment.
 
 ## 8. Lifecycle Authority
 
-The LS-1 policy-adoption prerequisite is satisfied. Phase 11 remains `HOLD`
-and may be authorized only for the exact `IMCORE-LS-001` preparation and
-implementation scope after both remaining conditions are satisfied:
+The LS-1 policy-adoption prerequisite and blocker-resolution decision are
+recorded. Phase 11 remains `HOLD` because:
 
-1. LS-1 eligibility is completely established; and
-2. the Project Owner records a current Phase 11 work-item decision.
+1. current required `master` checks do not satisfy the selected strict clean-
+   `master` condition;
+2. the selected dedicated general-purpose WSL2 environment is not separately
+   authorized, provisioned, or verified;
+3. exact implementation/test file scope, branch authority, and dependency
+   boundary are not recorded;
+4. all LS-1 eligibility conditions have not yet been established for execution;
+   and
+5. the Project Owner has not recorded the separate current Phase 11 work-item
+   decision.
 
-The work-item decision is not recorded, implementation-branch creation is not
-authorized, and the candidate remains `HOLD`.
+Implementation-branch creation is not authorized and the candidate remains
+`HOLD`. The approved receipt design also remains conditional on a future
+owner-selected external path, permissions, and Phase 12 evidence controls.
 
-Phase 12 Docker/database/runtime local-synthetic evidence collection requires a
-separate later Project Owner authorization. Phase 11 does not authorize Phase
-12.
+Phase 12 Docker/database/runtime local-synthetic evidence collection remains
+`HOLD` and requires a separate later Project Owner authorization. Phase 11 does
+not authorize Phase 12.
 
 ## 9. Unverified Claims
 
@@ -218,16 +241,21 @@ requiring external authority.
 
 ## 12. Next Controlled Actions
 
-1. Validate and open the conditionally authorized documentation-alignment Pull
-   Request; do not merge it under this authorization.
-2. Project Owner personally reviews that Pull Request and current checks.
-3. Separately prepare a Phase 11 work-item decision if the Project Owner elects
-   to consider `IMCORE-LS-001`.
-4. Only after a Phase 11 approval, create the proposed implementation branch.
-5. Create the required GitHub issue before the implementation branch is pushed
+1. Validate and open the authorized five-file blocker-decision documentation
+   Pull Request; do not merge it under this task.
+2. The Project Owner personally reviews that Pull Request and its current
+   checks, then separately approves, requests revision, rejects, or merges it.
+3. Separately authorize and complete the work needed to produce current passing
+   strict clean-`master` evidence; do not treat existing failures as passes.
+4. If still desired, separately authorize provisioning of the selected dedicated
+   general-purpose WSL2 PHP/PHPUnit environment without Docker or database use.
+5. After every recorded condition is satisfied, prepare the separate Phase 11
+   work-item decision. Only that later decision may authorize the exact
+   implementation branch and file scope.
+6. Create the required GitHub issue before the implementation branch is pushed
    or its Pull Request is opened.
-6. Obtain a separate Phase 12 owner decision before Docker, database, runtime,
-   or local-synthetic evidence activity.
+7. Obtain a separate Phase 12 owner decision before Docker, database, runtime,
+   or local-synthetic execution/evidence activity.
 
 ## 13. Explicit Non-Claims
 

@@ -7,21 +7,44 @@
 - Title: Reproducible Local-Synthetic Visit Context LBF Seed
 - Governing category: `LS-1 — BOUNDED LOCAL-SYNTHETIC ENGINEERING`
 - Governing policy: `POL-GOV-LS1-001`
+- Governing policy status: adopted and active on `master`; reconfirmed with
+  limitations
+- Adoption decision: `POL-GOV-LS1-001-ADOPTION-001`
+- Adoption PR and merge: PR #267 at
+  `76548a0f714177cde38d4d1201aa6095bcba0dfd`
+- Reconfirmation decision:
+  `POL-GOV-LS1-001-ADOPTION-001-RECONFIRMATION-001`
 - Proposed implementation branch:
   `codex/feat-im-core-lbf-visit-context-seed`
-- Candidate state: proposed and reserved
+- Candidate state: reserved/proposed future work item; `HOLD`
 - Phase 11 authorization: not yet recorded
+- Phase 11 implementation branch creation: not authorized
 - Phase 12 execution/evidence authorization: not granted
 - Implementation status: not started
 - Docker execution: not authorized by this packet state
 - Database writes: not authorized by this packet state
 - Final Project Owner decision: not recorded
-- Current gate result: `HOLD` until policy adoption and a complete current
-  Project Owner decision record
+- Current gate result: `HOLD`; the policy-adoption prerequisite is satisfied,
+  but a complete current Phase 11 Project Owner decision is not recorded
 
 This packet identifies the initial LS-1 candidate. It is not implementation,
 runtime, database-write, Docker, merge, clinical-use, deployment, validation,
 compliance, certification, or release authorization.
+
+### Policy Prerequisite and Workflow Limitations
+
+Policy adoption and reconfirmation satisfy the policy prerequisite only. The
+post-merge Whitespace run `32788377634` failed on inherited content outside PR
+#267's file scope. Test All Configurations run `32788377823` remains failed
+with two unresolved E2E jobs and no successful rerun. Scheduled run
+`32832190339` remains failed with an external or environmental MySQL setup
+failure whose precise cascading cause is partly unverified, an unresolved
+MariaDB E2E failure, and one skipped job.
+
+These results are not established as caused by PR #267 and are not passing
+runtime, verification, validation, readiness, compliance, certification, or
+clinical evidence. Whitespace repair and CI investigation are separate work
+items and do not authorize this candidate or either lifecycle phase.
 
 ## 2. Objective
 
@@ -37,7 +60,7 @@ conflict, exact-match idempotent, and bounded to the rows in Section 8.
 ### Repository-verified facts
 
 At the controlled baseline
-`d995dd91081b317502b00baa1220693bfb6ff0d1`:
+`76548a0f714177cde38d4d1201aa6095bcba0dfd`:
 
 - `custom/im-core/` contains Markdown documentation only;
 - no executable IM Core seed implementation exists on `master`;
@@ -312,27 +335,31 @@ Project Owner decision.
 - Decision-record ID: `DEC-LS1-IMCORE-LS-001-P11-001`
 - Decision date: not recorded
 - Project Owner: not recorded
-- Policy adoption confirmed: not recorded
+- Policy adoption confirmed: yes — `POL-GOV-LS1-001-ADOPTION-001`, PR #267,
+  merge `76548a0f714177cde38d4d1201aa6095bcba0dfd`, and reconfirmation
+  `POL-GOV-LS1-001-ADOPTION-001-RECONFIRMATION-001`
 - Work-item issue or adopted deferral: not recorded
 - Base branch and SHA: not recorded
-- Head branch and SHA: not created
+- Head branch and SHA: not created; branch creation is not authorized
 - Exact implementation/test file scope: not recorded
 - Artifact classification: not recorded
 - Dependency diff: none proposed; not yet verified on an implementation branch
 - Allowed/prohibited scope reviewed: not recorded
 - Evidence personally reviewed: not recorded
-- GPT advisory evidence reviewed: this packet is proposed; final review not
-  recorded
+- GPT advisory evidence reviewed: packet design retained; final Phase 11 review
+  not recorded
 - Required tests and results: not run
-- Blocking findings: policy adoption and final decision remain outstanding
-- Non-blocking findings: not recorded
-- Unresolved limitations: no implementation or execution evidence exists
+- Blocking findings: Phase 11 decision, exact scope, and branch authority remain
+  outstanding; policy adoption is satisfied
+- Non-blocking findings: post-merge workflow debt is separately controlled
+- Unresolved limitations: no implementation or execution evidence exists; the
+  recorded failed and skipped workflow results are not passing evidence
 - Author/owner/reviewer relationship: not recorded
 - Conflicts of interest: not recorded
 - Non-independence disclosure: required, not yet signed
 - Rationale: not recorded
 - Final decision: `HOLD — NOT RECORDED`
-- Conditions/follow-up: Project Owner review
+- Conditions/follow-up: separate Phase 11 Project Owner review and decision
 - Invalidation triggers: Sections 12 and `POL-GOV-LS1-001`
 
 ## 14. Project Owner Decision Record — Phase 12

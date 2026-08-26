@@ -4,11 +4,11 @@ A governed Internal Medicine customization layer built on top of the official [O
 
 ## Repository Status
 
-**Current status:** Planning / controlled customization baseline  
-**Production readiness:** Not production-ready  
+**Current status:** Planning / controlled customization baseline<br>
+**Production readiness:** Not production-ready<br>
 **Default strategy:** upstream-first, fork-minimal, customization-explicit
 
-This repository is **not** the official OpenEMR repository.  
+This repository is **not** the official OpenEMR repository.<br>
 It is a clinic-driven derivative intended to support structured Internal Medicine workflow development while preserving upstream compatibility wherever feasible.
 
 ## Core Operating Principles

@@ -80,5 +80,5 @@ For each non-trivial customization, document:
 
 ## Review Standard
 
-A customization is not considered mature merely because it works locally.  
+A customization is not considered mature merely because it works locally.<br>
 It must also be understandable, reviewable, maintainable, and reasonably upstream-compatible.

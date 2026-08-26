@@ -1,0 +1,187 @@
+schema_version: "0.1"
+package: "IMCoreGovernanceAgent V0.1"
+stage: "documentation-stage-only"
+status: "advisory-human-supervised"
+purpose: "Human reviewer role vocabulary for documentation-stage governance review support."
+
+authority_rule:
+  agent_authority: "advisory_only"
+  final_decision_authority: "human_reviewers_and_maintainers_only"
+  role_assignment_authority: "human_project_governance_only"
+  clinical_use_authority: "not_authorized"
+  runtime_authority: "not_authorized"
+
+roles:
+  governance_owner:
+    display: "Governance Owner"
+    advisory_scope:
+      - "governance posture review"
+      - "stage-boundary review"
+      - "NO-GO and HOLD condition review"
+      - "source-of-truth governance review"
+    may_be_recommended_for:
+      - "new governance artifact"
+      - "policy update"
+      - "decision boundary issue"
+      - "merge-readiness governance concern"
+    cannot_delegate_to_agent: true
+
+  documentation_owner:
+    display: "Documentation Owner"
+    advisory_scope:
+      - "documentation structure review"
+      - "Documentation Index alignment"
+      - "Documentation Inventory alignment"
+      - "duplicate-document review"
+    may_be_recommended_for:
+      - "new documentation package"
+      - "index follow-up"
+      - "inventory status update"
+      - "artifact discoverability issue"
+    cannot_delegate_to_agent: true
+
+  technical_owner:
+    display: "Technical Owner"
+    advisory_scope:
+      - "technical boundary review"
+      - "repository structure review"
+      - "non-runtime technical documentation review"
+      - "future-gated implementation boundary review"
+    may_be_recommended_for:
+      - "technical architecture documentation"
+      - "runtime boundary concern"
+      - "API/FHIR boundary concern"
+      - "database boundary concern"
+    cannot_delegate_to_agent: true
+
+  clinical_safety_owner:
+    display: "Clinical Safety Owner"
+    advisory_scope:
+      - "clinical safety boundary review"
+      - "clinical-use claim review"
+      - "clinical workflow documentation review"
+      - "patient safety risk wording review"
+    may_be_recommended_for:
+      - "clinical safety case document"
+      - "clinical workflow document"
+      - "clinical claim issue"
+      - "patient-facing or clinical decision-support boundary concern"
+    cannot_delegate_to_agent: true
+
+  privacy_security_owner:
+    display: "Privacy-Security Owner"
+    advisory_scope:
+      - "no-PHI review"
+      - "no-secrets review"
+      - "privacy/security boundary review"
+      - "production logs or database dumps concern"
+    may_be_recommended_for:
+      - "PHI risk"
+      - "secret or credential risk"
+      - "privacy/security policy issue"
+      - "data boundary issue"
+    cannot_delegate_to_agent: true
+
+  risk_owner:
+    display: "Risk Owner"
+    advisory_scope:
+      - "risk register linkage"
+      - "hazard/control mapping"
+      - "risk acceptance boundary review"
+      - "residual risk escalation review"
+    may_be_recommended_for:
+      - "risk register update"
+      - "hazard mapping"
+      - "control gap"
+      - "risk acceptance concern"
+    cannot_delegate_to_agent: true
+
+  evidence_reviewer:
+    display: "Evidence Reviewer"
+    advisory_scope:
+      - "evidence label review"
+      - "evidence registry linkage"
+      - "claim-to-evidence review"
+      - "unsupported evidence upgrade review"
+    may_be_recommended_for:
+      - "evidence registry update"
+      - "claim-control issue"
+      - "source support issue"
+      - "validation or compliance claim concern"
+    cannot_delegate_to_agent: true
+
+  requirements_owner:
+    display: "Requirements Owner"
+    advisory_scope:
+      - "requirements register linkage"
+      - "requirement status review"
+      - "requirement-to-control mapping"
+      - "requirement traceability gap review"
+    may_be_recommended_for:
+      - "requirements register update"
+      - "requirements traceability population"
+      - "requirement gap"
+      - "requirement status concern"
+    cannot_delegate_to_agent: true
+
+  traceability_reviewer:
+    display: "Traceability Reviewer"
+    advisory_scope:
+      - "changed-file to requirement mapping"
+      - "PR traceability review"
+      - "risk/control/evidence linkage"
+      - "reviewer decision traceability"
+    may_be_recommended_for:
+      - "traceability matrix update"
+      - "PR review traceability"
+      - "merge-readiness traceability"
+      - "documentation index follow-up traceability"
+    cannot_delegate_to_agent: true
+
+  maintainer:
+    display: "Maintainer"
+    advisory_scope:
+      - "repository action review"
+      - "branch and PR workflow review"
+      - "merge readiness review"
+      - "post-merge verification review"
+    may_be_recommended_for:
+      - "commit review"
+      - "push review"
+      - "PR creation review"
+      - "merge decision"
+    cannot_delegate_to_agent: true
+
+  project_owner:
+    display: "Project Owner"
+    advisory_scope:
+      - "strategic project decision review"
+      - "stage transition review"
+      - "scope authorization review"
+      - "governance acceptance review"
+    may_be_recommended_for:
+      - "stage boundary decision"
+      - "future-gated authorization decision"
+      - "major governance direction"
+      - "acceptance of unresolved uncertainty"
+    cannot_delegate_to_agent: true
+
+role_recommendation_limits:
+  advisory_only: true
+  no_final_assignment_by_agent: true
+  no_replacement_of_human_reviewers: true
+  no_clinical_use_authorization: true
+  no_runtime_authorization: true
+  no_risk_acceptance_by_agent: true
+  no_merge_approval_by_agent: true
+
+escalation_rule:
+  if_uncertain: "recommend HOLD or needs verification"
+  if_safety_privacy_security_or_claim_risk_detected: "recommend human review"
+  if_runtime_or_clinical_use_requested: "recommend NO_GO"
+  if_required_role_is_unclear: "recommend governance owner and documentation owner review"
+
+final_rule:
+  advisory_only: true
+  human_review_required: true
+  named_human_accountability_required: true

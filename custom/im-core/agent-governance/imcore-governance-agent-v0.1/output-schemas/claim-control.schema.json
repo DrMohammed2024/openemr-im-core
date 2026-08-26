@@ -1,0 +1,467 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "imcore-governance-agent-v0.1-claim-control.schema.json",
+  "title": "IMCoreGovernanceAgent V0.1 Claim-Control Advisory Output",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schema_version",
+    "package",
+    "output_type",
+    "stage",
+    "advisory_only",
+    "human_review_required",
+    "clinical_use_authorized",
+    "runtime_authorized",
+    "phi_or_real_patient_data_allowed",
+    "claim_review_summary",
+    "material_claims",
+    "forbidden_claim_scan",
+    "required_rewrites",
+    "recommended_decision",
+    "human_decision_required"
+  ],
+  "properties": {
+    "schema_version": {
+      "type": "string",
+      "const": "0.1"
+    },
+    "package": {
+      "type": "string",
+      "const": "IMCoreGovernanceAgent V0.1"
+    },
+    "output_type": {
+      "type": "string",
+      "const": "claim_control_advisory"
+    },
+    "stage": {
+      "type": "string",
+      "const": "documentation-stage-only"
+    },
+    "advisory_only": {
+      "type": "boolean",
+      "const": true
+    },
+    "human_review_required": {
+      "type": "boolean",
+      "const": true
+    },
+    "clinical_use_authorized": {
+      "type": "boolean",
+      "const": false
+    },
+    "runtime_authorized": {
+      "type": "boolean",
+      "const": false
+    },
+    "phi_or_real_patient_data_allowed": {
+      "type": "boolean",
+      "const": false
+    },
+    "claim_review_summary": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "scope_reviewed",
+        "claims_reviewed",
+        "unsupported_claims_detected",
+        "hard_stop_claims_detected",
+        "summary"
+      ],
+      "properties": {
+        "scope_reviewed": {
+          "type": "string"
+        },
+        "claims_reviewed": {
+          "type": "boolean"
+        },
+        "unsupported_claims_detected": {
+          "type": "boolean"
+        },
+        "hard_stop_claims_detected": {
+          "type": "boolean"
+        },
+        "summary": {
+          "type": "string"
+        }
+      }
+    },
+    "material_claims": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "claim_text",
+          "claim_category",
+          "evidence_label",
+          "claim_status",
+          "risk_level",
+          "required_action"
+        ],
+        "properties": {
+          "claim_text": {
+            "type": "string"
+          },
+          "claim_category": {
+            "type": "string",
+            "enum": [
+              "stage",
+              "documentation",
+              "governance",
+              "runtime",
+              "ai",
+              "clinical_use",
+              "phi_or_real_patient_data",
+              "production_readiness",
+              "validation",
+              "regulatory_compliance",
+              "cybersecurity_certification",
+              "commercial_readiness",
+              "medical_device_readiness",
+              "unknown"
+            ]
+          },
+          "evidence_label": {
+            "type": "string",
+            "enum": [
+              "repository-verified",
+              "file-grounded",
+              "user-provided",
+              "documented only",
+              "roadmap-stated",
+              "proposed",
+              "assumption",
+              "inference",
+              "unknown",
+              "needs verification",
+              "not acceptable for reliance"
+            ]
+          },
+          "claim_status": {
+            "type": "string",
+            "enum": [
+              "acceptable_current_stage_wording",
+              "acceptable_with_rewrite",
+              "unsupported",
+              "forbidden_current_stage",
+              "needs verification"
+            ]
+          },
+          "risk_level": {
+            "type": "string",
+            "enum": [
+              "low",
+              "medium",
+              "high",
+              "hard_stop"
+            ]
+          },
+          "required_action": {
+            "type": "string",
+            "enum": [
+              "none",
+              "rewrite",
+              "remove",
+              "verify",
+              "escalate_to_human_review",
+              "block_until_resolved"
+            ]
+          }
+        }
+      }
+    },
+    "forbidden_claim_scan": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "clinically_validated",
+        "approved_for_clinical_use",
+        "production_ready",
+        "regulatory_compliant",
+        "cybersecurity_certified",
+        "phi_ready",
+        "real_patient_data_ready",
+        "runtime_ai_implemented",
+        "model_integration_complete",
+        "prompt_execution_enabled",
+        "autonomous_clinical_decision_making"
+      ],
+      "properties": {
+        "clinically_validated": {
+          "type": "boolean"
+        },
+        "approved_for_clinical_use": {
+          "type": "boolean"
+        },
+        "production_ready": {
+          "type": "boolean"
+        },
+        "regulatory_compliant": {
+          "type": "boolean"
+        },
+        "cybersecurity_certified": {
+          "type": "boolean"
+        },
+        "phi_ready": {
+          "type": "boolean"
+        },
+        "real_patient_data_ready": {
+          "type": "boolean"
+        },
+        "runtime_ai_implemented": {
+          "type": "boolean"
+        },
+        "model_integration_complete": {
+          "type": "boolean"
+        },
+        "prompt_execution_enabled": {
+          "type": "boolean"
+        },
+        "autonomous_clinical_decision_making": {
+          "type": "boolean"
+        }
+      }
+    },
+    "required_rewrites": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "original_text",
+          "safe_replacement_text",
+          "reason"
+        ],
+        "properties": {
+          "original_text": {
+            "type": "string"
+          },
+          "safe_replacement_text": {
+            "type": "string"
+          },
+          "reason": {
+            "type": "string"
+          }
+        }
+      }
+    },
+    "recommended_decision": {
+      "type": "string",
+      "enum": [
+        "GO",
+        "CONDITIONAL GO",
+        "NO-GO",
+        "HOLD",
+        "DEFER"
+      ]
+    },
+    "human_decision_required": {
+      "type": "boolean",
+      "const": true
+    }
+  },
+  "allOf": [
+    {
+      "$comment": "A detected hard-stop claim requires an advisory NO-GO recommendation.",
+      "if": {
+        "properties": {
+          "claim_review_summary": {
+            "properties": {
+              "hard_stop_claims_detected": {
+                "const": true
+              }
+            },
+            "required": [
+              "hard_stop_claims_detected"
+            ]
+          }
+        },
+        "required": [
+          "claim_review_summary"
+        ]
+      },
+      "then": {
+        "properties": {
+          "recommended_decision": {
+            "const": "NO-GO"
+          }
+        }
+      }
+    },
+    {
+      "$comment": "Any detected forbidden claim must be recorded as a hard stop and must produce NO-GO.",
+      "if": {
+        "properties": {
+          "forbidden_claim_scan": {
+            "anyOf": [
+              {
+                "properties": {
+                  "clinically_validated": {
+                    "const": true
+                  }
+                },
+                "required": [
+                  "clinically_validated"
+                ]
+              },
+              {
+                "properties": {
+                  "approved_for_clinical_use": {
+                    "const": true
+                  }
+                },
+                "required": [
+                  "approved_for_clinical_use"
+                ]
+              },
+              {
+                "properties": {
+                  "production_ready": {
+                    "const": true
+                  }
+                },
+                "required": [
+                  "production_ready"
+                ]
+              },
+              {
+                "properties": {
+                  "regulatory_compliant": {
+                    "const": true
+                  }
+                },
+                "required": [
+                  "regulatory_compliant"
+                ]
+              },
+              {
+                "properties": {
+                  "cybersecurity_certified": {
+                    "const": true
+                  }
+                },
+                "required": [
+                  "cybersecurity_certified"
+                ]
+              },
+              {
+                "properties": {
+                  "phi_ready": {
+                    "const": true
+                  }
+                },
+                "required": [
+                  "phi_ready"
+                ]
+              },
+              {
+                "properties": {
+                  "real_patient_data_ready": {
+                    "const": true
+                  }
+                },
+                "required": [
+                  "real_patient_data_ready"
+                ]
+              },
+              {
+                "properties": {
+                  "runtime_ai_implemented": {
+                    "const": true
+                  }
+                },
+                "required": [
+                  "runtime_ai_implemented"
+                ]
+              },
+              {
+                "properties": {
+                  "model_integration_complete": {
+                    "const": true
+                  }
+                },
+                "required": [
+                  "model_integration_complete"
+                ]
+              },
+              {
+                "properties": {
+                  "prompt_execution_enabled": {
+                    "const": true
+                  }
+                },
+                "required": [
+                  "prompt_execution_enabled"
+                ]
+              },
+              {
+                "properties": {
+                  "autonomous_clinical_decision_making": {
+                    "const": true
+                  }
+                },
+                "required": [
+                  "autonomous_clinical_decision_making"
+                ]
+              }
+            ]
+          }
+        },
+        "required": [
+          "forbidden_claim_scan"
+        ]
+      },
+      "then": {
+        "properties": {
+          "claim_review_summary": {
+            "properties": {
+              "hard_stop_claims_detected": {
+                "const": true
+              }
+            }
+          },
+          "recommended_decision": {
+            "const": "NO-GO"
+          }
+        }
+      }
+    },
+    {
+      "$comment": "Unresolved unsupported claims prevent a GO recommendation even when no hard-stop claim exists.",
+      "if": {
+        "properties": {
+          "claim_review_summary": {
+            "properties": {
+              "unsupported_claims_detected": {
+                "const": true
+              },
+              "hard_stop_claims_detected": {
+                "const": false
+              }
+            },
+            "required": [
+              "unsupported_claims_detected",
+              "hard_stop_claims_detected"
+            ]
+          }
+        },
+        "required": [
+          "claim_review_summary"
+        ]
+      },
+      "then": {
+        "properties": {
+          "recommended_decision": {
+            "enum": [
+              "CONDITIONAL GO",
+              "NO-GO",
+              "HOLD",
+              "DEFER"
+            ]
+          }
+        }
+      }
+    }
+  ]
+}

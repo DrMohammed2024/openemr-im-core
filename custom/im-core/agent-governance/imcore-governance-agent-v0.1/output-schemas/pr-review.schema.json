@@ -1,0 +1,759 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "imcore-governance-agent-v0.1-pr-review.schema.json",
+  "title": "IMCoreGovernanceAgent V0.1 PR Review Advisory Output",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schema_version",
+    "package",
+    "output_type",
+    "stage",
+    "advisory_only",
+    "human_review_required",
+    "clinical_use_authorized",
+    "runtime_authorized",
+    "phi_or_real_patient_data_allowed",
+    "repository_context",
+    "review_summary",
+    "changed_file_review",
+    "safety_gates",
+    "claim_control",
+    "traceability_notes",
+    "recommended_decision",
+    "human_decision_required"
+  ],
+  "properties": {
+    "schema_version": {
+      "type": "string",
+      "const": "0.1"
+    },
+    "package": {
+      "type": "string",
+      "const": "IMCoreGovernanceAgent V0.1"
+    },
+    "output_type": {
+      "type": "string",
+      "const": "pr_review_advisory"
+    },
+    "stage": {
+      "type": "string",
+      "const": "documentation-stage-only"
+    },
+    "advisory_only": {
+      "type": "boolean",
+      "const": true
+    },
+    "human_review_required": {
+      "type": "boolean",
+      "const": true
+    },
+    "clinical_use_authorized": {
+      "type": "boolean",
+      "const": false
+    },
+    "runtime_authorized": {
+      "type": "boolean",
+      "const": false
+    },
+    "phi_or_real_patient_data_allowed": {
+      "type": "boolean",
+      "const": false
+    },
+    "repository_context": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "repository",
+        "branch",
+        "working_tree_status",
+        "open_pr_status",
+        "checks_status",
+        "context_evidence_label"
+      ],
+      "properties": {
+        "repository": {
+          "type": "string"
+        },
+        "branch": {
+          "type": "string"
+        },
+        "working_tree_status": {
+          "type": "string"
+        },
+        "open_pr_status": {
+          "type": "string"
+        },
+        "checks_status": {
+          "type": "string"
+        },
+        "context_evidence_label": {
+          "type": "string",
+          "enum": [
+            "repository-verified",
+            "needs verification",
+            "unknown"
+          ]
+        }
+      }
+    },
+    "review_summary": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "objective",
+        "scope_classification",
+        "one_pr_one_purpose",
+        "documentation_only_status",
+        "summary"
+      ],
+      "properties": {
+        "objective": {
+          "type": "string"
+        },
+        "scope_classification": {
+          "type": "string"
+        },
+        "one_pr_one_purpose": {
+          "type": "boolean"
+        },
+        "documentation_only_status": {
+          "type": "string",
+          "enum": [
+            "confirmed",
+            "not confirmed",
+            "violated",
+            "needs verification"
+          ]
+        },
+        "summary": {
+          "type": "string"
+        }
+      }
+    },
+    "changed_file_review": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "path",
+          "file_role",
+          "evidence_label",
+          "source_of_truth_risk",
+          "duplicate_document_risk",
+          "review_required"
+        ],
+        "properties": {
+          "path": {
+            "type": "string"
+          },
+          "file_role": {
+            "type": "string"
+          },
+          "evidence_label": {
+            "type": "string",
+            "enum": [
+              "repository-verified",
+              "file-grounded",
+              "user-provided",
+              "documented only",
+              "roadmap-stated",
+              "proposed",
+              "assumption",
+              "inference",
+              "unknown",
+              "needs verification",
+              "not acceptable for reliance"
+            ]
+          },
+          "source_of_truth_risk": {
+            "type": "string",
+            "enum": [
+              "none detected",
+              "possible",
+              "confirmed",
+              "needs verification"
+            ]
+          },
+          "duplicate_document_risk": {
+            "type": "string",
+            "enum": [
+              "none detected",
+              "possible",
+              "confirmed",
+              "needs verification"
+            ]
+          },
+          "review_required": {
+            "type": "boolean"
+          }
+        }
+      }
+    },
+    "safety_gates": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "no_phi",
+        "no_real_patient_data",
+        "no_secrets",
+        "no_runtime_ai",
+        "no_prompt_execution",
+        "no_model_integration",
+        "no_clinical_use",
+        "no_unsupported_readiness_claims",
+        "zero_failing_zero_pending_checks_before_merge"
+      ],
+      "properties": {
+        "no_phi": {
+          "type": "string",
+          "enum": [
+            "pass",
+            "fail",
+            "needs verification"
+          ]
+        },
+        "no_real_patient_data": {
+          "type": "string",
+          "enum": [
+            "pass",
+            "fail",
+            "needs verification"
+          ]
+        },
+        "no_secrets": {
+          "type": "string",
+          "enum": [
+            "pass",
+            "fail",
+            "needs verification"
+          ]
+        },
+        "no_runtime_ai": {
+          "type": "string",
+          "enum": [
+            "pass",
+            "fail",
+            "needs verification"
+          ]
+        },
+        "no_prompt_execution": {
+          "type": "string",
+          "enum": [
+            "pass",
+            "fail",
+            "needs verification"
+          ]
+        },
+        "no_model_integration": {
+          "type": "string",
+          "enum": [
+            "pass",
+            "fail",
+            "needs verification"
+          ]
+        },
+        "no_clinical_use": {
+          "type": "string",
+          "enum": [
+            "pass",
+            "fail",
+            "needs verification"
+          ]
+        },
+        "no_unsupported_readiness_claims": {
+          "type": "string",
+          "enum": [
+            "pass",
+            "fail",
+            "needs verification"
+          ]
+        },
+        "zero_failing_zero_pending_checks_before_merge": {
+          "type": "string",
+          "enum": [
+            "pass",
+            "fail",
+            "needs verification",
+            "not assessed"
+          ]
+        }
+      }
+    },
+    "claim_control": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "material_claims_reviewed",
+        "unsupported_claims_detected",
+        "required_wording_changes"
+      ],
+      "properties": {
+        "material_claims_reviewed": {
+          "type": "boolean"
+        },
+        "unsupported_claims_detected": {
+          "type": "boolean"
+        },
+        "required_wording_changes": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        }
+      }
+    },
+    "traceability_notes": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "traceability_required",
+        "traceability_status",
+        "required_reviewer_roles"
+      ],
+      "properties": {
+        "traceability_required": {
+          "type": "boolean"
+        },
+        "traceability_status": {
+          "type": "string",
+          "enum": [
+            "complete for current stage",
+            "partial",
+            "missing",
+            "needs verification",
+            "not applicable"
+          ]
+        },
+        "required_reviewer_roles": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        }
+      }
+    },
+    "recommended_decision": {
+      "type": "string",
+      "enum": [
+        "GO",
+        "CONDITIONAL GO",
+        "NO-GO",
+        "HOLD",
+        "DEFER"
+      ]
+    },
+    "human_decision_required": {
+      "type": "boolean",
+      "const": true
+    }
+  },
+  "allOf": [
+    {
+      "$comment": "A GO advisory recommendation is valid only when repository context is freshly verified, the working tree is clean, the PR remains documentation-only and one-purpose, changed files have no detected source-of-truth or duplicate-document conflict, all safety gates pass, material claims are reviewed with no unsupported claims or pending rewrites, and required traceability is complete for the current stage.",
+      "if": {
+        "properties": {
+          "recommended_decision": {
+            "const": "GO"
+          }
+        },
+        "required": [
+          "recommended_decision"
+        ]
+      },
+      "then": {
+        "properties": {
+          "repository_context": {
+            "properties": {
+              "repository": {
+                "type": "string",
+                "minLength": 1
+              },
+              "branch": {
+                "type": "string",
+                "minLength": 1
+              },
+              "working_tree_status": {
+                "const": "CLEAN"
+              },
+              "open_pr_status": {
+                "type": "string",
+                "minLength": 1
+              },
+              "checks_status": {
+                "type": "string",
+                "minLength": 1
+              },
+              "context_evidence_label": {
+                "const": "repository-verified"
+              }
+            },
+            "required": [
+              "repository",
+              "branch",
+              "working_tree_status",
+              "open_pr_status",
+              "checks_status",
+              "context_evidence_label"
+            ]
+          },
+          "review_summary": {
+            "properties": {
+              "objective": {
+                "type": "string",
+                "minLength": 1
+              },
+              "scope_classification": {
+                "type": "string",
+                "minLength": 1
+              },
+              "one_pr_one_purpose": {
+                "const": true
+              },
+              "documentation_only_status": {
+                "const": "confirmed"
+              },
+              "summary": {
+                "type": "string",
+                "minLength": 1
+              }
+            },
+            "required": [
+              "objective",
+              "scope_classification",
+              "one_pr_one_purpose",
+              "documentation_only_status",
+              "summary"
+            ]
+          },
+          "changed_file_review": {
+            "type": "array",
+            "minItems": 1,
+            "items": {
+              "properties": {
+                "evidence_label": {
+                  "enum": [
+                    "repository-verified",
+                    "file-grounded"
+                  ]
+                },
+                "source_of_truth_risk": {
+                  "const": "none detected"
+                },
+                "duplicate_document_risk": {
+                  "const": "none detected"
+                }
+              },
+              "required": [
+                "evidence_label",
+                "source_of_truth_risk",
+                "duplicate_document_risk"
+              ]
+            }
+          },
+          "safety_gates": {
+            "properties": {
+              "no_phi": {
+                "const": "pass"
+              },
+              "no_real_patient_data": {
+                "const": "pass"
+              },
+              "no_secrets": {
+                "const": "pass"
+              },
+              "no_runtime_ai": {
+                "const": "pass"
+              },
+              "no_prompt_execution": {
+                "const": "pass"
+              },
+              "no_model_integration": {
+                "const": "pass"
+              },
+              "no_clinical_use": {
+                "const": "pass"
+              },
+              "no_unsupported_readiness_claims": {
+                "const": "pass"
+              },
+              "zero_failing_zero_pending_checks_before_merge": {
+                "const": "pass"
+              }
+            },
+            "required": [
+              "no_phi",
+              "no_real_patient_data",
+              "no_secrets",
+              "no_runtime_ai",
+              "no_prompt_execution",
+              "no_model_integration",
+              "no_clinical_use",
+              "no_unsupported_readiness_claims",
+              "zero_failing_zero_pending_checks_before_merge"
+            ]
+          },
+          "claim_control": {
+            "properties": {
+              "material_claims_reviewed": {
+                "const": true
+              },
+              "unsupported_claims_detected": {
+                "const": false
+              },
+              "required_wording_changes": {
+                "type": "array",
+                "maxItems": 0
+              }
+            },
+            "required": [
+              "material_claims_reviewed",
+              "unsupported_claims_detected",
+              "required_wording_changes"
+            ]
+          },
+          "traceability_notes": {
+            "properties": {
+              "required_reviewer_roles": {
+                "type": "array",
+                "minItems": 1
+              }
+            },
+            "required": [
+              "traceability_required",
+              "traceability_status",
+              "required_reviewer_roles"
+            ],
+            "anyOf": [
+              {
+                "properties": {
+                  "traceability_required": {
+                    "const": true
+                  },
+                  "traceability_status": {
+                    "const": "complete for current stage"
+                  }
+                }
+              },
+              {
+                "properties": {
+                  "traceability_required": {
+                    "const": false
+                  },
+                  "traceability_status": {
+                    "const": "not applicable"
+                  }
+                }
+              }
+            ]
+          }
+        },
+        "required": [
+          "repository_context",
+          "review_summary",
+          "changed_file_review",
+          "safety_gates",
+          "claim_control",
+          "traceability_notes"
+        ]
+      }
+    },
+    {
+      "$comment": "A documentation-only scope violation requires a NO-GO advisory recommendation.",
+      "if": {
+        "properties": {
+          "review_summary": {
+            "properties": {
+              "documentation_only_status": {
+                "const": "violated"
+              }
+            },
+            "required": [
+              "documentation_only_status"
+            ]
+          }
+        },
+        "required": [
+          "review_summary"
+        ]
+      },
+      "then": {
+        "properties": {
+          "recommended_decision": {
+            "const": "NO-GO"
+          }
+        }
+      }
+    },
+    {
+      "$comment": "A failed PHI, real-patient-data, secrets, runtime-AI, prompt-execution, model-integration, or clinical-use gate requires a NO-GO advisory recommendation.",
+      "if": {
+        "properties": {
+          "safety_gates": {
+            "anyOf": [
+              {
+                "properties": {
+                  "no_clinical_use": {
+                    "const": "fail"
+                  }
+                },
+                "required": [
+                  "no_clinical_use"
+                ]
+              },
+              {
+                "properties": {
+                  "no_model_integration": {
+                    "const": "fail"
+                  }
+                },
+                "required": [
+                  "no_model_integration"
+                ]
+              },
+              {
+                "properties": {
+                  "no_phi": {
+                    "const": "fail"
+                  }
+                },
+                "required": [
+                  "no_phi"
+                ]
+              },
+              {
+                "properties": {
+                  "no_prompt_execution": {
+                    "const": "fail"
+                  }
+                },
+                "required": [
+                  "no_prompt_execution"
+                ]
+              },
+              {
+                "properties": {
+                  "no_real_patient_data": {
+                    "const": "fail"
+                  }
+                },
+                "required": [
+                  "no_real_patient_data"
+                ]
+              },
+              {
+                "properties": {
+                  "no_runtime_ai": {
+                    "const": "fail"
+                  }
+                },
+                "required": [
+                  "no_runtime_ai"
+                ]
+              },
+              {
+                "properties": {
+                  "no_secrets": {
+                    "const": "fail"
+                  }
+                },
+                "required": [
+                  "no_secrets"
+                ]
+              }
+            ]
+          }
+        },
+        "required": [
+          "safety_gates"
+        ]
+      },
+      "then": {
+        "properties": {
+          "recommended_decision": {
+            "const": "NO-GO"
+          }
+        }
+      }
+    },
+    {
+      "$comment": "A failed unsupported-readiness-claim or required-checks gate prevents GO until corrected or verified, but may result in CONDITIONAL GO, NO-GO, HOLD, or DEFER following human governance review.",
+      "if": {
+        "properties": {
+          "safety_gates": {
+            "anyOf": [
+              {
+                "properties": {
+                  "no_unsupported_readiness_claims": {
+                    "const": "fail"
+                  }
+                },
+                "required": [
+                  "no_unsupported_readiness_claims"
+                ]
+              },
+              {
+                "properties": {
+                  "zero_failing_zero_pending_checks_before_merge": {
+                    "const": "fail"
+                  }
+                },
+                "required": [
+                  "zero_failing_zero_pending_checks_before_merge"
+                ]
+              }
+            ]
+          }
+        },
+        "required": [
+          "safety_gates"
+        ]
+      },
+      "then": {
+        "properties": {
+          "recommended_decision": {
+            "enum": [
+              "CONDITIONAL GO",
+              "NO-GO",
+              "HOLD",
+              "DEFER"
+            ]
+          }
+        }
+      }
+    },
+    {
+      "$comment": "Detected unsupported claims prevent a GO recommendation until they are removed, rewritten, supported, or resolved through human governance review.",
+      "if": {
+        "properties": {
+          "claim_control": {
+            "properties": {
+              "unsupported_claims_detected": {
+                "const": true
+              }
+            },
+            "required": [
+              "unsupported_claims_detected"
+            ]
+          }
+        },
+        "required": [
+          "claim_control"
+        ]
+      },
+      "then": {
+        "properties": {
+          "recommended_decision": {
+            "enum": [
+              "CONDITIONAL GO",
+              "NO-GO",
+              "HOLD",
+              "DEFER"
+            ]
+          }
+        }
+      }
+    }
+  ]
+}
